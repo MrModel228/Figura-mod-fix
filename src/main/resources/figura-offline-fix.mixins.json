@@ -6,7 +6,9 @@
   "client": [
     "AvatarManagerMixin",
     "PlayerJoinMixin",
-    "FiguraAuthMixin"
+    "FiguraAuthMixin",
+    "UserUtilsMixin",
+    "AvatarManagerAccessor"
   ],
   "injectors": {
     "defaultRequire": 0

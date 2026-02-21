@@ -5,5 +5,5 @@ import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(AvatarManager.class)
 public interface AvatarManagerAccessor {
-    // Оставляем пустым, чтобы не было ошибок при сборке
+    // Оставляем пустым. Рефлексия в FiguraOfflineFix сделает всю работу.
 }

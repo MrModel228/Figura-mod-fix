@@ -18,7 +18,7 @@ dependencies {
     
     // Используем стабильную версию API. 
     // Если 0.120.0 не находит, попробуй 0.117.0+1.21.4 (она часто совместима)
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.117.0+1.21.4"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.114.0+1.21.4"
     
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
 }

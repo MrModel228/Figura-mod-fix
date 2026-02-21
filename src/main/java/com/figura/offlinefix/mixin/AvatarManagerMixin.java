@@ -14,15 +14,13 @@ import java.util.UUID;
 @Mixin(targets = "org.figuramc.figura.avatar.AvatarManager", remap = false)
 public class AvatarManagerMixin {
     
-    // Сигнатура (Ljava/util/UUID;)Z
     @Inject(method = "canLoadFor", at = @At("HEAD"), cancellable = true, remap = false)
-    private void figuraOfflineFix$allowAll(UUID uuid, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(true);
+    private void allowOffline(UUID uuid, CallbackInfoReturnable<Boolean> cir) {
+        cir.setReturnValue(true); // Разрешаем загрузку даже если мы "оффлайн"
     }
 
-    // Сигнатура (Ljava/util/UUID;Lnet/minecraft/class_2487;)V
     @Inject(method = "loadAvatar", at = @At("TAIL"), remap = false)
-    private static void figuraOfflineFix$cache(UUID uuid, NbtCompound nbt, CallbackInfo ci) {
+    private static void onCacheAvatar(UUID uuid, NbtCompound nbt, CallbackInfo ci) {
         if (nbt != null) {
             FiguraOfflineFix.saveBackup(uuid.toString(), nbt);
         }

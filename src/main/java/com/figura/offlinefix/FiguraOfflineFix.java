@@ -1,20 +1,22 @@
 package com.figura.offlinefix;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtIo;
+import net.minecraft.nbt.NbtSizeTracker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.zip.GZIPInputStream;
-import java.util.zip.GZIPOutputStream;
 
 public class FiguraOfflineFix implements ClientModInitializer {
     public static final String MOD_ID = "figura-offline-fix";
@@ -25,124 +27,85 @@ public class FiguraOfflineFix implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LOGGER.info("Figura Offline Fix: Initializing...");
+        LOGGER.info("Figura Offline Fix: Initializing 1.2.5...");
 
-        // Создаем папку для кэша
-        if (!CACHE_DIR.exists()) {
-            CACHE_DIR.mkdirs();
-        }
+        if (!CACHE_DIR.exists()) CACHE_DIR.mkdirs();
+
+        ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
+            FiguraFixCommand.register(dispatcher);
+        });
 
         ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
             if (client.player != null) {
-                updateAvatarManual(client.player);
+                new Thread(() -> {
+                    try {
+                        Thread.sleep(3000);
+                        updateAvatarManual(client.player);
+                    } catch (Exception e) { e.printStackTrace(); }
+                }).start();
             }
         });
     }
 
     public static void updateAvatarManual(PlayerEntity player) {
         try {
-            // Пробуем напрямую получить AvatarManager через его класс
-            Class<?> avatarManagerClass = Class.forName("org.figuramc.figura.avatar.AvatarManager");
+            // ШАГ 1: Достаем менеджер через рефлексию (так как метод getAvatarManager не найден)
+            Class<?> figuraModClass = Class.forName("org.figuramc.figura.FiguraMod");
+            Object manager = null;
             
-            LOGGER.info("Figura Offline Fix: AvatarManager class loaded. Available methods:");
-            // Перебираем все методы AvatarManager для поиска метода обновления
-            for (Method m : avatarManagerClass.getDeclaredMethods()) {
-                LOGGER.info("  - " + m.getName() + " (params: " + m.getParameterCount() + ", return: " + m.getReturnType().getSimpleName() + ")");
-            }
-            
-            // Пробуем получить синглтон AvatarManager
-            Object managerInstance = null;
-            for (Method sm : avatarManagerClass.getDeclaredMethods()) {
-                if (sm.getParameterCount() == 0 && sm.getReturnType().equals(avatarManagerClass)) {
-                    sm.setAccessible(true);
-                    managerInstance = sm.invoke(null);
-                    LOGGER.info("Figura Offline Fix: Got AvatarManager instance via " + sm.getName());
+            for (Field f : figuraModClass.getDeclaredFields()) {
+                if (f.getType().getName().contains("AvatarManager")) {
+                    f.setAccessible(true);
+                    manager = f.get(null);
                     break;
                 }
             }
-            
-            if (managerInstance == null) {
-                LOGGER.warn("Figura Offline Fix: Could not get AvatarManager instance");
-            }
-            
-            // Пробуем вызвать reloadAvatar с UUID
-            try {
-                Method reloadAvatar = avatarManagerClass.getDeclaredMethod("reloadAvatar", java.util.UUID.class);
-                reloadAvatar.setAccessible(true);
-                reloadAvatar.invoke(managerInstance, player.getUuid());
-                LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString() + " via reloadAvatar(UUID)");
-                return;
-            } catch (NoSuchMethodException e) {
-                LOGGER.info("Figura Offline Fix: reloadAvatar(UUID) not found");
-            }
-            
-            // Пробуем вызвать reloadAvatar с Entity
-            try {
-                Method reloadAvatar = avatarManagerClass.getDeclaredMethod("reloadAvatar", net.minecraft.entity.Entity.class);
-                reloadAvatar.setAccessible(true);
-                reloadAvatar.invoke(managerInstance, player);
-                LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString() + " via reloadAvatar(Entity)");
-                return;
-            } catch (NoSuchMethodException e) {
-                LOGGER.info("Figura Offline Fix: reloadAvatar(Entity) not found");
-            }
-            
-            // Пробуем вызвать loadEntityAvatar
-            try {
-                Method loadEntityAvatar = avatarManagerClass.getDeclaredMethod("loadEntityAvatar", net.minecraft.entity.Entity.class, boolean.class);
-                loadEntityAvatar.setAccessible(true);
-                loadEntityAvatar.invoke(managerInstance, player, true);
-                LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString() + " via loadEntityAvatar");
-                return;
-            } catch (NoSuchMethodException e) {
-                LOGGER.info("Figura Offline Fix: loadEntityAvatar not found");
-            }
-            
-            LOGGER.warn("Figura Offline Fix: No suitable method found to update avatar");
-        } catch (Exception e) {
-            LOGGER.error("Figura Offline Fix: Error updating avatar: " + e.getMessage());
-            e.printStackTrace();
-        }
-    }
 
-    public static void log(String message) {
-        LOGGER.info(message);
+            if (manager == null) {
+                LOGGER.error("Figura Offline Fix: Could not find AvatarManager field!");
+                return;
+            }
+
+            // ШАГ 2: Ищем метод обновления
+            for (Method m : manager.getClass().getDeclaredMethods()) {
+                if (m.getParameterCount() == 1 && m.getParameterTypes()[0].isAssignableFrom(player.getClass())) {
+                    m.setAccessible(true);
+                    m.invoke(manager, player);
+                    LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString());
+                    return;
+                }
+            }
+        } catch (Exception e) {
+            LOGGER.error("Figura Offline Fix: Update failed: " + e.getMessage());
+        }
     }
 
     public static void saveBackup(String uuid, NbtCompound nbt) {
         try {
             AVATAR_CACHE.put(uuid, nbt);
-            
-            File cacheFile = new File(CACHE_DIR, uuid + ".dat.gz");
-            try (FileOutputStream fos = new FileOutputStream(cacheFile);
-                 GZIPOutputStream gzos = new GZIPOutputStream(fos)) {
-                byte[] data = nbt.toString().getBytes();
-                gzos.write(data);
+            File cacheFile = new File(CACHE_DIR, uuid + ".dat");
+            try (FileOutputStream fos = new FileOutputStream(cacheFile)) {
+                NbtIo.writeCompressed(nbt, fos);
             }
-            LOGGER.info("Figura Offline Fix: Cached avatar for " + uuid);
-        } catch (IOException e) {
-            LOGGER.error("Figura Offline Fix: Error caching avatar: " + e.getMessage());
+        } catch (Exception e) {
+            LOGGER.error("Error saving cache: " + e.getMessage());
         }
     }
 
     public static NbtCompound loadBackup(String uuid) {
-        NbtCompound cached = AVATAR_CACHE.get(uuid);
-        if (cached != null) {
-            return cached;
-        }
-
-        File cacheFile = new File(CACHE_DIR, uuid + ".dat.gz");
+        if (AVATAR_CACHE.containsKey(uuid)) return AVATAR_CACHE.get(uuid);
+        File cacheFile = new File(CACHE_DIR, uuid + ".dat");
         if (cacheFile.exists()) {
-            try (FileInputStream fis = new FileInputStream(cacheFile);
-                 GZIPInputStream gzis = new GZIPInputStream(fis)) {
-                byte[] data = gzis.readAllBytes();
-                NbtCompound nbt = new NbtCompound();
-                // Простая реализация - в реальном коде нужно парсить NBT
-                return nbt;
-            } catch (IOException e) {
-                LOGGER.error("Figura Offline Fix: Error loading cached avatar: " + e.getMessage());
+            try (FileInputStream fis = new FileInputStream(cacheFile)) {
+                return NbtIo.readCompressed(fis, NbtSizeTracker.ofUnlimitedBytes());
+            } catch (Exception e) {
+                LOGGER.error("Error loading cache: " + e.getMessage());
             }
         }
         return null;
+    }
+
+    public static void log(String message) {
+        LOGGER.info(message);
     }
 }
