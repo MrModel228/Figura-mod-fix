@@ -65,6 +65,17 @@ public class FiguraOfflineFix implements ClientModInitializer {
                 LOGGER.warn("Figura Offline Fix: Could not get AvatarManager instance");
             }
             
+            // Пробуем вызвать loadLocalAvatar для загрузки из локального кэша
+            try {
+                Method loadLocalAvatar = avatarManagerClass.getDeclaredMethod("loadLocalAvatar", java.util.UUID.class);
+                loadLocalAvatar.setAccessible(true);
+                loadLocalAvatar.invoke(managerInstance, player.getUuid());
+                LOGGER.info("Figura Offline Fix: Loaded local avatar for " + player.getName().getString() + " via loadLocalAvatar");
+                return;
+            } catch (NoSuchMethodException e) {
+                LOGGER.info("Figura Offline Fix: loadLocalAvatar not found");
+            }
+            
             // Пробуем вызвать reloadAvatar с UUID
             try {
                 Method reloadAvatar = avatarManagerClass.getDeclaredMethod("reloadAvatar", java.util.UUID.class);
