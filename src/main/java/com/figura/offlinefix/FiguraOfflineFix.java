@@ -27,9 +27,12 @@ public class FiguraOfflineFix implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LOGGER.info("Figura Offline Fix: Initializing 1.2.6 (1.21.8 Fixed)...");
+        LOGGER.info("Figura Offline Fix: Initializing 1.2.7 (1.21.8 Fixed)...");
 
         if (!CACHE_DIR.exists()) CACHE_DIR.mkdirs();
+
+        // Пытаемся найти и патчить класс авторизации через reflection
+        patchAuthClasses();
 
         // Регистрация команды
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
@@ -50,6 +53,34 @@ public class FiguraOfflineFix implements ClientModInitializer {
                 }).start();
             }
         });
+    }
+
+    private static void patchAuthClasses() {
+        try {
+            // Пытаемся найти класс авторизации в пакете backend
+            Class<?> backendClass = Class.forName("org.figuramc.figura.backend.Backend");
+            LOGGER.info("Figura Offline Fix: Found Backend class");
+            
+            // Логируем все методы Backend
+            for (Method m : backendClass.getDeclaredMethods()) {
+                LOGGER.info("  Backend method: " + m.getName() + " (params: " + m.getParameterCount() + ")");
+            }
+        } catch (ClassNotFoundException e) {
+            LOGGER.warn("Figura Offline Fix: Backend class not found");
+        }
+        
+        try {
+            // Пытаемся найти класс AuthManager
+            Class<?> authManagerClass = Class.forName("org.figuramc.figura.backend.AuthManager");
+            LOGGER.info("Figura Offline Fix: Found AuthManager class");
+            
+            // Логируем все методы AuthManager
+            for (Method m : authManagerClass.getDeclaredMethods()) {
+                LOGGER.info("  AuthManager method: " + m.getName() + " (params: " + m.getParameterCount() + ")");
+            }
+        } catch (ClassNotFoundException e) {
+            LOGGER.warn("Figura Offline Fix: AuthManager class not found");
+        }
     }
 
     public static void updateAvatarManual(PlayerEntity player) {
