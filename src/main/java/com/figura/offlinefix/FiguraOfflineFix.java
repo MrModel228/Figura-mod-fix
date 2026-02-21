@@ -48,41 +48,56 @@ public class FiguraOfflineFix implements ClientModInitializer {
             // Перебираем все методы AvatarManager для поиска метода обновления
             for (Method m : avatarManagerClass.getDeclaredMethods()) {
                 LOGGER.info("  - " + m.getName() + " (params: " + m.getParameterCount() + ", return: " + m.getReturnType().getSimpleName() + ")");
-                
-                if (m.getParameterCount() == 1 && m.getParameterTypes()[0].equals(PlayerEntity.class)) {
-                    LOGGER.info("Figura Offline Fix: Found suitable method: " + m.getName());
-                    try {
-                        // Пробуем получить синглтон AvatarManager
-                        Object managerInstance = null;
-                        
-                        // Ищем статический метод getInstance или подобный
-                        for (Method sm : avatarManagerClass.getDeclaredMethods()) {
-                            if (sm.getParameterCount() == 0 && sm.getReturnType().equals(avatarManagerClass)) {
-                                sm.setAccessible(true);
-                                managerInstance = sm.invoke(null);
-                                LOGGER.info("Figura Offline Fix: Got AvatarManager instance via " + sm.getName());
-                                break;
-                            }
-                        }
-                        
-                        if (managerInstance == null) {
-                            LOGGER.warn("Figura Offline Fix: Could not get AvatarManager instance, trying static invocation");
-                            // Пробуем вызвать метод статически
-                            m.setAccessible(true);
-                            m.invoke(null, player);
-                            LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString());
-                            return;
-                        } else {
-                            m.setAccessible(true);
-                            m.invoke(managerInstance, player);
-                            LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString());
-                            return;
-                        }
-                    } catch (Exception e) {
-                        LOGGER.warn("Figura Offline Fix: Failed to invoke method " + m.getName() + ": " + e.getMessage());
-                    }
+            }
+            
+            // Пробуем получить синглтон AvatarManager
+            Object managerInstance = null;
+            for (Method sm : avatarManagerClass.getDeclaredMethods()) {
+                if (sm.getParameterCount() == 0 && sm.getReturnType().equals(avatarManagerClass)) {
+                    sm.setAccessible(true);
+                    managerInstance = sm.invoke(null);
+                    LOGGER.info("Figura Offline Fix: Got AvatarManager instance via " + sm.getName());
+                    break;
                 }
             }
+            
+            if (managerInstance == null) {
+                LOGGER.warn("Figura Offline Fix: Could not get AvatarManager instance");
+            }
+            
+            // Пробуем вызвать reloadAvatar с UUID
+            try {
+                Method reloadAvatar = avatarManagerClass.getDeclaredMethod("reloadAvatar", java.util.UUID.class);
+                reloadAvatar.setAccessible(true);
+                reloadAvatar.invoke(managerInstance, player.getUuid());
+                LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString() + " via reloadAvatar(UUID)");
+                return;
+            } catch (NoSuchMethodException e) {
+                LOGGER.info("Figura Offline Fix: reloadAvatar(UUID) not found");
+            }
+            
+            // Пробуем вызвать reloadAvatar с Entity
+            try {
+                Method reloadAvatar = avatarManagerClass.getDeclaredMethod("reloadAvatar", net.minecraft.entity.Entity.class);
+                reloadAvatar.setAccessible(true);
+                reloadAvatar.invoke(managerInstance, player);
+                LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString() + " via reloadAvatar(Entity)");
+                return;
+            } catch (NoSuchMethodException e) {
+                LOGGER.info("Figura Offline Fix: reloadAvatar(Entity) not found");
+            }
+            
+            // Пробуем вызвать loadEntityAvatar
+            try {
+                Method loadEntityAvatar = avatarManagerClass.getDeclaredMethod("loadEntityAvatar", net.minecraft.entity.Entity.class, boolean.class);
+                loadEntityAvatar.setAccessible(true);
+                loadEntityAvatar.invoke(managerInstance, player, true);
+                LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString() + " via loadEntityAvatar");
+                return;
+            } catch (NoSuchMethodException e) {
+                LOGGER.info("Figura Offline Fix: loadEntityAvatar not found");
+            }
+            
             LOGGER.warn("Figura Offline Fix: No suitable method found to update avatar");
         } catch (Exception e) {
             LOGGER.error("Figura Offline Fix: Error updating avatar: " + e.getMessage());
