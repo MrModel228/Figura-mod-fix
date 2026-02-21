@@ -41,25 +41,42 @@ public class FiguraOfflineFix implements ClientModInitializer {
 
     public static void updateAvatarManual(PlayerEntity player) {
         try {
-            // Используем рефлексию для получения AvatarManager
-            Class<?> figuraModClass = Class.forName("org.figuramc.figura.FiguraMod");
+            // Пробуем напрямую получить AvatarManager через его класс
+            Class<?> avatarManagerClass = Class.forName("org.figuramc.figura.avatar.AvatarManager");
             
-            // Перебираем все методы FiguraMod для поиска AvatarManager
-            for (Method m : figuraModClass.getDeclaredMethods()) {
-                if (m.getName().toLowerCase().contains("avatar") || m.getName().toLowerCase().contains("manager")) {
-                    LOGGER.info("Figura Offline Fix: Found method: " + m.getName() + " with return type: " + m.getReturnType());
+            LOGGER.info("Figura Offline Fix: AvatarManager class loaded. Available methods:");
+            // Перебираем все методы AvatarManager для поиска метода обновления
+            for (Method m : avatarManagerClass.getDeclaredMethods()) {
+                LOGGER.info("  - " + m.getName() + " (params: " + m.getParameterCount() + ", return: " + m.getReturnType().getSimpleName() + ")");
+                
+                if (m.getParameterCount() == 1 && m.getParameterTypes()[0].equals(PlayerEntity.class)) {
+                    LOGGER.info("Figura Offline Fix: Found suitable method: " + m.getName());
                     try {
-                        Object manager = m.invoke(null);
-                        if (manager != null) {
-                            // Перебираем методы AvatarManager для поиска метода обновления
-                            for (Method am : manager.getClass().getDeclaredMethods()) {
-                                if (am.getParameterCount() == 1 && am.getParameterTypes()[0].equals(PlayerEntity.class)) {
-                                    am.setAccessible(true);
-                                    am.invoke(manager, player);
-                                    LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString());
-                                    return;
-                                }
+                        // Пробуем получить синглтон AvatarManager
+                        Object managerInstance = null;
+                        
+                        // Ищем статический метод getInstance или подобный
+                        for (Method sm : avatarManagerClass.getDeclaredMethods()) {
+                            if (sm.getParameterCount() == 0 && sm.getReturnType().equals(avatarManagerClass)) {
+                                sm.setAccessible(true);
+                                managerInstance = sm.invoke(null);
+                                LOGGER.info("Figura Offline Fix: Got AvatarManager instance via " + sm.getName());
+                                break;
                             }
+                        }
+                        
+                        if (managerInstance == null) {
+                            LOGGER.warn("Figura Offline Fix: Could not get AvatarManager instance, trying static invocation");
+                            // Пробуем вызвать метод статически
+                            m.setAccessible(true);
+                            m.invoke(null, player);
+                            LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString());
+                            return;
+                        } else {
+                            m.setAccessible(true);
+                            m.invoke(managerInstance, player);
+                            LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString());
+                            return;
                         }
                     } catch (Exception e) {
                         LOGGER.warn("Figura Offline Fix: Failed to invoke method " + m.getName() + ": " + e.getMessage());
