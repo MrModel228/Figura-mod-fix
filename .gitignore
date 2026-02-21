@@ -41,3 +41,5 @@ Thumbs.db
 # Нам НУЖНЫ библиотеки из libs (Figura API), иначе билд упадет
 !libs/
 !libs/*.jar
+
+rek.txt

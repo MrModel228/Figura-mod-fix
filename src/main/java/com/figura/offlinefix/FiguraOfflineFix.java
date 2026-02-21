@@ -43,19 +43,33 @@ public class FiguraOfflineFix implements ClientModInitializer {
         try {
             // Используем рефлексию для получения AvatarManager
             Class<?> figuraModClass = Class.forName("org.figuramc.figura.FiguraMod");
-            Object manager = figuraModClass.getMethod("getAvatarManager").invoke(null);
             
-            // Перебираем методы, чтобы найти тот, который принимает игрока
-            for (Method m : manager.getClass().getDeclaredMethods()) {
-                if (m.getParameterCount() == 1 && m.getParameterTypes()[0].equals(PlayerEntity.class)) {
-                    m.setAccessible(true);
-                    m.invoke(manager, player);
-                    LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString());
-                    return;
+            // Перебираем все методы FiguraMod для поиска AvatarManager
+            for (Method m : figuraModClass.getDeclaredMethods()) {
+                if (m.getName().toLowerCase().contains("avatar") || m.getName().toLowerCase().contains("manager")) {
+                    LOGGER.info("Figura Offline Fix: Found method: " + m.getName() + " with return type: " + m.getReturnType());
+                    try {
+                        Object manager = m.invoke(null);
+                        if (manager != null) {
+                            // Перебираем методы AvatarManager для поиска метода обновления
+                            for (Method am : manager.getClass().getDeclaredMethods()) {
+                                if (am.getParameterCount() == 1 && am.getParameterTypes()[0].equals(PlayerEntity.class)) {
+                                    am.setAccessible(true);
+                                    am.invoke(manager, player);
+                                    LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString());
+                                    return;
+                                }
+                            }
+                        }
+                    } catch (Exception e) {
+                        LOGGER.warn("Figura Offline Fix: Failed to invoke method " + m.getName() + ": " + e.getMessage());
+                    }
                 }
             }
+            LOGGER.warn("Figura Offline Fix: No suitable method found to update avatar");
         } catch (Exception e) {
             LOGGER.error("Figura Offline Fix: Error updating avatar: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
