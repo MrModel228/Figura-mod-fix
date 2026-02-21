@@ -27,21 +27,26 @@ public class FiguraOfflineFix implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LOGGER.info("Figura Offline Fix: Initializing 1.2.5...");
+        LOGGER.info("Figura Offline Fix: Initializing 1.2.5 (1.21.8 Fixed)...");
 
         if (!CACHE_DIR.exists()) CACHE_DIR.mkdirs();
 
+        // Регистрация команды
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             FiguraFixCommand.register(dispatcher);
         });
 
+        // Слушатель входа
         ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
             if (client.player != null) {
                 new Thread(() -> {
                     try {
-                        Thread.sleep(3000);
+                        // Ждем чуть дольше (5 сек), чтобы все ресурсы Figura успели прогрузиться
+                        Thread.sleep(5000);
                         updateAvatarManual(client.player);
-                    } catch (Exception e) { e.printStackTrace(); }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }).start();
             }
         });
@@ -49,34 +54,52 @@ public class FiguraOfflineFix implements ClientModInitializer {
 
     public static void updateAvatarManual(PlayerEntity player) {
         try {
-            // ШАГ 1: Достаем менеджер через рефлексию (так как метод getAvatarManager не найден)
             Class<?> figuraModClass = Class.forName("org.figuramc.figura.FiguraMod");
             Object manager = null;
-            
-            for (Field f : figuraModClass.getDeclaredFields()) {
-                if (f.getType().getName().contains("AvatarManager")) {
-                    f.setAccessible(true);
-                    manager = f.get(null);
+
+            // Сначала ищем во всех методах FiguraMod тот, который возвращает AvatarManager
+            for (Method m : figuraModClass.getDeclaredMethods()) {
+                if (m.getReturnType().getName().contains("AvatarManager") && m.getParameterCount() == 0) {
+                    m.setAccessible(true);
+                    manager = m.invoke(null);
                     break;
                 }
             }
 
+            // Если через методы не нашли, ищем по полям
             if (manager == null) {
-                LOGGER.error("Figura Offline Fix: Could not find AvatarManager field!");
+                for (Field f : figuraModClass.getDeclaredFields()) {
+                    if (f.getType().getName().contains("AvatarManager")) {
+                        f.setAccessible(true);
+                        manager = f.get(null);
+                        break;
+                    }
+                }
+            }
+
+            if (manager == null) {
+                LOGGER.error("Figura Offline Fix: [!] CRITICAL: AvatarManager not found in FiguraMod!");
                 return;
             }
 
-            // ШАГ 2: Ищем метод обновления
+            // Ищем метод обновления аватара, который принимает PlayerEntity
+            boolean methodFound = false;
             for (Method m : manager.getClass().getDeclaredMethods()) {
                 if (m.getParameterCount() == 1 && m.getParameterTypes()[0].isAssignableFrom(player.getClass())) {
                     m.setAccessible(true);
                     m.invoke(manager, player);
-                    LOGGER.info("Figura Offline Fix: Updated avatar for " + player.getName().getString());
-                    return;
+                    LOGGER.info("Figura Offline Fix: Successfully updated avatar via: " + m.getName());
+                    methodFound = true;
+                    break;
                 }
             }
+            
+            if (!methodFound) {
+                LOGGER.warn("Figura Offline Fix: Update method not found in AvatarManager.");
+            }
+
         } catch (Exception e) {
-            LOGGER.error("Figura Offline Fix: Update failed: " + e.getMessage());
+            LOGGER.error("Figura Offline Fix: Error during reflection: " + e.getMessage());
         }
     }
 
@@ -87,19 +110,23 @@ public class FiguraOfflineFix implements ClientModInitializer {
             try (FileOutputStream fos = new FileOutputStream(cacheFile)) {
                 NbtIo.writeCompressed(nbt, fos);
             }
+            LOGGER.info("Figura Offline Fix: Saved cache for " + uuid);
         } catch (Exception e) {
-            LOGGER.error("Error saving cache: " + e.getMessage());
+            LOGGER.error("Figura Offline Fix: Error saving cache: " + e.getMessage());
         }
     }
 
     public static NbtCompound loadBackup(String uuid) {
         if (AVATAR_CACHE.containsKey(uuid)) return AVATAR_CACHE.get(uuid);
+        
         File cacheFile = new File(CACHE_DIR, uuid + ".dat");
         if (cacheFile.exists()) {
             try (FileInputStream fis = new FileInputStream(cacheFile)) {
-                return NbtIo.readCompressed(fis, NbtSizeTracker.ofUnlimitedBytes());
+                NbtCompound nbt = NbtIo.readCompressed(fis, NbtSizeTracker.ofUnlimitedBytes());
+                AVATAR_CACHE.put(uuid, nbt);
+                return nbt;
             } catch (Exception e) {
-                LOGGER.error("Error loading cache: " + e.getMessage());
+                LOGGER.error("Figura Offline Fix: Error loading cache: " + e.getMessage());
             }
         }
         return null;

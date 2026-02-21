@@ -7,7 +7,6 @@
     "AvatarManagerMixin",
     "PlayerJoinMixin",
     "FiguraAuthMixin",
-    "UserUtilsMixin",
     "AvatarManagerAccessor"
   ],
   "injectors": {
