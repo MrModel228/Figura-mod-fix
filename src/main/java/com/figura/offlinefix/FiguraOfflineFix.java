@@ -27,7 +27,7 @@ public class FiguraOfflineFix implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LOGGER.info("Figura Offline Fix: Initializing 1.2.5 (1.21.8 Fixed)...");
+        LOGGER.info("Figura Offline Fix: Initializing 1.2.6 (1.21.8 Fixed)...");
 
         if (!CACHE_DIR.exists()) CACHE_DIR.mkdirs();
 
@@ -54,48 +54,67 @@ public class FiguraOfflineFix implements ClientModInitializer {
 
     public static void updateAvatarManual(PlayerEntity player) {
         try {
-            Class<?> figuraModClass = Class.forName("org.figuramc.figura.FiguraMod");
-            Object manager = null;
-
-            // Сначала ищем во всех методах FiguraMod тот, который возвращает AvatarManager
-            for (Method m : figuraModClass.getDeclaredMethods()) {
-                if (m.getReturnType().getName().contains("AvatarManager") && m.getParameterCount() == 0) {
-                    m.setAccessible(true);
-                    manager = m.invoke(null);
-                    break;
-                }
+            // Прямой доступ к классу AvatarManager
+            Class<?> avatarManagerClass = Class.forName("org.figuramc.figura.avatar.AvatarManager");
+            
+            // Логируем все методы AvatarManager для отладки
+            LOGGER.info("Figura Offline Fix: AvatarManager methods:");
+            for (Method m : avatarManagerClass.getDeclaredMethods()) {
+                LOGGER.info("  - " + m.getName() + " (params: " + m.getParameterCount() + ")");
             }
-
-            // Если через методы не нашли, ищем по полям
-            if (manager == null) {
-                for (Field f : figuraModClass.getDeclaredFields()) {
-                    if (f.getType().getName().contains("AvatarManager")) {
-                        f.setAccessible(true);
-                        manager = f.get(null);
-                        break;
-                    }
-                }
-            }
-
-            if (manager == null) {
-                LOGGER.error("Figura Offline Fix: [!] CRITICAL: AvatarManager not found in FiguraMod!");
-                return;
-            }
-
-            // Ищем метод обновления аватара, который принимает PlayerEntity
+            
+            // Ищем метод для обновления аватара
             boolean methodFound = false;
-            for (Method m : manager.getClass().getDeclaredMethods()) {
-                if (m.getParameterCount() == 1 && m.getParameterTypes()[0].isAssignableFrom(player.getClass())) {
-                    m.setAccessible(true);
-                    m.invoke(manager, player);
-                    LOGGER.info("Figura Offline Fix: Successfully updated avatar via: " + m.getName());
-                    methodFound = true;
-                    break;
+            
+            // Пробуем разные варианты методов
+            String[] methodNames = {"reloadAvatar", "loadAvatar", "loadEntityAvatar", "updateAvatar", "refreshAvatar"};
+            
+            for (String methodName : methodNames) {
+                try {
+                    Method method = null;
+                    
+                    // Пробуем найти метод по имени
+                    for (Method m : avatarManagerClass.getDeclaredMethods()) {
+                        if (m.getName().equals(methodName)) {
+                            method = m;
+                            break;
+                        }
+                    }
+                    
+                    if (method != null) {
+                        method.setAccessible(true);
+                        
+                        // Пробуем вызвать с разными параметрами
+                        if (method.getParameterCount() == 1) {
+                            Class<?> paramType = method.getParameterTypes()[0];
+                            if (paramType.isAssignableFrom(player.getClass())) {
+                                // Статический метод с PlayerEntity
+                                method.invoke(null, player);
+                                LOGGER.info("Figura Offline Fix: Successfully updated avatar via static " + methodName + "(PlayerEntity)");
+                                methodFound = true;
+                                break;
+                            } else if (paramType.getName().equals("java.util.UUID")) {
+                                // Статический метод с UUID
+                                method.invoke(null, player.getUuid());
+                                LOGGER.info("Figura Offline Fix: Successfully updated avatar via static " + methodName + "(UUID)");
+                                methodFound = true;
+                                break;
+                            }
+                        } else if (method.getParameterCount() == 0) {
+                            // Статический метод без параметров
+                            method.invoke(null);
+                            LOGGER.info("Figura Offline Fix: Successfully updated avatar via static " + methodName + "()");
+                            methodFound = true;
+                            break;
+                        }
+                    }
+                } catch (Exception e) {
+                    LOGGER.warn("Figura Offline Fix: Failed to call " + methodName + ": " + e.getMessage());
                 }
             }
             
             if (!methodFound) {
-                LOGGER.warn("Figura Offline Fix: Update method not found in AvatarManager.");
+                LOGGER.warn("Figura Offline Fix: No suitable update method found in AvatarManager.");
             }
 
         } catch (Exception e) {

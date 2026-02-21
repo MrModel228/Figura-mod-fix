@@ -9,6 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(value = FiguraMod.class, remap = false)
 public class FiguraAuthMixin {
     
+    // Перехватываем все методы, которые могут проверять авторизацию
     @Inject(method = "isAuthenticated", at = @At("HEAD"), cancellable = true, remap = false)
     private static void onIsAuthenticated(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(true);
@@ -16,6 +17,18 @@ public class FiguraAuthMixin {
     
     @Inject(method = "isOnline", at = @At("HEAD"), cancellable = true, remap = false)
     private static void onIsOnline(CallbackInfoReturnable<Boolean> cir) {
+        cir.setReturnValue(true);
+    }
+    
+    // Перехватываем проверку лицензии
+    @Inject(method = "isLicensed", at = @At("HEAD"), cancellable = true, remap = false)
+    private static void onIsLicensed(CallbackInfoReturnable<Boolean> cir) {
+        cir.setReturnValue(true);
+    }
+    
+    // Перехватываем проверку валидности
+    @Inject(method = "isValid", at = @At("HEAD"), cancellable = true, remap = false)
+    private static void onIsValid(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(true);
     }
 }
