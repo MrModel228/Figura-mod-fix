@@ -27,7 +27,7 @@ public class FiguraOfflineFix implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LOGGER.info("Figura Offline Fix: Initializing 1.2.7 (1.21.8 Fixed)...");
+        LOGGER.info("Figura Offline Fix: Initializing 1.2.8 (1.21.8 Fixed)...");
 
         if (!CACHE_DIR.exists()) CACHE_DIR.mkdirs();
 
@@ -56,30 +56,54 @@ public class FiguraOfflineFix implements ClientModInitializer {
     }
 
     private static void patchAuthClasses() {
-        try {
-            // Пытаемся найти класс авторизации в пакете backend
-            Class<?> backendClass = Class.forName("org.figuramc.figura.backend.Backend");
-            LOGGER.info("Figura Offline Fix: Found Backend class");
-            
-            // Логируем все методы Backend
-            for (Method m : backendClass.getDeclaredMethods()) {
-                LOGGER.info("  Backend method: " + m.getName() + " (params: " + m.getParameterCount() + ")");
+        // Пытаемся найти классы авторизации в разных пакетах
+        String[] possibleClasses = new String[] {
+            "org.figuramc.figura.backend.Backend",
+            "org.figuramc.figura.backend.AuthManager",
+            "org.figuramc.figura.auth.AuthManager",
+            "org.figuramc.figura.auth.Authentication",
+            "org.figuramc.figura.AuthManager",
+            "org.figuramc.figura.Authentication",
+            "org.figuramc.figura.backend.network.AuthManager",
+            "org.figuramc.figura.backend.network.Authentication"
+        };
+        
+        for (String className : possibleClasses) {
+            try {
+                Class<?> clazz = Class.forName(className);
+                LOGGER.info("Figura Offline Fix: Found auth class: " + className);
+                
+                // Логируем все методы
+                for (Method m : clazz.getDeclaredMethods()) {
+                    LOGGER.info("  " + className + " method: " + m.getName() + " (params: " + m.getParameterCount() + ")");
+                }
+                
+                // Логируем все поля
+                for (Field f : clazz.getDeclaredFields()) {
+                    LOGGER.info("  " + className + " field: " + f.getName() + " (type: " + f.getType().getSimpleName() + ")");
+                }
+            } catch (ClassNotFoundException e) {
+                // Игнорируем, класс не найден
             }
-        } catch (ClassNotFoundException e) {
-            LOGGER.warn("Figura Offline Fix: Backend class not found");
         }
         
+        // Пытаемся найти FiguraMod и логировать его методы авторизации
         try {
-            // Пытаемся найти класс AuthManager
-            Class<?> authManagerClass = Class.forName("org.figuramc.figura.backend.AuthManager");
-            LOGGER.info("Figura Offline Fix: Found AuthManager class");
+            Class<?> figuraModClass = Class.forName("org.figuramc.figura.FiguraMod");
+            LOGGER.info("Figura Offline Fix: Found FiguraMod class");
             
-            // Логируем все методы AuthManager
-            for (Method m : authManagerClass.getDeclaredMethods()) {
-                LOGGER.info("  AuthManager method: " + m.getName() + " (params: " + m.getParameterCount() + ")");
+            // Ищем методы, связанные с авторизацией
+            for (Method m : figuraModClass.getDeclaredMethods()) {
+                String methodName = m.getName().toLowerCase();
+                if (methodName.contains("auth") || methodName.contains("verify") || 
+                    methodName.contains("valid") || methodName.contains("license") ||
+                    methodName.contains("online") || methodName.contains("check")) {
+                    LOGGER.info("  FiguraMod auth-related method: " + m.getName() + 
+                               " (params: " + m.getParameterCount() + ", return: " + m.getReturnType().getSimpleName() + ")");
+                }
             }
         } catch (ClassNotFoundException e) {
-            LOGGER.warn("Figura Offline Fix: AuthManager class not found");
+            LOGGER.warn("Figura Offline Fix: FiguraMod class not found");
         }
     }
 
