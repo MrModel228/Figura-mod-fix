@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "figura-offline-fix",
+  "version": "1.2.1",
+  "name": "Figura Offline Fix (Jarvis)",
+  "description": "фикс фигуры для пиратки.",
+  "authors": ["MrModel"],
+  "contact": {"https://github.com/MrModel228/Figura-mod-fix": "GitHub"},
+  "license": "MIT",
+  "icon": "assets/figura-offline-fix/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.figura.offlinefix.FiguraOfflineFix"
+    ]
+  },
+  "mixins": [
+    "figura-offline-fix.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.8",
+    "java": ">=21",
+    "figura": ">=0.1.5"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.figura.offlinefix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "UserUtilsMixin",
+    "AvatarManagerMixin",
+    "AvatarManagerAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
