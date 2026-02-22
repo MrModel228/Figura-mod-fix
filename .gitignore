@@ -9,3 +9,4 @@ loom-cache/
 *.log
 figura_offline_cache/
 .DS_Store
+quick-commit.bat
