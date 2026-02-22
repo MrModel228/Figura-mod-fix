@@ -2,33 +2,17 @@ package com.figura.offlinefix.mixin;
 
 import org.figuramc.figura.FiguraMod;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(value = FiguraMod.class, remap = false)
 public class FiguraAuthMixin {
-    
-    // Перехватываем все методы, которые могут проверять авторизацию
-    @Inject(method = "isAuthenticated", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void onIsAuthenticated(CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(true);
+    @Overwrite
+    public boolean isAuthenticated() {
+        return true;
     }
-    
-    @Inject(method = "isOnline", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void onIsOnline(CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(true);
-    }
-    
-    // Перехватываем проверку лицензии
-    @Inject(method = "isLicensed", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void onIsLicensed(CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(true);
-    }
-    
-    // Перехватываем проверку валидности
-    @Inject(method = "isValid", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void onIsValid(CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(true);
+
+    @Overwrite
+    public static boolean isOnline() {
+        return true;
     }
 }

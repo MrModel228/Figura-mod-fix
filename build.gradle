@@ -1,13 +1,13 @@
 plugins {
-    id 'fabric-loom' version '1.9-SNAPSHOT' // Откатываемся на 1.9, она стабильнее с 1.21.8
+    id 'fabric-loom' version '1.9-SNAPSHOT'
+    id 'maven-publish'
 }
 
-version = "1.2.8"
+version = "1.2.5"
 group = "com.figura.offlinefix"
 
 repositories {
     mavenCentral()
-    maven { url = "https://maven.fabricmc.net/" }
     maven { url = "https://maven.terraformersmc.com/releases/" }
 }
 
@@ -15,20 +15,19 @@ dependencies {
     minecraft "com.mojang:minecraft:1.21.8"
     mappings "net.fabricmc:yarn:1.21.8+build.1:v2"
     modImplementation "net.fabricmc:fabric-loader:0.16.10"
-    
-    // Используем стабильную версию API. 
-    // Если 0.120.0 не находит, попробуй 0.117.0+1.21.4 (она часто совместима)
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.114.0+1.21.4"
-    
-    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
-}
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.117.0+1.21.8"
 
-// ЭТОТ БЛОК ОТКЛЮЧАЕТ ОШИБКУ С JAVADOC
-loom {
-    def commonJavadoc = "https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/0.117.0+1.21.4/fabric-api-0.117.0+1.21.4-javadoc.jar"
-    // Мы просто игнорируем проблемные сорсы
+    // Подключаем Figura из твоей папки libs
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 tasks.withType(JavaCompile).configureEach {
     it.options.release = 21
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
 }

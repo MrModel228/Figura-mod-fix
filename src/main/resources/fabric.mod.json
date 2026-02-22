@@ -1,11 +1,14 @@
 {
   "schemaVersion": 1,
   "id": "figura-offline-fix",
-  "version": "1.2.8",
-  "name": "Figura Offline Fix (Jarvis)",
-  "description": "фикс фигуры для пиратки.",
+  "version": "${version}",
+  "name": "Figura Offline Fix",
+  "description": "Fixes Figura avatars for offline and Ely.by accounts. Compatible with V5 and Extra Bone.",
   "authors": ["MrModel"],
-  "contact": {"https://github.com/MrModel228/Figura-mod-fix": "GitHub"},
+  "contact": {
+    "homepage": "https://github.com/MrModel228/Figura-mod-fix",
+    "sources": "https://github.com/MrModel228/Figura-mod-fix"
+  },
   "license": "MIT",
   "icon": "assets/figura-offline-fix/icon.png",
   "environment": "client",
@@ -18,9 +21,8 @@
     "figura-offline-fix.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.16.0",
+    "fabricloader": ">=0.16.10",
     "minecraft": "~1.21.8",
-    "java": ">=21",
     "figura": ">=0.1.5"
   }
 }

@@ -1,45 +1,11 @@
-# --- [ Java & Gradle ] ---
 .gradle/
 build/
 bin/
-out/
-.generated/
-
-# --- [ IDE Settings ] ---
-# IntelliJ IDEA
 .idea/
 *.iml
-*.iws
-*.ipr
-out/
-
-# VS Code
-.vscode/
-
-# --- [ Fabric & Minecraft ] ---
-# Игнорируем запускную папку клиента при отладке
 run/
-# Игнорируем маппинги и временные файлы Loom
-.gradle/loom-cache/
-
-# --- [ Figura Service Fix Specific ] ---
-# Обязательно игнорируем логи и кэш моделей, 
-# чтобы не засорять репозиторий личными данными
-logs/
-figura-fix/
+.fabric/
+loom-cache/
 *.log
-
-# --- [ OS specific ] ---
+figura_offline_cache/
 .DS_Store
-Thumbs.db
-
-# --- [ Crucial Exceptions ] ---
-# Нам НУЖЕН Gradle Wrapper, чтобы билд работал везде
-!gradle/wrapper/gradle-wrapper.jar
-!gradle/wrapper/gradle-wrapper.properties
-
-# Нам НУЖНЫ библиотеки из libs (Figura API), иначе билд упадет
-!libs/
-!libs/*.jar
-
-rek.txt
