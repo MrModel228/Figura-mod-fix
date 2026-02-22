@@ -1,33 +1,64 @@
 plugins {
-    id 'fabric-loom' version '1.9-SNAPSHOT'
-    id 'maven-publish'
+    id "architectury-plugin" version "3.4.155"
+    id "dev.architectury.loom" version "1.7-SNAPSHOT" apply false
 }
 
-version = "1.2.5"
-group = "com.figura.offlinefix"
-
-repositories {
-    mavenCentral()
-    maven { url = "https://maven.terraformersmc.com/releases/" }
+architectury {
+    minecraft = rootProject.minecraft_version
 }
 
-dependencies {
-    minecraft "com.mojang:minecraft:1.21.8"
-    mappings "net.fabricmc:yarn:1.21.8+build.1:v2"
-    modImplementation "net.fabricmc:fabric-loader:0.16.10"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.117.0+1.21.8"
+subprojects {
+    apply plugin: "dev.architectury.loom"
 
-    // Подключаем Figura из твоей папки libs
-    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+    loom {
+        silentMojangMappingsLicense()
+        // Отключаем инъекцию интерфейсов, которая часто ломает билд на 1.21.x
+        interfaceInjection {
+            enableDependencyInterfaceInjection = false
+        }
+    }
+
+    repositories {
+        maven { url 'https://maven.terraformersmc.com/releases/' }
+        maven { url 'https://api.modrinth.com/maven' }
+        maven { url 'https://maven.fabricmc.net/' }
+        mavenCentral()
+    }
+
+    dependencies {
+        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+        mappings loom.layered {
+            officialMojangMappings()
+        }
+        compileOnly fileTree(dir: '../libs', include: ['*.jar'])
+    }
 }
 
-tasks.withType(JavaCompile).configureEach {
-    it.options.release = 21
-}
+allprojects {
+    apply plugin: "java"
+    apply plugin: "architectury-plugin"
+    apply plugin: "maven-publish"
 
-processResources {
-    inputs.property "version", project.version
-    filesMatching("fabric.mod.json") {
-        expand "version": project.version
+    base {
+        archivesName = "figura-offline-fix"
+    }
+
+    version = rootProject.mod_version
+    group = "com.figura.offlinefix"
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = "UTF-8"
+        options.release = 21
+    }
+
+    java {
+        withSourcesJar()
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+    
+    // Пропускаем генерацию метаданных, чтобы не натыкаться на ошибки Javadoc
+    tasks.withType(GenerateModuleMetadata).configureEach {
+        enabled = false
     }
 }

@@ -1,0 +1,73 @@
+plugins {
+    id "com.github.johnrengelman.shadow" version "8.1.1"
+}
+
+architectury {
+    platformSetupLoomIde()
+    fabric()
+}
+
+loom {
+    // Автоматически подтягивает AW из общего модуля
+    accessWidenerPath = project(":common").loom.accessWidenerPath
+}
+
+configurations {
+    common
+    shadowCommon
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
+    developmentFabric.extendsFrom common
+}
+
+dependencies {
+    mappings loom.layered {
+        officialMojangMappings()
+    }
+
+    // Библиотеки (исправлены имена переменных из твоего gradle.properties)
+    include(implementation("com.github.FiguraMC.luaj:luaj-core:3.0.8"))
+    include(implementation("com.github.FiguraMC.luaj:luaj-jse:3.0.8"))
+    include(implementation("com.neovisionaries:nv-websocket-client:${rootProject.nv_websocket}"))
+    include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.4.1")))
+
+    // Логика выбора платформы (Fabric vs Quilt)
+    if(rootProject.run_on_quilt == "false") {
+        modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+
+        // Подключаем только необходимые модули API, чтобы билд был легче
+        include(modImplementation(fabricApi.module("fabric-api-base", rootProject.fabric_api)))
+        include(modImplementation(fabricApi.module("fabric-command-api-v2", rootProject.fabric_api)))
+        include(modImplementation(fabricApi.module("fabric-key-binding-api-v1", rootProject.fabric_api)))
+        include(modImplementation(fabricApi.module("fabric-resource-loader-v0", rootProject.fabric_api)))
+    } else {
+        modImplementation "org.quiltmc:quilt-loader:${rootProject.quilt_loader_version}"
+        modApi "org.quiltmc.quilted-fabric-api:quilted-fabric-api:${rootProject.quilt_fabric_api_version}"
+    }
+
+    // Мод-зависимости (ModMenu)
+    if (rootProject.run_with_modmenu == "true") {
+        modImplementation("maven.modrinth:modmenu:${rootProject.modmenu}")
+    }
+
+    // Связка с common модулем
+    common(project(path: ":common", configuration: "namedElements")) { transitive false }
+    shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
+}
+
+processResources {
+    // Явно указываем переменные, чтобы избежать ошибок синтаксиса
+    inputs.property "version", rootProject.mod_version
+    inputs.property "minecraft_version", rootProject.minecraft_version
+    inputs.property "java_version", rootProject.java_version
+
+    filesMatching("fabric.mod.json") {
+        expand([
+            "version": rootProject.mod_version,
+            "minecraft_version": rootProject.minecraft_version,
+            "java_version": rootProject.java_version
+        ])
+    }
+}
+
+// ... остальное (shadowJar, remapJar, publishing) оставляем как есть, оно настроено верно

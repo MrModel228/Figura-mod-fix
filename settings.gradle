@@ -1,1 +1,14 @@
-rootProject.name = 'figura-offline-fix'
+pluginManagement {
+    repositories {
+        maven { url = "https://maven.fabricmc.net/" }
+        maven { url = "https://maven.architectury.dev/" }
+        maven { url = "https://maven.minecraftforge.net/" }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+include("common")
+include("fabric")
+
+rootProject.name = "Figura-Offline-Fix"

@@ -1,12 +1,38 @@
+# --- [ Gradle & Build ] ---
 .gradle/
 build/
 bin/
+.kotlin/
+
+# --- [ IDE & Editor ] ---
 .idea/
 *.iml
+*.iws
+.vscode/
+.project
+.classpath
+.settings/
+*.swp
+*.sublime-*
+
+# --- [ Minecraft / Fabric Cache ] ---
 run/
 .fabric/
 loom-cache/
-*.log
+userCache.json
+usernamecache.json
+
+# --- [ Logs & Crash Reports ] ---
+logs/
+crash-reports/
+debug.log
+
+# --- [ Project Specific ] ---
+# Мы НЕ игнорируем /libs/, чтобы Figura осталась в репозитории.
+# Но игнорируем папку кэша аватаров, которую создает твой аддон.
 figura_offline_cache/
+
+# --- [ OS Junk ] ---
 .DS_Store
+Thumbs.db
 quick-commit.bat

@@ -1,0 +1,49 @@
+architectury {
+    common(rootProject.enabled_platforms.split(","))
+}
+
+loom {
+    // Если у тебя нет файла .accesswidener, закомментируй эту строку, чтобы не было ошибки
+    // accessWidenerPath = file("src/main/resources/figura.accesswidener")
+}
+
+repositories {
+    flatDir {
+        dirs "$rootProject.projectDir/libs"
+    }
+}
+
+dependencies {
+    mappings loom.layered {
+        officialMojangMappings()
+    }
+
+    // Библиотеки (исправлено использование переменных из gradle.properties)
+    implementation("com.github.FiguraMC.luaj:luaj-core:3.0.8") // Прямое указание версии для стабильности
+    implementation("com.github.FiguraMC.luaj:luaj-jse:3.0.8")
+    implementation("com.neovisionaries:nv-websocket-client:${rootProject.nv_websocket}")
+
+    // MixinExtras — обязательная штука для современных миксинов
+    implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
+
+    // Подключаем саму фигуру из libs, чтобы миксины видели её классы
+    compileOnly fileTree(dir: "$rootProject.projectDir/libs", include: '*.jar')
+
+    // Зависимость от загрузчика для аннотаций @Environment
+    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+
+    // Опциональные зависимости (исправлены переменные)
+    modCompileOnly "maven.modrinth:iris:${rootProject.iris}"
+    modCompileOnly "maven.modrinth:immediatelyfast:${rootProject.immediately_fast}"
+}
+
+// Упрощенный блок публикации (чтобы не ломался при локальной сборке)
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = "figura-offline-fix-common"
+            version = project.version
+            artifact(remapJar)
+        }
+    }
+}
