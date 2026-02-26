@@ -1,9 +1,13 @@
 plugins {
     id 'fabric-loom' version '1.9-SNAPSHOT'
+    id 'maven-publish'
 }
 
+// Удалите старый блок repositories сверху, если он там был один, 
+// и используйте этот формат:
 repositories {
     maven { url = "https://maven.terraformersmc.com/releases/" }
+    maven { url = "https://maven.ladysnake.org/releases" }
 }
 
 dependencies {
@@ -11,10 +15,5 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.minecraft_version}+build.1:v2"
     loader "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-    
-    // Подключаем API Фигуры, чтобы наши миксины видели её классы
     modCompileOnly "org.figuramc:figura-fabric:0.1.4+1.21.1" 
 }
-
-tasks.withType(JavaCompile).configureEach { it.options.release = 21 }
-java { sourceCompatibility = JavaVersion.VERSION_21 }
