@@ -10,16 +10,9 @@ repositories {
     mavenCentral()
     maven { url = "https://maven.fabricmc.net/" }
     maven { url = "https://maven.terraformersmc.com/releases/" }
-    maven { url = "https://maven.ladysnake.org/releases" }
     
-    // Сэр, добавляем репозиторий специально для Figura
-    maven {
-        name = "Modrinth"
-        url = "https://api.modrinth.com/maven"
-        content {
-            includeGroup "maven.modrinth"
-        }
-    }
+    // Сэр, используем JitPack — он соберет Figura прямо из её исходников
+    maven { url = "https://jitpack.io" }
 }
 
 dependencies {
@@ -29,11 +22,19 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     
-    // ИСПРАВЛЕНИЕ: Используем правильный путь к Figura через Modrinth
-    // Сэр, я обновил строку ниже, чтобы она соответствовала формату Modrinth
-    modCompileOnly "maven.modrinth:figura:0.1.4-rc.1+1.21.1" 
+    // Сэр, указываем на репозиторий Figura через JitPack
+    // Формат: com.github.ПОЛЬЗОВАТЕЛЬ:РЕПОЗИТОРИЙ:ВЕРСИЯ
+    modCompileOnly "com.github.FiguraMC:Figura:0.1.4-rc.1"
 }
 
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 21
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
 tasks.withType(JavaCompile).configureEach {
     it.options.release = 21
 }
