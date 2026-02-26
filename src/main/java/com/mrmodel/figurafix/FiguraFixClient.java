@@ -12,7 +12,7 @@ public class FiguraFixClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LOGGER.info("§b[FiguraFix] §aСистема ULTIMATE для Reign RP запущена, Сэр!");
+        LOGGER.info("§b[FiguraFix] §aСистема ULTIMATE запущена, Сэр!");
         
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             FFCommand.register(dispatcher);
