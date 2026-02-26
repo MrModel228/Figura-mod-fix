@@ -3,11 +3,6 @@
   "minVersion": "0.8",
   "package": "com.mrmodel.figurafix.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "ThreadedLoaderMixin",
-    "LodRendererMixin"
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+  "mixins": [ "OptimizationMixin", "ThreadedLoaderMixin", "ItemSyncMixin" ],
+  "injectors": { "defaultRequire": 1 }
 }
