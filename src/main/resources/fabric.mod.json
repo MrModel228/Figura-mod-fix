@@ -3,22 +3,15 @@
   "id": "figurafix",
   "version": "${version}",
   "name": "Figura Fix: Reign Edition",
-  "description": "Оптимизация и фиксы для Figura на сервере Reign RP",
+  "description": "Ultimate Optimization for Reign RP",
   "authors": [ "Сэр mrmodel" ],
-  "contact": { "sources": "https://github.com/mrmodel/figurafix" },
-  "license": "MIT",
-  "icon": "assets/figurafix/icon.png",
   "environment": "client",
-  "entrypoints": {
-    "client": [ "com.mrmodel.figurafix.FiguraFixClient" ]
-  },
-  "mixins": [
-    "figurafix.mixins.json"
-  ],
+  "entrypoints": { "client": [ "com.mrmodel.figurafix.FiguraFixClient" ] },
+  "mixins": [ "figurafix.mixins.json" ],
   "depends": {
     "fabricloader": ">=0.16.10",
     "minecraft": "~1.21.4",
+    "figura": "*",
     "java": ">=21"
   }
 }
-
