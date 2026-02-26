@@ -7,22 +7,19 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
+    mavenCentral()
+    maven { url = "https://maven.fabricmc.net/" }
     maven { url = "https://maven.terraformersmc.com/releases/" }
     maven { url = "https://maven.ladysnake.org/releases" }
 }
 
 dependencies {
-    // Основные зависимости Minecraft и Yarn
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.minecraft_version}+build.1:v2"
     
-    // ИСПРАВЛЕНИЕ: Используем modImplementation вместо loader
     modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
-
-    // Fabric API
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     
-    // Figura API (только для компиляции)
     modCompileOnly "org.figuramc:figura-fabric:0.1.4+1.21.1" 
 }
 
