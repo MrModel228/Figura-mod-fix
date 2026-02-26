@@ -1,6 +1,5 @@
 plugins {
     id 'fabric-loom' version '1.9-SNAPSHOT'
-    id 'maven-publish'
 }
 
 version = project.mod_version
@@ -10,21 +9,19 @@ repositories {
     mavenCentral()
     maven { url = "https://maven.fabricmc.net/" }
     maven { url = "https://maven.terraformersmc.com/releases/" }
-    
-    // Сэр, используем JitPack — он соберет Figura прямо из её исходников
-    maven { url = "https://jitpack.io" }
 }
 
 dependencies {
+    // Ядро Minecraft и маппинги
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.minecraft_version}+build.1:v2"
     
+    // Fabric Loader и API
     modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     
-    // Сэр, указываем на репозиторий Figura через JitPack
-    // Формат: com.github.ПОЛЬЗОВАТЕЛЬ:РЕПОЗИТОРИЙ:ВЕРСИЯ
-    modCompileOnly "com.github.FiguraMC:Figura:0.1.4-rc.1"
+    // Сэр, вот она — ваша локальная Figura 1.21.8
+    modCompileOnly files("libs/figura.jar")
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -33,13 +30,4 @@ tasks.withType(JavaCompile).configureEach {
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
-}
-tasks.withType(JavaCompile).configureEach {
-    it.options.release = 21
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
 }
