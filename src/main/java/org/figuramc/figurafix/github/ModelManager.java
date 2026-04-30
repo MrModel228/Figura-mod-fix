@@ -16,9 +16,55 @@ public class ModelManager {
 
     public ModelManager(GitHubAPI gitHubAPI) {
         this.gitHubAPI = gitHubAPI;
-        this.avatarsFolder = new File(AVATARS_DIR);
+        this.avatarsFolder = findAvatarsFolder();
         ensureAvatarsDir();
         startFileWatcher();
+    }
+
+    private File findAvatarsFolder() {
+        String gameDir = System.getProperty("gameDir");
+        
+        if (gameDir != null) {
+            File figDir = new File(gameDir, "figura/avatars");
+            if (figDir.mkdirs()) {
+                System.out.println("[Figura-Fix] Found avatars folder (from gameDir): " + figDir.getAbsolutePath());
+                return figDir;
+            }
+        }
+        
+        File current = new File(".");
+        File figFolder = findFolderRecursively(current, "figura");
+        
+        if (figFolder != null) {
+            File avatars = new File(figFolder, "avatars");
+            if (avatars.mkdirs()) {
+                System.out.println("[Figura-Fix] Found avatars folder (recursive): " + avatars.getAbsolutePath());
+                return avatars;
+            }
+        }
+        
+        File fallback = new File(AVATARS_DIR);
+        if (fallback.mkdirs()) {
+            System.out.println("[Figura-Fix] Created fallback avatars folder: " + fallback.getAbsolutePath());
+        }
+        return fallback;
+    }
+    
+    private File findFolderRecursively(File dir, String target) {
+        if (dir.getName().equals(target) && dir.isDirectory()) {
+            return dir;
+        }
+        
+        File[] files = dir.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    File found = findFolderRecursively(file, target);
+                    if (found != null) return found;
+                }
+            }
+        }
+        return null;
     }
 
     public File getAvatarsFolder() {
