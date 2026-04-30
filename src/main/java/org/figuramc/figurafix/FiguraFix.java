@@ -22,7 +22,7 @@ public class FiguraFix implements ClientModInitializer {
         SYNC_MANAGER = new SyncManager(gitHubAPI, MODEL_MANAGER);
         
         LOGGER.info("========================================");
-        LOGGER.info("   Figura-Fix v1.0.3 Loading...");
+        LOGGER.info("   Figura-Fix v1.0.4 Loading...");
         LOGGER.info("========================================");
         LOGGER.info("GitHub sync: enabled");
         LOGGER.info("Repo: MrModel228/figura-fix-models");
