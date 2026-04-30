@@ -1,0 +1,93 @@
+plugins {
+    id 'fabric-loom' version '1.10.5'
+    id 'maven-publish'
+}
+
+version = "1.0.1"
+group = "org.figuramc.figurafix"
+
+base {
+    archivesName = "figura-fix"
+}
+
+repositories {
+    mavenCentral()
+    maven { url = "https://maven.fabricmc.net/" }
+    maven { url = "https://jitpack.io" }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.8"
+    mappings loom.officialMojangMappings()
+    
+    modImplementation "net.fabricmc:fabric-loader:0.18.4"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.136.1+1.21.8"
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = [
+                'src/main/resources'
+            ]
+        }
+    }
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+loom {
+    accessWidenerPath.set(file("src/main/resources/figurafix.access_widener"))
+    
+    runs {
+        client {
+            client()
+            name "Minecraft Client"
+            ideConfigGenerated true
+            runDir "run"
+        }
+    }
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
+    options.encoding = "UTF-8"
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+
+    manifest {
+        attributes(
+            'MixinConfigs': 'figurafix.mixins.json',
+            'Implementation-Title': 'Figura-Fix',
+            'Implementation-Version': project.version,
+            'Built-At': new Date().format('yyyy-MM-dd HH:mm:ss')
+        )
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            url = project.findProperty('repoUrl') ?: System.getenv('REPO_URL') ?: 'file://localhost/repo'
+        }
+    }
+}

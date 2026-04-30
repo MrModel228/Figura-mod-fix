@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+MixinConfigs: figurafix.mixins.json
+Implementation-Title: Figura-Fix
+Implementation-Version: 1.0.1
+Built-At: 2026-04-27 15:44:59
+

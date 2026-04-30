@@ -1,0 +1,22 @@
+{
+  "ru_ru": {
+    "figurafix.name": "Figura-Fix",
+    "figurafix.description": "Оптимизация и синхронизация для Figura",
+    "figurafix.github_sync_enabled": "GitHub синхронизация включена",
+    "figurafix.avatar_uploaded": "Аватар загружен: %s",
+    "figurafix.avatar_downloaded": "Аватар скачан: %s",
+    "figurafix.sync.now": "Синхронизировать сейчас",
+    "figurafix.sync.auto_start": "Авто-синх: запуск",
+    "figurafix.sync.auto_exit": "Авто-синх: выход",
+    "figurafix.model.name": "Имя модели",
+    "figurafix.model.date": "Дата",
+    "figurafix.model.size": "Размер",
+    "figurafix.settings.title": "Настройки Figura-Fix",
+    "figurafix.close": "Закрыть",
+    "figurafix.github.repo": "Репозиторий моделей",
+    "figurafix.github.user": "Имя пользователя",
+    "figurafix.syncing": "Синхронизация...",
+    "figurafix.sync_complete": "Синхронизация завершена!",
+    "figurafix.sync_failed": "Ошибка синхронизации: %s"
+  }
+}

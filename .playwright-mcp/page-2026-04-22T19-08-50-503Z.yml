@@ -1,0 +1,1005 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e9]:
+        - button "Toggle navigation" [ref=e11] [cursor=pointer]
+        - link "Homepage" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img [ref=e18]
+        - generic [ref=e20]:
+          - link "Sign in" [ref=e21] [cursor=pointer]:
+            - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FFiguraMC%2FFigura
+          - button "Appearance settings" [ref=e24] [cursor=pointer]:
+            - img
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e32]:
+          - img [ref=e33]
+          - link "FiguraMC" [ref=e36] [cursor=pointer]:
+            - /url: /FiguraMC
+          - generic [ref=e37]: /
+          - strong [ref=e38]:
+            - link "Figura" [ref=e39] [cursor=pointer]:
+              - /url: /FiguraMC/Figura
+          - generic [ref=e40]: Public
+        - generic [ref=e41]:
+          - list:
+            - listitem [ref=e42]:
+              - button "Sponsor FiguraMC/Figura" [ref=e44] [cursor=pointer]:
+                - generic [ref=e46]:
+                  - img [ref=e47]
+                  - text: Sponsor
+            - listitem [ref=e49]:
+              - link "You must be signed in to change notification settings" [ref=e50] [cursor=pointer]:
+                - /url: /login?return_to=%2FFiguraMC%2FFigura
+                - img [ref=e51]
+                - text: Notifications
+            - listitem [ref=e53]:
+              - link "Fork 123" [ref=e54] [cursor=pointer]:
+                - /url: /login?return_to=%2FFiguraMC%2FFigura
+                - img [ref=e55]
+                - text: Fork
+                - generic "123" [ref=e57]
+            - listitem [ref=e58]:
+              - link "You must be signed in to star a repository" [ref=e60] [cursor=pointer]:
+                - /url: /login?return_to=%2FFiguraMC%2FFigura
+                - img [ref=e61]
+                - text: Star
+                - generic "474 users starred this repository" [ref=e63]: "474"
+      - navigation "Repository" [ref=e64]:
+        - list [ref=e65]:
+          - listitem [ref=e66]:
+            - link "Code" [ref=e67] [cursor=pointer]:
+              - /url: /FiguraMC/Figura
+              - img [ref=e68]
+              - generic [ref=e70]: Code
+          - listitem [ref=e71]:
+            - link "Issues 101" [ref=e72] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/issues
+              - img [ref=e73]
+              - generic [ref=e76]: Issues
+              - generic "101" [ref=e77]
+          - listitem [ref=e78]:
+            - link "Pull requests 27" [ref=e79] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/pulls
+              - img [ref=e80]
+              - generic [ref=e82]: Pull requests
+              - generic "27" [ref=e83]
+          - listitem [ref=e84]:
+            - link "Discussions" [ref=e85] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/discussions
+              - img [ref=e86]
+              - generic [ref=e88]: Discussions
+          - listitem [ref=e89]:
+            - link "Actions" [ref=e90] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/actions
+              - img [ref=e91]
+              - generic [ref=e93]: Actions
+          - listitem [ref=e94]
+          - listitem [ref=e95]
+          - listitem [ref=e96]
+          - listitem [ref=e97]
+        - button "Additional navigation options" [ref=e101] [cursor=pointer]:
+          - img
+    - generic [ref=e114]:
+      - heading "FiguraMC/Figura" [level=1] [ref=e116]
+      - generic [ref=e117]:
+        - generic [ref=e120]:
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - button "1.20 branch" [ref=e124] [cursor=pointer]:
+                - generic [ref=e125]:
+                  - generic [ref=e127]:
+                    - img [ref=e129]
+                    - generic [ref=e132]: "1.20"
+                  - generic:
+                    - img
+              - generic [ref=e133]:
+                - link "Go to Branches page" [ref=e134] [cursor=pointer]:
+                  - /url: /FiguraMC/Figura/branches
+                  - img [ref=e135]
+                - link "Go to Tags page" [ref=e137] [cursor=pointer]:
+                  - /url: /FiguraMC/Figura/tags
+                  - img [ref=e138]
+            - generic [ref=e140]:
+              - button "Go to file" [ref=e143] [cursor=pointer]:
+                - generic [ref=e145]: Go to file
+              - button "Code" [ref=e146] [cursor=pointer]:
+                - generic [ref=e147]:
+                  - generic:
+                    - img
+                  - generic [ref=e148]: Code
+                  - generic:
+                    - img
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - heading "Folders and files" [level=2] [ref=e151]
+              - table "Folders and files" [ref=e152]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message":
+                      - generic "Last commit message"
+                    - columnheader "Last commit date":
+                      - generic "Last commit date"
+                - rowgroup [ref=e153]:
+                  - 'row "Latest commit UnlikePaladin commits by UnlikePaladin Merge pull request #462 from Bitslayn/light-crash-fix Open commit details success Commit 532d720 · Mar 30, 20263 weeks ago History View commit history for this file." [ref=e154]':
+                    - 'cell "Latest commit UnlikePaladin commits by UnlikePaladin Merge pull request #462 from Bitslayn/light-crash-fix Open commit details success Commit 532d720 · Mar 30, 20263 weeks ago History View commit history for this file." [ref=e155]':
+                      - generic [ref=e156]:
+                        - heading "Latest commit" [level=2] [ref=e157]
+                        - generic [ref=e158]:
+                          - generic [ref=e160]:
+                            - link "UnlikePaladin" [ref=e161] [cursor=pointer]:
+                              - /url: /UnlikePaladin
+                              - img "UnlikePaladin" [ref=e162]
+                            - link "commits by UnlikePaladin" [ref=e163] [cursor=pointer]:
+                              - /url: /FiguraMC/Figura/commits?author=UnlikePaladin
+                              - text: UnlikePaladin
+                          - generic [ref=e164]:
+                            - generic [ref=e166]:
+                              - link "Merge pull request" [ref=e167] [cursor=pointer]:
+                                - /url: /FiguraMC/Figura/commit/532d720152f7c4d4ba95f2637401558da5b18305
+                              - link "#462" [ref=e168] [cursor=pointer]:
+                                - /url: https://github.com/FiguraMC/Figura/pull/462
+                              - link "from Bitslayn/light-crash-fix" [ref=e169] [cursor=pointer]:
+                                - /url: /FiguraMC/Figura/commit/532d720152f7c4d4ba95f2637401558da5b18305
+                            - button "Open commit details" [ref=e170] [cursor=pointer]:
+                              - img [ref=e171]
+                            - button "success" [ref=e173] [cursor=pointer]:
+                              - img [ref=e174]
+                        - generic [ref=e176]:
+                          - generic [ref=e178]:
+                            - link "Commit 532d720" [ref=e179] [cursor=pointer]:
+                              - /url: /FiguraMC/Figura/commit/532d720152f7c4d4ba95f2637401558da5b18305
+                              - text: 532d720
+                            - text: ·
+                            - generic "Mar 30, 2026, 6:32 AM GMT+3" [ref=e180]: Mar 30, 20263 weeks ago
+                          - generic [ref=e181]:
+                            - heading "History" [level=2] [ref=e182]
+                            - link "View commit history for this file." [ref=e184] [cursor=pointer]:
+                              - /url: /FiguraMC/Figura/commits/1.20/
+                              - generic [ref=e185]:
+                                - generic:
+                                  - img
+                  - row ".github, (Directory) Add Neoforge artifacts to build Sep 1, 20258 months ago" [ref=e186]:
+                    - cell ".github, (Directory)" [ref=e187]:
+                      - generic [ref=e188]:
+                        - img [ref=e189]
+                        - link ".github, (Directory)" [ref=e194] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/tree/1.20/.github
+                          - text: .github
+                    - cell "Add Neoforge artifacts to build" [ref=e195]:
+                      - link "Add Neoforge artifacts to build" [ref=e198] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/bbaa3ad78cd5fbf60a9c76588cc803630fc811e7
+                    - cell "Sep 1, 20258 months ago" [ref=e199]:
+                      - generic [ref=e200]: Sep 1, 20258 months ago
+                  - row "certificates, (Directory) add certificates Feb 10, 20242 years ago" [ref=e201]:
+                    - cell "certificates, (Directory)" [ref=e202]:
+                      - generic [ref=e203]:
+                        - img [ref=e204]
+                        - link "certificates, (Directory)" [ref=e209] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/tree/1.20/certificates
+                          - text: certificates
+                    - cell "add certificates" [ref=e210]:
+                      - link "add certificates" [ref=e213] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/8a25971fe6e5e3937a66621f250ad1e34ea48648
+                    - cell "Feb 10, 20242 years ago" [ref=e214]:
+                      - generic [ref=e215]: Feb 10, 20242 years ago
+                  - 'row "common, (Directory) Merge pull request #462 from Bitslayn/light-crash-fix Mar 30, 20263 weeks ago" [ref=e216]':
+                    - cell "common, (Directory)" [ref=e217]:
+                      - generic [ref=e218]:
+                        - img [ref=e219]
+                        - link "common, (Directory)" [ref=e224] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/tree/1.20/common
+                          - text: common
+                    - 'cell "Merge pull request #462 from Bitslayn/light-crash-fix" [ref=e225]':
+                      - generic [ref=e227]:
+                        - link "Merge pull request" [ref=e228] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/commit/532d720152f7c4d4ba95f2637401558da5b18305
+                        - link "#462" [ref=e229] [cursor=pointer]:
+                          - /url: https://github.com/FiguraMC/Figura/pull/462
+                        - link "from Bitslayn/light-crash-fix" [ref=e230] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/commit/532d720152f7c4d4ba95f2637401558da5b18305
+                    - cell "Mar 30, 20263 weeks ago" [ref=e231]:
+                      - generic [ref=e232]: Mar 30, 20263 weeks ago
+                  - row "fabric, (Directory) Report a dependency error if v5addon is installed Dec 19, 20254 months ago" [ref=e233]:
+                    - cell "fabric, (Directory)" [ref=e234]:
+                      - generic [ref=e235]:
+                        - img [ref=e236]
+                        - link "fabric, (Directory)" [ref=e241] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/tree/1.20/fabric
+                          - text: fabric
+                    - cell "Report a dependency error if v5addon is installed" [ref=e242]:
+                      - link "Report a dependency error if v5addon is installed" [ref=e245] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/9ec65807153930695baffc4d8ae8241227bea7c7
+                    - cell "Dec 19, 20254 months ago" [ref=e246]:
+                      - generic [ref=e247]: Dec 19, 20254 months ago
+                  - row "forge, (Directory) Merge branch '1.20' into bbv5 Jan 17, 20263 months ago" [ref=e248]:
+                    - cell "forge, (Directory)" [ref=e249]:
+                      - generic [ref=e250]:
+                        - img [ref=e251]
+                        - link "forge, (Directory)" [ref=e256] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/tree/1.20/forge
+                          - text: forge
+                    - cell "Merge branch '1.20' into bbv5" [ref=e257]:
+                      - link "Merge branch '1.20' into bbv5" [ref=e260] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/9377871b9f20aa2a50679ff1c190e2b19510933f
+                    - cell "Jan 17, 20263 months ago" [ref=e261]:
+                      - generic [ref=e262]: Jan 17, 20263 months ago
+                  - row "gradle/wrapper, (Directory) Commands gaming (wip) Nov 6, 20242 years ago" [ref=e263]:
+                    - cell "gradle/wrapper, (Directory)" [ref=e264]:
+                      - generic [ref=e265]:
+                        - img [ref=e266]
+                        - link "gradle/wrapper, (Directory)" [ref=e271] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/tree/1.20/gradle/wrapper
+                          - text: gradle/wrapper
+                    - cell "Commands gaming (wip)" [ref=e272]:
+                      - link "Commands gaming (wip)" [ref=e275] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/f77d17c27c78e85b3c4d1dfc696b063e983df6ec
+                    - cell "Nov 6, 20242 years ago" [ref=e276]:
+                      - generic [ref=e277]: Nov 6, 20242 years ago
+                  - 'row "server-common, (Directory) Merge pull request #455 from penguinencounter/fsb/sync Dec 17, 20254 months ago" [ref=e278]':
+                    - cell "server-common, (Directory)" [ref=e279]:
+                      - generic [ref=e280]:
+                        - img [ref=e281]
+                        - link "server-common, (Directory)" [ref=e286] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/tree/1.20/server-common
+                          - text: server-common
+                    - 'cell "Merge pull request #455 from penguinencounter/fsb/sync" [ref=e287]':
+                      - generic [ref=e289]:
+                        - link "Merge pull request" [ref=e290] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/commit/baef1399683d322ac626c4a68f3d5681d9e25c85
+                        - link "#455" [ref=e291] [cursor=pointer]:
+                          - /url: https://github.com/FiguraMC/Figura/pull/455
+                        - link "from penguinencounter/fsb/sync" [ref=e292] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/commit/baef1399683d322ac626c4a68f3d5681d9e25c85
+                    - cell "Dec 17, 20254 months ago" [ref=e293]:
+                      - generic [ref=e294]: Dec 17, 20254 months ago
+                  - row "spigot, (Directory) Fine-grained control of Rate, size and count limits using meta permis… Jun 21, 202510 months ago" [ref=e295]:
+                    - cell "spigot, (Directory)" [ref=e296]:
+                      - generic [ref=e297]:
+                        - img [ref=e298]
+                        - link "spigot, (Directory)" [ref=e303] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/tree/1.20/spigot
+                          - text: spigot
+                    - cell "Fine-grained control of Rate, size and count limits using meta permis…" [ref=e304]:
+                      - link "Fine-grained control of Rate, size and count limits using meta permis…" [ref=e307] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/7a904411bfec48afaeca52b4ea0e9f1413b7317d
+                    - cell "Jun 21, 202510 months ago" [ref=e308]:
+                      - generic [ref=e309]: Jun 21, 202510 months ago
+                  - row ".gitignore, (File) Final dependency check-ups. Aug 3, 20233 years ago" [ref=e310]:
+                    - cell ".gitignore, (File)" [ref=e311]:
+                      - generic [ref=e312]:
+                        - img [ref=e313]
+                        - link ".gitignore, (File)" [ref=e318] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/.gitignore
+                          - text: .gitignore
+                    - cell "Final dependency check-ups." [ref=e319]:
+                      - link "Final dependency check-ups." [ref=e322] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/c37ec92341c792715f2744c5821a1c4f2a754331
+                    - cell "Aug 3, 20233 years ago" [ref=e323]:
+                      - generic [ref=e324]: Aug 3, 20233 years ago
+                  - row ".gitpod.Dockerfile, (File) Ensure the JDK is defaulted in shell. Jan 21, 20242 years ago" [ref=e325]:
+                    - cell ".gitpod.Dockerfile, (File)" [ref=e326]:
+                      - generic [ref=e327]:
+                        - img [ref=e328]
+                        - link ".gitpod.Dockerfile, (File)" [ref=e333] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/.gitpod.Dockerfile
+                          - text: .gitpod.Dockerfile
+                    - cell "Ensure the JDK is defaulted in shell." [ref=e334]:
+                      - link "Ensure the JDK is defaulted in shell." [ref=e337] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/0b9d9af339b67e7c0169a296885e39a806d53d70
+                    - cell "Jan 21, 20242 years ago" [ref=e338]:
+                      - generic [ref=e339]: Jan 21, 20242 years ago
+                  - row ".gitpod.yml, (File) Document the CI scripts, Polish update-base script a bit. Nov 1, 20233 years ago" [ref=e340]:
+                    - cell ".gitpod.yml, (File)" [ref=e341]:
+                      - generic [ref=e342]:
+                        - img [ref=e343]
+                        - link ".gitpod.yml, (File)" [ref=e348] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/.gitpod.yml
+                          - text: .gitpod.yml
+                    - cell "Document the CI scripts, Polish update-base script a bit." [ref=e349]:
+                      - link "Document the CI scripts, Polish update-base script a bit." [ref=e352] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/4ab8a53da7540fe29b60ba24e17486cd9c13ee90
+                    - cell "Nov 1, 20233 years ago" [ref=e353]:
+                      - generic [ref=e354]: Nov 1, 20233 years ago
+                  - row "CONTRIBUTING.md, (File) update discord links Jan 20, 20242 years ago" [ref=e355]:
+                    - cell "CONTRIBUTING.md, (File)" [ref=e356]:
+                      - generic [ref=e357]:
+                        - img [ref=e358]
+                        - link "CONTRIBUTING.md, (File)" [ref=e363] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/CONTRIBUTING.md
+                          - text: CONTRIBUTING.md
+                    - cell "update discord links" [ref=e364]:
+                      - link "update discord links" [ref=e367] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/a025b6abb23a7764fd2736a54ac8b7b6ef3407f0
+                    - cell "Jan 20, 20242 years ago" [ref=e368]:
+                      - generic [ref=e369]: Jan 20, 20242 years ago
+                  - row "CREDITS, (File) Update CREDITS Dec 12, 20233 years ago" [ref=e370]:
+                    - cell "CREDITS, (File)" [ref=e371]:
+                      - generic [ref=e372]:
+                        - img [ref=e373]
+                        - link "CREDITS, (File)" [ref=e378] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/CREDITS
+                          - text: CREDITS
+                    - cell "Update CREDITS" [ref=e379]:
+                      - link "Update CREDITS" [ref=e382] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/a7b6b0c9c34413d01334172341fae4fb07ec65a7
+                    - cell "Dec 12, 20233 years ago" [ref=e383]:
+                      - generic [ref=e384]: Dec 12, 20233 years ago
+                  - row "LICENSE.md, (File) Change to PolyForm Noncommercial License 1.0.0 Dec 15, 20242 years ago" [ref=e385]:
+                    - cell "LICENSE.md, (File)" [ref=e386]:
+                      - generic [ref=e387]:
+                        - img [ref=e388]
+                        - link "LICENSE.md, (File)" [ref=e393] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/LICENSE.md
+                          - text: LICENSE.md
+                    - cell "Change to PolyForm Noncommercial License 1.0.0" [ref=e394]:
+                      - link "Change to PolyForm Noncommercial License 1.0.0" [ref=e397] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/3d3198559f70db47d0e3ea18e8edd4bacfb4d9b2
+                    - cell "Dec 15, 20242 years ago" [ref=e398]:
+                      - generic [ref=e399]: Dec 15, 20242 years ago
+                  - row "README.md, (File) Add NeoForge badge Dec 14, 20242 years ago" [ref=e400]:
+                    - cell "README.md, (File)" [ref=e401]:
+                      - generic [ref=e402]:
+                        - img [ref=e403]
+                        - link "README.md, (File)" [ref=e408] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/README.md
+                          - text: README.md
+                    - cell "Add NeoForge badge" [ref=e409]:
+                      - link "Add NeoForge badge" [ref=e412] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/7afeb6a2f7635cfbad87ec65fe116cd3cfd4cdaa
+                    - cell "Dec 14, 20242 years ago" [ref=e413]:
+                      - generic [ref=e414]: Dec 14, 20242 years ago
+                  - 'row "build.gradle, (File) Merge pull request #239 from lexize/fsb Feb 25, 2025last year" [ref=e415]':
+                    - cell "build.gradle, (File)" [ref=e416]:
+                      - generic [ref=e417]:
+                        - img [ref=e418]
+                        - link "build.gradle, (File)" [ref=e423] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/build.gradle
+                          - text: build.gradle
+                    - 'cell "Merge pull request #239 from lexize/fsb" [ref=e424]':
+                      - generic [ref=e426]:
+                        - link "Merge pull request" [ref=e427] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/commit/081b635919781509d58b70f461a1d782996266f9
+                        - link "#239" [ref=e428] [cursor=pointer]:
+                          - /url: https://github.com/FiguraMC/Figura/pull/239
+                        - link "from lexize/fsb" [ref=e429] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/commit/081b635919781509d58b70f461a1d782996266f9
+                    - cell "Feb 25, 2025last year" [ref=e430]:
+                      - generic [ref=e431]: Feb 25, 2025last year
+                  - 'row "gradle.properties, (File) fix: fabric loader version 0.15.10 Feb 25, 2025last year" [ref=e432]':
+                    - cell "gradle.properties, (File)" [ref=e433]:
+                      - generic [ref=e434]:
+                        - img [ref=e435]
+                        - link "gradle.properties, (File)" [ref=e440] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/gradle.properties
+                          - text: gradle.properties
+                    - 'cell "fix: fabric loader version 0.15.10" [ref=e441]':
+                      - 'link "fix: fabric loader version 0.15.10" [ref=e444] [cursor=pointer]':
+                        - /url: /FiguraMC/Figura/commit/94ac525d84c55abcc73906a303d19652ae9480b2
+                    - cell "Feb 25, 2025last year" [ref=e445]:
+                      - generic [ref=e446]: Feb 25, 2025last year
+                  - row "gradlew, (File) Make SDKMAN's JDK installer efficient, Gradle 8.3. Sep 17, 20233 years ago" [ref=e447]:
+                    - cell "gradlew, (File)" [ref=e448]:
+                      - generic [ref=e449]:
+                        - img [ref=e450]
+                        - link "gradlew, (File)" [ref=e455] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/gradlew
+                          - text: gradlew
+                    - cell "Make SDKMAN's JDK installer efficient, Gradle 8.3." [ref=e456]:
+                      - link "Make SDKMAN's JDK installer efficient, Gradle 8.3." [ref=e459] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/82800f551a2166e38aa5cf372e274db39530ba7c
+                    - cell "Sep 17, 20233 years ago" [ref=e460]:
+                      - generic [ref=e461]: Sep 17, 20233 years ago
+                  - row "gradlew.bat, (File) Make SDKMAN's JDK installer efficient, Gradle 8.3. Sep 17, 20233 years ago" [ref=e462]:
+                    - cell "gradlew.bat, (File)" [ref=e463]:
+                      - generic [ref=e464]:
+                        - img [ref=e465]
+                        - link "gradlew.bat, (File)" [ref=e470] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/gradlew.bat
+                          - text: gradlew.bat
+                    - cell "Make SDKMAN's JDK installer efficient, Gradle 8.3." [ref=e471]:
+                      - link "Make SDKMAN's JDK installer efficient, Gradle 8.3." [ref=e474] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/82800f551a2166e38aa5cf372e274db39530ba7c
+                    - cell "Sep 17, 20233 years ago" [ref=e475]:
+                      - generic [ref=e476]: Sep 17, 20233 years ago
+                  - row "jitpack.yml, (File) Ensure the JDK is defaulted in shell. Jan 21, 20242 years ago" [ref=e477]:
+                    - cell "jitpack.yml, (File)" [ref=e478]:
+                      - generic [ref=e479]:
+                        - img [ref=e480]
+                        - link "jitpack.yml, (File)" [ref=e485] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/jitpack.yml
+                          - text: jitpack.yml
+                    - cell "Ensure the JDK is defaulted in shell." [ref=e486]:
+                      - link "Ensure the JDK is defaulted in shell." [ref=e489] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/0b9d9af339b67e7c0169a296885e39a806d53d70
+                    - cell "Jan 21, 20242 years ago" [ref=e490]:
+                      - generic [ref=e491]: Jan 21, 20242 years ago
+                  - row "settings.gradle, (File) Huh it actually works Oct 29, 20242 years ago" [ref=e492]:
+                    - cell "settings.gradle, (File)" [ref=e493]:
+                      - generic [ref=e494]:
+                        - img [ref=e495]
+                        - link "settings.gradle, (File)" [ref=e500] [cursor=pointer]:
+                          - /url: /FiguraMC/Figura/blob/1.20/settings.gradle
+                          - text: settings.gradle
+                    - cell "Huh it actually works" [ref=e501]:
+                      - link "Huh it actually works" [ref=e504] [cursor=pointer]:
+                        - /url: /FiguraMC/Figura/commit/d1b130b05dade0dfa3607966d28821162cbc456b
+                    - cell "Oct 29, 20242 years ago" [ref=e505]:
+                      - generic [ref=e506]: Oct 29, 20242 years ago
+            - generic [ref=e508]:
+              - generic [ref=e509]:
+                - heading "Repository files navigation" [level=2] [ref=e510]
+                - navigation "Repository files" [ref=e511]:
+                  - list [ref=e512]:
+                    - listitem [ref=e513]:
+                      - link "README" [ref=e514] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e516]
+                        - generic [ref=e518]: README
+                    - listitem [ref=e519]:
+                      - link "Contributing" [ref=e520] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e522]
+                        - generic [ref=e524]: Contributing
+                    - listitem [ref=e525]:
+                      - link "License" [ref=e526] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e528]
+                        - generic [ref=e530]: License
+                - button "Outline" [ref=e531] [cursor=pointer]:
+                  - img [ref=e532]
+              - article [ref=e535]:
+                - generic [ref=e536]:
+                  - heading "Figura" [level=1] [ref=e537]
+                  - 'link "Permalink: Figura" [ref=e538] [cursor=pointer]':
+                    - /url: "#-figura-"
+                    - img [ref=e539]
+                - paragraph [ref=e541]:
+                  - link "fabric" [ref=e542] [cursor=pointer]:
+                    - /url: https://camo.githubusercontent.com/eb7ba12be01479b46cde5a308fa30f3ee168e3e6a8f7a0798f17b657cc3798af/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f6e706d2f40696e746572677261762f646576696e732d62616467657340332f6173736574732f636f7a792f737570706f727465642f6661627269635f766563746f722e737667
+                    - img "fabric" [ref=e543]
+                  - link "forge" [ref=e544] [cursor=pointer]:
+                    - /url: https://camo.githubusercontent.com/c7cdd85cfcd56ba788bddcf0b28ce12c7ec237ef76213c03be6ef5aaf875fc83/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f6e706d2f40696e746572677261762f646576696e732d62616467657340332f6173736574732f636f7a792f737570706f727465642f666f7267655f766563746f722e737667
+                    - img "forge" [ref=e545]
+                  - link "quilt" [ref=e546] [cursor=pointer]:
+                    - /url: https://camo.githubusercontent.com/db2c5b60dfb6ec04c01eb8d78e9f59a6b125b6932019eb7eb9342c97a4af548f/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f6e706d2f40696e746572677261762f646576696e732d62616467657340332f6173736574732f636f7a792f737570706f727465642f7175696c745f766563746f722e737667
+                    - img "quilt" [ref=e547]
+                  - link "neoforge" [ref=e548] [cursor=pointer]:
+                    - /url: https://camo.githubusercontent.com/153fe28020b57bdafc3a749a763b4dfecdca7f5f8d2e44478f5bfc05cffd2add/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f4879706572626f6c652d446576732f766563746f7273406e656f666f7267655f6261646765732f6173736574732f636f7a792f737570706f727465642f6e656f666f7267655f766563746f722e737667
+                    - img "neoforge" [ref=e549]
+                - generic [ref=e550]:
+                  - heading "A Minecraft Java client mod that allows you to extensively customize your player model and have other players see your Avatar without requiring any server mods!" [level=2] [ref=e551]
+                  - 'link "Permalink: A Minecraft Java client mod that allows you to extensively customize your player model and have other players see your Avatar without requiring any server mods!" [ref=e552] [cursor=pointer]':
+                    - /url: "#a-minecraft-java-client-mod-that-allows-you-to-extensively-customize-your-player-model-and-have-other-players-see-your-avatar-without-requiring-any-server-mods"
+                    - img [ref=e553]
+                - paragraph [ref=e555]:
+                  - link "blockbench" [ref=e556] [cursor=pointer]:
+                    - /url: https://raw.githubusercontent.com/FiguraMC/Figura/HEAD/.github/assets/blockbench.png
+                    - img "blockbench" [ref=e557]
+                - generic [ref=e558]:
+                  - heading "Utilizing the full potential of Blockbench." [level=2] [ref=e559]:
+                    - text: Utilizing the full potential of
+                    - link "Blockbench" [ref=e560] [cursor=pointer]:
+                      - /url: https://www.blockbench.net/
+                    - text: .
+                  - 'link "Permalink: Utilizing the full potential of Blockbench." [ref=e561] [cursor=pointer]':
+                    - /url: "#utilizing-the-full-potential-of-blockbench"
+                    - img [ref=e562]
+                - paragraph [ref=e564]:
+                  - link "animation" [ref=e565] [cursor=pointer]:
+                    - /url: https://raw.githubusercontent.com/FiguraMC/Figura/HEAD/.github/assets/anims.png
+                    - img "animation" [ref=e566]
+                - paragraph [ref=e567]:
+                  - link "mesh" [ref=e568] [cursor=pointer]:
+                    - /url: https://raw.githubusercontent.com/FiguraMC/Figura/HEAD/.github/assets/mesh_e.png
+                    - img "mesh" [ref=e569]
+                - generic [ref=e570]:
+                  - heading "Not only can you customize your model but Figura also has an optional Lua API to make your own scripts!" [level=2] [ref=e571]:
+                    - text: Not only can you customize your model but Figura also has an optional
+                    - link "Lua" [ref=e572] [cursor=pointer]:
+                      - /url: https://www.lua.org/
+                    - text: API to make your own scripts!
+                  - 'link "Permalink: Not only can you customize your model but Figura also has an optional Lua API to make your own scripts!" [ref=e573] [cursor=pointer]':
+                    - /url: "#not-only-can-you-customize-your-model-but-figura-also-has-an-optional-lua-api-to-make-your-own-scripts"
+                    - img [ref=e574]
+                - paragraph [ref=e576]:
+                  - link "lua" [ref=e577] [cursor=pointer]:
+                    - /url: https://raw.githubusercontent.com/FiguraMC/Figura/HEAD/.github/assets/lua.png
+                    - img "lua" [ref=e578]
+                - generic [ref=e579]:
+                  - heading "What if someone is invisible, or very small? Take advantage of Figura's robust permission system!" [level=2] [ref=e580]
+                  - 'link "Permalink: What if someone is invisible, or very small? Take advantage of Figura''s robust permission system!" [ref=e581] [cursor=pointer]':
+                    - /url: "#what-if-someone-is-invisible-or-very-small-take-advantage-of-figuras-robust-permission-system"
+                    - img [ref=e582]
+                - paragraph [ref=e584]:
+                  - link "perms" [ref=e585] [cursor=pointer]:
+                    - /url: https://raw.githubusercontent.com/FiguraMC/Figura/HEAD/.github/assets/perms.png
+                    - img "perms" [ref=e586]
+                - generic [ref=e587]:
+                  - heading "We also have some extras, like:" [level=2] [ref=e588]
+                  - 'link "Permalink: We also have some extras, like:" [ref=e589] [cursor=pointer]':
+                    - /url: "#we-also-have-some-extras-like"
+                    - img [ref=e590]
+                - paragraph [ref=e592]:
+                  - link "Qol" [ref=e593] [cursor=pointer]:
+                    - /url: https://raw.githubusercontent.com/FiguraMC/Figura/HEAD/.github/assets/wheel.png
+                    - img "Qol" [ref=e594]
+                - paragraph [ref=e595]:
+                  - link "skullemoji" [ref=e596] [cursor=pointer]:
+                    - /url: https://raw.githubusercontent.com/FiguraMC/Figura/HEAD/.github/assets/skull.png
+                    - img "skullemoji" [ref=e597]
+                - paragraph [ref=e598]:
+                  - text: Meet us on the
+                  - link "FiguraMC Discord Server" [ref=e599] [cursor=pointer]:
+                    - /url: https://discord.figuramc.org/
+                  - text: for more info and help!
+                - paragraph [ref=e600]:
+                  - text: Help translate Figura to your native language on
+                  - link "Weblate" [ref=e601] [cursor=pointer]:
+                    - /url: https://translate.figuramc.org/projects/figuramc/figura/
+                  - text: "!"
+                  - link "translate" [ref=e602] [cursor=pointer]:
+                    - /url: https://camo.githubusercontent.com/50a84b213233e47d4232a4ea6591e4ba3a5018041521ba696707b4fcf81129b2/68747470733a2f2f7472616e736c6174652e6669677572616d632e6f72672f7769646765742f6669677572616d632f6669677572612f686f72697a6f6e74616c2d6175746f2e737667
+                    - img "translate" [ref=e603]
+                - generic [ref=e604]:
+                  - heading "Links" [level=1] [ref=e605]
+                  - 'link "Permalink: Links" [ref=e606] [cursor=pointer]':
+                    - /url: "#links"
+                    - img [ref=e607]
+                - generic [ref=e609]:
+                  - 'heading "Social: discord website" [level=2] [ref=e610]':
+                    - text: "Social:"
+                    - link "discord" [ref=e611] [cursor=pointer]:
+                      - /url: https://discord.figuramc.org/
+                      - img "discord" [ref=e612]
+                    - link "website" [ref=e613] [cursor=pointer]:
+                      - /url: https://figuramc.org/
+                      - img "website" [ref=e614]
+                  - 'link "Permalink: Social:" [ref=e615] [cursor=pointer]':
+                    - /url: "#social------"
+                    - img [ref=e616]
+                - generic [ref=e618]:
+                  - 'heading "Download: modrinth curseforge github" [level=2] [ref=e619]':
+                    - text: "Download:"
+                    - link "modrinth" [ref=e620] [cursor=pointer]:
+                      - /url: https://modrinth.com/mod/figura
+                      - img "modrinth" [ref=e621]
+                    - link "curseforge" [ref=e622] [cursor=pointer]:
+                      - /url: https://curseforge.com/minecraft/mc-mods/figura
+                      - img "curseforge" [ref=e623]
+                    - link "github" [ref=e624] [cursor=pointer]:
+                      - /url: https://github.com/FiguraMC/Figura/releases/latest
+                      - img "github" [ref=e625]
+                  - 'link "Permalink: Download:" [ref=e626] [cursor=pointer]':
+                    - /url: "#download---------"
+                    - img [ref=e627]
+                - generic [ref=e629]:
+                  - 'heading "Donate: collective kofi" [level=2] [ref=e630]':
+                    - text: "Donate:"
+                    - link "collective" [ref=e631] [cursor=pointer]:
+                      - /url: https://opencollective.com/figura
+                      - img "collective" [ref=e632]
+                    - link "kofi" [ref=e633] [cursor=pointer]:
+                      - /url: https://ko-fi.com/skyrina
+                      - img "kofi" [ref=e634]
+                  - 'link "Permalink: Donate:" [ref=e635] [cursor=pointer]':
+                    - /url: "#donate------"
+                    - img [ref=e636]
+                - generic [ref=e638]:
+                  - 'heading "Resources: wiki weblate github-contrib" [level=2] [ref=e639]':
+                    - text: "Resources:"
+                    - link "wiki" [ref=e640] [cursor=pointer]:
+                      - /url: https://wiki.figuramc.org/
+                      - img "wiki" [ref=e641]
+                    - link "weblate" [ref=e642] [cursor=pointer]:
+                      - /url: https://translate.figuramc.org/projects/figuramc/figura/
+                      - img "weblate" [ref=e643]
+                    - link "github-contrib" [ref=e644] [cursor=pointer]:
+                      - /url: https://github.com/FiguraMC/Figura/blob/HEAD/CONTRIBUTING.md
+                      - img "github-contrib" [ref=e645]
+                  - 'link "Permalink: Resources:" [ref=e646] [cursor=pointer]':
+                    - /url: "#resources---------"
+                    - img [ref=e647]
+                - generic [ref=e649]:
+                  - heading "FAQ" [level=1] [ref=e650]
+                  - 'link "Permalink: FAQ" [ref=e651] [cursor=pointer]':
+                    - /url: "#faq"
+                    - img [ref=e652]
+                - generic [ref=e654]:
+                  - heading "• My avatars don't appear in the Figura list, even though they're in the correct folder?" [level=3] [ref=e655]
+                  - 'link "Permalink: • My avatars don''t appear in the Figura list, even though they''re in the correct folder?" [ref=e656] [cursor=pointer]':
+                    - /url: "#-my-avatars-dont-appear-in-the-figura-list-even-though-theyre-in-the-correct-folder"
+                    - img [ref=e657]
+                - blockquote [ref=e659]:
+                  - paragraph [ref=e660]: Check if your avatar has a file called "avatar.json" (don't forget to check file extensions)
+                  - paragraph [ref=e661]: This file can be completely empty, it just needs to be present for Figura to recognise it as an avatar
+                - generic [ref=e662]:
+                  - heading "• How do I hide the vanilla model?" [level=3] [ref=e663]
+                  - 'link "Permalink: • How do I hide the vanilla model?" [ref=e664] [cursor=pointer]':
+                    - /url: "#-how-do-i-hide-the-vanilla-model"
+                    - img [ref=e665]
+                - blockquote [ref=e667]:
+                  - paragraph [ref=e668]: "At the top of your script, put:"
+                  - paragraph [ref=e669]: "• To hide literally everything (player, armor, elytra, held items):"
+                  - generic [ref=e670]:
+                    - generic [ref=e671]: vanilla_model.ALL:setVisible(false)
+                    - button "Copy" [ref=e673] [cursor=pointer]:
+                      - img [ref=e674]
+                  - paragraph [ref=e677]: "• To hide only the player:"
+                  - generic [ref=e678]:
+                    - generic [ref=e679]: vanilla_model.PLAYER:setVisible(false)
+                    - button "Copy" [ref=e681] [cursor=pointer]:
+                      - img [ref=e682]
+                  - paragraph [ref=e685]: "• To hide only armor:"
+                  - generic [ref=e686]:
+                    - generic [ref=e687]: vanilla_model.ARMOR:setVisible(false)
+                    - button "Copy" [ref=e689] [cursor=pointer]:
+                      - img [ref=e690]
+                  - paragraph [ref=e693]: • To hide other, or specific parts, you can check the in-game docs
+                - generic [ref=e694]:
+                  - heading "• How do I play a Blockbench Animation?" [level=3] [ref=e695]
+                  - 'link "Permalink: • How do I play a Blockbench Animation?" [ref=e696] [cursor=pointer]':
+                    - /url: "#-how-do-i-play-a-blockbench-animation"
+                    - img [ref=e697]
+                - blockquote [ref=e699]:
+                  - paragraph [ref=e700]: "Simply put this code in your script:"
+                  - generic [ref=e701]:
+                    - generic [ref=e702]: animations.modelName.animationName:play()
+                    - button "Copy" [ref=e704] [cursor=pointer]:
+                      - img [ref=e705]
+                  - paragraph [ref=e708]: "Where:"
+                  - paragraph [ref=e709]:
+                    - text: "\""
+                    - code [ref=e710]: animations
+                    - text: "\" is the global table which contains all animations"
+                  - paragraph [ref=e711]:
+                    - text: "\""
+                    - code [ref=e712]: modelName
+                    - text: "\" is the name of the model you are accessing the animation from"
+                  - paragraph [ref=e713]:
+                    - text: "\""
+                    - code [ref=e714]: animationName
+                    - text: "\" is, as the name says, the animation name"
+                - generic [ref=e715]:
+                  - heading "• What are Pings and how do I use them?" [level=3] [ref=e716]
+                  - 'link "Permalink: • What are Pings and how do I use them?" [ref=e717] [cursor=pointer]':
+                    - /url: "#-what-are-pings-and-how-do-i-use-them"
+                    - img [ref=e718]
+                - blockquote [ref=e720]:
+                  - paragraph [ref=e721]: Pings are Lua functions that are executed for everyone running your avatar's script
+                  - paragraph [ref=e722]: Pings are sent from the host player, and can be used to sync things like keypresses or action wheel actions
+                  - paragraph [ref=e723]: "To create a ping:"
+                  - generic [ref=e724]:
+                    - generic [ref=e725]:
+                      - text: function pings.myPing(arg1, arg2)
+                      - generic [ref=e726]: "-- code to run once the ping is called"
+                      - text: end
+                    - button "Copy" [ref=e728] [cursor=pointer]:
+                      - img [ref=e729]
+                  - paragraph [ref=e732]: "And to execute the ping, it's as simple as calling a lua function:"
+                  - generic [ref=e733]:
+                    - generic [ref=e734]:
+                      - text: pings.myPing(
+                      - generic [ref=e735]: "\"Hello\""
+                      - text: ","
+                      - generic [ref=e736]: "\"World\""
+                      - text: )
+                    - button "Copy" [ref=e738] [cursor=pointer]:
+                      - img [ref=e739]
+                  - paragraph [ref=e742]: Note that pings are limited in their content and size, and are rate-limited
+                - generic [ref=e743]:
+                  - heading "• How can I add an emissive texture?" [level=3] [ref=e744]
+                  - 'link "Permalink: • How can I add an emissive texture?" [ref=e745] [cursor=pointer]':
+                    - /url: "#-how-can-i-add-an-emissive-texture"
+                    - img [ref=e746]
+                - blockquote [ref=e748]:
+                  - paragraph [ref=e749]:
+                    - text: Name the texture the same as the non-emissive counterpart, then add
+                    - code [ref=e750]: _e
+                    - text: to the end
+                  - paragraph [ref=e751]:
+                    - text: And don't forget to set the places you don't want to glow to
+                    - strong [ref=e752]: transparent black
+                    - text: (#00000000), to also ensure compatibility with shader mods
+                - generic [ref=e753]:
+                  - heading "• My emissives doesn't glow, nor have bloom with Iris/OptiFine shaders?" [level=3] [ref=e754]
+                  - 'link "Permalink: • My emissives doesn''t glow, nor have bloom with Iris/OptiFine shaders?" [ref=e755] [cursor=pointer]':
+                    - /url: "#-my-emissives-doesnt-glow-nor-have-bloom-with-irisoptifine-shaders"
+                    - img [ref=e756]
+                - blockquote [ref=e758]:
+                  - paragraph [ref=e759]: Since some shaders do not support emissives, a compatibility setting (default on) will change the render type of emissive textures to render them at it were fullbright, however that can lead to some unintended results
+                  - paragraph [ref=e760]:
+                    - text: You can force your avatar to use the correct emissive render type by using the render type
+                    - code [ref=e761]: EYES
+                    - text: on your model
+                - generic [ref=e762]:
+                  - heading "• How can I use Figura with OptiFine?" [level=3] [ref=e763]
+                  - 'link "Permalink: • How can I use Figura with OptiFine?" [ref=e764] [cursor=pointer]':
+                    - /url: "#-how-can-i-use-figura-with-optifine"
+                    - img [ref=e765]
+                - blockquote [ref=e767]:
+                  - paragraph [ref=e768]: Figura will work with OptiFine but due to its closed source nature issues might arise, therefore we still recommend you try using Sodium+Iris (Fabric) or Rubidium+Oculus (Forge) instead
+                  - paragraph [ref=e769]:
+                    - text: Check out the full list of
+                    - link "alternatives" [ref=e770] [cursor=pointer]:
+                      - /url: https://lambdaurora.dev/optifine_alternatives/
+                - generic [ref=e771]:
+                  - heading "• Where can I find Avatars to download?" [level=3] [ref=e772]
+                  - 'link "Permalink: • Where can I find Avatars to download?" [ref=e773] [cursor=pointer]':
+                    - /url: "#-where-can-i-find-avatars-to-download"
+                    - img [ref=e774]
+                - blockquote [ref=e776]:
+                  - paragraph [ref=e777]: For now, you can find Avatars in the showcase channel in the official Discord server (A Web Based and In-Game browser is in the works!)
+                - generic [ref=e778]:
+                  - heading "• My Minecraft is cracked (non-premium/non-original) or I'm trying to join a cracked offline mode server, why can't I use Figura?" [level=3] [ref=e779]
+                  - 'link "Permalink: • My Minecraft is cracked (non-premium/non-original) or I''m trying to join a cracked offline mode server, why can''t I use Figura?" [ref=e780] [cursor=pointer]':
+                    - /url: "#-my-minecraft-is-cracked-non-premiumnon-original-or-im-trying-to-join-a-cracked-offline-mode-server-why-cant-i-use-figura"
+                    - img [ref=e781]
+                - blockquote [ref=e783]:
+                  - paragraph [ref=e784]: Figura uses your account's UUID and your Mojang authentication as a way to prove you own that account, avoiding unwanted / malicious uploads
+                  - paragraph [ref=e785]: Non-premium Minecraft accounts don't authenticate with Mojang, and Offline mode servers don't report working UUID's, as such can neither upload nor download Figura avatars
+                - generic [ref=e786]:
+                  - heading "Community Resources" [level=2] [ref=e787]
+                  - 'link "Permalink: Community Resources" [ref=e788] [cursor=pointer]':
+                    - /url: "#community-resources"
+                    - img [ref=e789]
+                - list [ref=e791]:
+                  - listitem [ref=e792]:
+                    - paragraph [ref=e793]:
+                      - text: Want to learn / get into Lua scripting? check out this
+                      - link "Lua quickstart" [ref=e794] [cursor=pointer]:
+                        - /url: https://manuel-3.github.io/lua-quickstart
+                      - text: made by Manuel.
+                  - listitem [ref=e795]:
+                    - paragraph [ref=e796]:
+                      - text: If you are tired of having to be in-game to look in the wiki, applejuice hosts the wiki as a
+                      - link "website." [ref=e797] [cursor=pointer]:
+                        - /url: https://applejuiceyy.github.io/figs/
+                  - listitem [ref=e798]:
+                    - paragraph [ref=e799]:
+                      - text: Are you new to Figura and are looking for a video tutorial about how everything works? You should probably watch Chloe's
+                      - link "Figura tutorial series" [ref=e800] [cursor=pointer]:
+                        - /url: https://www.youtube.com/playlist?list=PLNz7v2g2SFA8lOQUDS4z4-gIDLi_dWAhl
+                      - text: on YouTube.
+                  - listitem [ref=e801]:
+                    - paragraph [ref=e802]:
+                      - text: Do you use VSCode and wish Figura's documentation autocompleted in the editor? GrandpaScout saves the day with their
+                      - link "VSDocs." [ref=e803] [cursor=pointer]:
+                        - /url: https://github.com/GrandpaScout/FiguraRewriteVSDocs/wiki
+                  - listitem [ref=e804]:
+                    - paragraph [ref=e805]:
+                      - text: Katt has created a Blockbench extention which adds a special model format for Figura! Read more
+                      - link "here." [ref=e806] [cursor=pointer]:
+                        - /url: https://github.com/KitCat962/figura-format-bbplugin
+                      - text: "- Note. This plugin is available on the Blockbench plugin browser and should be installed from there."
+                  - listitem [ref=e807]:
+                    - paragraph [ref=e808]:
+                      - text: By searching "Figura" in the VSCode extention browser you can install Manuel's Figura
+                      - link "extension" [ref=e809] [cursor=pointer]:
+                        - /url: https://marketplace.visualstudio.com/items?itemName=Manuel-Underscore.figura
+                      - text: "! It adds multiple useful features including autocomplete for your model paths."
+        - generic [ref=e813]:
+          - generic [ref=e816]:
+            - heading "About" [level=2] [ref=e817]
+            - paragraph [ref=e818]: Extensively customize your character with Figura!
+            - generic [ref=e819]:
+              - img [ref=e820]
+              - link "modrinth.com/mod/figura" [ref=e823] [cursor=pointer]:
+                - /url: https://modrinth.com/mod/figura
+            - heading "Resources" [level=3] [ref=e824]
+            - link "Readme" [ref=e826] [cursor=pointer]:
+              - /url: "#readme-ov-file"
+              - img [ref=e827]
+              - text: Readme
+            - heading "License" [level=3] [ref=e829]
+            - link "View license" [ref=e831] [cursor=pointer]:
+              - /url: "#License-1-ov-file"
+              - img [ref=e832]
+              - text: View license
+            - heading "Contributing" [level=3] [ref=e834]
+            - link "Contributing" [ref=e836] [cursor=pointer]:
+              - /url: "#contributing-ov-file"
+              - img [ref=e837]
+              - text: Contributing
+            - link "Activity" [ref=e840] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/activity
+              - img [ref=e841]
+              - text: Activity
+            - link "Custom properties" [ref=e844] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/custom-properties
+              - img [ref=e845]
+              - text: Custom properties
+            - heading "Stars" [level=3] [ref=e847]
+            - link "474 stars" [ref=e849] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/stargazers
+              - img [ref=e850]
+              - strong [ref=e852]: "474"
+              - text: stars
+            - heading "Watchers" [level=3] [ref=e853]
+            - link "11 watching" [ref=e855] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/watchers
+              - img [ref=e856]
+              - strong [ref=e858]: "11"
+              - text: watching
+            - heading "Forks" [level=3] [ref=e859]
+            - link "123 forks" [ref=e861] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/forks
+              - img [ref=e862]
+              - strong [ref=e864]: "123"
+              - text: forks
+            - link "Report repository" [ref=e866] [cursor=pointer]:
+              - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2FFiguraMC%2FFigura&report=FiguraMC+%28user%29
+          - generic [ref=e868]:
+            - heading "Releases 11" [level=2] [ref=e869]:
+              - link "Releases 11" [ref=e870] [cursor=pointer]:
+                - /url: /FiguraMC/Figura/releases
+                - text: Releases
+                - generic "11" [ref=e871]
+            - link "0.1.5 Latest Feb 17, 2025on Feb 17, 2025" [ref=e872] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/releases/tag/0.1.5
+              - img [ref=e873]
+              - generic [ref=e875]:
+                - generic [ref=e876]:
+                  - generic [ref=e877]: 0.1.5
+                  - 'generic "Label: Latest" [ref=e878]': Latest
+                - generic [ref=e879]: Feb 17, 2025on Feb 17, 2025
+            - link "+ 10 releases" [ref=e881] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/releases
+          - generic [ref=e883]:
+            - heading "Sponsor this project" [level=2] [ref=e884]
+            - list
+            - list [ref=e885]:
+              - listitem [ref=e886]:
+                - img "open_collective" [ref=e888]
+                - link "opencollective.com/figura" [ref=e890] [cursor=pointer]:
+                  - /url: https://opencollective.com/figura
+                  - generic [ref=e891]:
+                    - text: opencollective.com/
+                    - strong [ref=e892]: figura
+              - listitem [ref=e893]:
+                - img "ko_fi" [ref=e895]
+                - link "ko-fi.com/skyrina" [ref=e897] [cursor=pointer]:
+                  - /url: https://ko-fi.com/skyrina
+                  - generic [ref=e898]:
+                    - text: ko-fi.com/
+                    - strong [ref=e899]: skyrina
+          - generic [ref=e901]:
+            - heading "Packages 4" [level=2] [ref=e902]:
+              - link "Packages 4" [ref=e903] [cursor=pointer]:
+                - /url: /orgs/FiguraMC/packages?repo_name=Figura
+                - text: Packages
+                - generic "4" [ref=e904]
+            - list [ref=e905]:
+              - listitem [ref=e906]:
+                - img [ref=e908]
+                - link "org.figuramc.figura-common-intermediary" [ref=e927] [cursor=pointer]:
+                  - /url: /FiguraMC/Figura/packages/1921191
+              - listitem [ref=e928]:
+                - img [ref=e930]
+                - link "org.figuramc.figura-fabric" [ref=e949] [cursor=pointer]:
+                  - /url: /FiguraMC/Figura/packages/1921192
+              - listitem [ref=e950]:
+                - img [ref=e952]
+                - link "org.figuramc.figura-common-mojmap" [ref=e971] [cursor=pointer]:
+                  - /url: /FiguraMC/Figura/packages/1921193
+              - listitem [ref=e972]:
+                - img [ref=e974]
+                - link "org.figuramc.figura-forge" [ref=e993] [cursor=pointer]:
+                  - /url: /FiguraMC/Figura/packages/1921194
+          - generic [ref=e995]:
+            - heading "Contributors 64" [level=2] [ref=e996]:
+              - link "Contributors 64" [ref=e997] [cursor=pointer]:
+                - /url: /FiguraMC/Figura/graphs/contributors
+                - text: Contributors
+                - generic "64" [ref=e998]
+            - list [ref=e999]:
+              - listitem [ref=e1000]:
+                - link "@Francy-chan" [ref=e1001] [cursor=pointer]:
+                  - /url: https://github.com/Francy-chan
+                  - img "@Francy-chan" [ref=e1002]
+              - listitem [ref=e1003]:
+                - link "@UnlikePaladin" [ref=e1004] [cursor=pointer]:
+                  - /url: https://github.com/UnlikePaladin
+                  - img "@UnlikePaladin" [ref=e1005]
+              - listitem [ref=e1006]:
+                - link "@TooManyLimits" [ref=e1007] [cursor=pointer]:
+                  - /url: https://github.com/TooManyLimits
+                  - img "@TooManyLimits" [ref=e1008]
+              - listitem [ref=e1009]:
+                - link "@lexize" [ref=e1010] [cursor=pointer]:
+                  - /url: https://github.com/lexize
+                  - img "@lexize" [ref=e1011]
+              - listitem [ref=e1012]:
+                - link "@KitCat962" [ref=e1013] [cursor=pointer]:
+                  - /url: https://github.com/KitCat962
+                  - img "@KitCat962" [ref=e1014]
+              - listitem [ref=e1015]:
+                - link "@penguinencounter" [ref=e1016] [cursor=pointer]:
+                  - /url: https://github.com/penguinencounter
+                  - img "@penguinencounter" [ref=e1017]
+              - listitem [ref=e1018]:
+                - link "@Covkie" [ref=e1019] [cursor=pointer]:
+                  - /url: https://github.com/Covkie
+                  - img "@Covkie" [ref=e1020]
+              - listitem [ref=e1021]:
+                - link "@Bitslayn" [ref=e1022] [cursor=pointer]:
+                  - /url: https://github.com/Bitslayn
+                  - img "@Bitslayn" [ref=e1023]
+              - listitem [ref=e1024]:
+                - link "@Evoloxi" [ref=e1025] [cursor=pointer]:
+                  - /url: https://github.com/Evoloxi
+                  - img "@Evoloxi" [ref=e1026]
+              - listitem [ref=e1027]:
+                - link "@aprilkenopsia" [ref=e1028] [cursor=pointer]:
+                  - /url: https://github.com/aprilkenopsia
+                  - img "@aprilkenopsia" [ref=e1029]
+              - listitem [ref=e1030]:
+                - link "@skyrina" [ref=e1031] [cursor=pointer]:
+                  - /url: https://github.com/skyrina
+                  - img "@skyrina" [ref=e1032]
+              - listitem [ref=e1033]:
+                - link "@omoflop" [ref=e1034] [cursor=pointer]:
+                  - /url: https://github.com/omoflop
+                  - img "@omoflop" [ref=e1035]
+              - listitem [ref=e1036]:
+                - link "@Kichura" [ref=e1037] [cursor=pointer]:
+                  - /url: https://github.com/Kichura
+                  - img "@Kichura" [ref=e1038]
+              - listitem [ref=e1039]:
+                - link "@superpowers04" [ref=e1040] [cursor=pointer]:
+                  - /url: https://github.com/superpowers04
+                  - img "@superpowers04" [ref=e1041]
+            - link "+ 50 contributors" [ref=e1043] [cursor=pointer]:
+              - /url: /FiguraMC/Figura/graphs/contributors
+          - generic [ref=e1045]:
+            - heading "Languages" [level=2] [ref=e1046]
+            - list [ref=e1050]:
+              - listitem [ref=e1051]:
+                - link "Java 100.0%" [ref=e1052] [cursor=pointer]:
+                  - /url: /FiguraMC/Figura/search?l=java
+                  - img [ref=e1053]
+                  - generic [ref=e1055]: Java
+                  - generic [ref=e1056]: 100.0%
+  - contentinfo [ref=e1058]:
+    - heading "Footer" [level=2] [ref=e1059]
+    - generic [ref=e1060]:
+      - generic [ref=e1061]:
+        - link "GitHub Homepage" [ref=e1062] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e1063]
+        - generic [ref=e1065]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e1066]:
+        - heading "Footer navigation" [level=3] [ref=e1067]
+        - list "Footer navigation" [ref=e1068]:
+          - listitem [ref=e1069]:
+            - link "Terms" [ref=e1070] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e1071]:
+            - link "Privacy" [ref=e1072] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e1073]:
+            - link "Security" [ref=e1074] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e1075]:
+            - link "Status" [ref=e1076] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e1077]:
+            - link "Community" [ref=e1078] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e1079]:
+            - link "Docs" [ref=e1080] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e1081]:
+            - link "Contact" [ref=e1082] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e1083]:
+            - button "Manage cookies" [ref=e1085] [cursor=pointer]
+          - listitem [ref=e1086]:
+            - button "Do not share my personal information" [ref=e1088] [cursor=pointer]

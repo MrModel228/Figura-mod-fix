@@ -1,0 +1,13 @@
+{
+  "gitHubSyncEnabled": false,
+  "gitHubToken": "",
+  "gitHubOwner": "MrModel228",
+  "gitHubRepo": "figura-fix-models",
+  "enabled": true,
+  "lodFullDistance": 32.0,
+  "lodStaticDistance": 64.0,
+  "lodCullingDistance": 128.0,
+  "fpsThreshold": 40.0,
+  "autoCheckUpdates": true,
+  "debugMode": false
+}

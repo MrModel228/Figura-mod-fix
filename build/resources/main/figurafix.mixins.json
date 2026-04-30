@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.figuramc.figurafix",
+  "compatibilityLevel": "JAVA_21",
+  "client": [],
+  "mixins": [],
+  "accessWidener": "figurafix.access_widener"
+}

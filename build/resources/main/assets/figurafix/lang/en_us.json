@@ -1,0 +1,22 @@
+{
+  "en_us": {
+    "figurafix.name": "Figura-Fix",
+    "figurafix.description": "Optimization and sync for Figura",
+    "figurafix.github_sync_enabled": "GitHub sync enabled",
+    "figurafix.avatar_uploaded": "Avatar uploaded: %s",
+    "figurafix.avatar_downloaded": "Avatar downloaded: %s",
+    "figurafix.sync.now": "Sync now",
+    "figurafix.sync.auto_start": "Auto sync: start",
+    "figurafix.sync.auto_exit": "Auto sync: exit",
+    "figurafix.model.name": "Model name",
+    "figurafix.model.date": "Date",
+    "figurafix.model.size": "Size",
+    "figurafix.settings.title": "Figura-Fix Settings",
+    "figurafix.close": "Close",
+    "figurafix.github.repo": "Models repository",
+    "figurafix.github.user": "Username",
+    "figurafix.syncing": "Syncing...",
+    "figurafix.sync_complete": "Sync complete!",
+    "figurafix.sync_failed": "Sync failed: %s"
+  }
+}

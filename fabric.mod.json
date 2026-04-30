@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "figurafix",
+  "version": "1.0.1",
+  "name": "Figura-Fix",
+  "description": "Client-side optimization for Figura",
+  "authors": ["MrModel228"],
+  "contact": {"homepage": "https://github.com/MrModel228/figura-fix", "sources": "https://github.com/MrModel228/figura-fix"},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {"client": ["org.figuramc.figurafix.FiguraFix"]},
+  "mixins": {"config": "figurafix.mixins.json"},
+  "accessWidenerPath": "figurafix.access_widener",
+  "depends": {"fabricloader": ">=0.18.4", "fabric-api": ">=0.136.1+1.21.8", "minecraft": "1.21.8"}
+}

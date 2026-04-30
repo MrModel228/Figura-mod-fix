@@ -1,0 +1,966 @@
+[19:37:49] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.8 with Fabric Loader 0.16.13
+[19:37:49] [main/DEBUG] (FabricLoader/GamePatch) Found game constructor: net.minecraft.client.main.Main -> net.minecraft.client.Minecraft
+[19:37:49] [main/DEBUG] (FabricLoader/GamePatch) Patching game constructor <init>(Lnet/minecraft/client/main/GameConfig;)V
+[19:37:49] [main/DEBUG] (FabricLoader/GamePatch) Run directory field is thought to be net/minecraft/client/Minecraft/gameDirectory
+[19:37:49] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/client/ClientBrandRetriever::getClientModName
+[19:37:49] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/server/MinecraftServer::getServerModName
+[19:37:49] [main/DEBUG] (FabricLoader/Mappings) Loading mappings took 289 ms
+[19:37:49] [main/DEBUG] (FabricLoader/GamePatch) Patched 3 classs
+[19:37:49] [main/DEBUG] (FabricLoader/Discovery) Mod discovery time: 38.7 ms
+[19:37:49] [main/DEBUG] (FabricLoader/Resolution) Mod resolution time: 106.3 ms
+[19:37:49] [main/INFO] (FabricLoader) Loading 49 mods:
+	- fabric-api 0.133.4+1.21.8
+	- fabric-api-base 0.5.0+cd8c0daa2c
+	- fabric-api-lookup-api-v1 1.6.101+946bf4c32c
+	- fabric-biome-api-v1 16.0.11+946bf4c32c
+	- fabric-block-api-v1 1.1.3+946bf4c32c
+	- fabric-block-view-api-v2 1.0.31+946bf4c32c
+	- fabric-client-gametest-api-v1 4.2.5+8a98c3fc2c
+	- fabric-command-api-v2 2.3.1+52fff9ec2c
+	- fabric-content-registries-v0 10.1.0+c75de69d2c
+	- fabric-convention-tags-v1 2.1.41+7f945d5b2c
+	- fabric-convention-tags-v2 2.15.6+eb5df52f2c
+	- fabric-crash-report-info-v1 0.3.15+946bf4c32c
+	- fabric-data-attachment-api-v1 1.8.13+38b5f74e2c
+	- fabric-data-generation-api-v1 23.2.7+0b1ef9762c
+	- fabric-dimensions-v1 4.0.20+948fc79a2c
+	- fabric-entity-events-v1 2.1.2+c9e472732c
+	- fabric-events-interaction-v0 4.0.25+946bf4c32c
+	- fabric-game-rule-api-v1 1.0.73+c64c9c5b2c
+	- fabric-gametest-api-v1 3.1.10+39ce47f52c
+	- fabric-item-api-v1 11.5.0+02ce13f42c
+	- fabric-item-group-api-v1 4.2.14+c5f9bbc12c
+	- fabric-key-binding-api-v1 1.0.65+946bf4c32c
+	- fabric-lifecycle-events-v1 2.6.4+db4dfd852c
+	- fabric-loot-api-v2 3.0.56+3f89f5a52c
+	- fabric-loot-api-v3 2.0.3+946bf4c32c
+	- fabric-message-api-v1 6.1.2+946bf4c32c
+	- fabric-model-loading-api-v1 5.2.7+946bf4c32c
+	- fabric-networking-api-v1 5.0.3+4ddbf91b2c
+	- fabric-object-builder-api-v1 21.1.9+946bf4c32c
+	- fabric-particles-v1 4.1.9+946bf4c32c
+	- fabric-recipe-api-v1 8.1.16+946bf4c32c
+	- fabric-registry-sync-v0 6.1.29+946bf4c32c
+	- fabric-renderer-api-v1 7.0.4+208eed172c
+	- fabric-renderer-indigo 4.0.4+946bf4c32c
+	- fabric-rendering-fluids-v1 3.1.31+fa6cb72b2c
+	- fabric-rendering-v1 12.5.1+fbe231d52c
+	- fabric-resource-conditions-api-v1 5.0.25+98e6d6db2c
+	- fabric-resource-loader-v0 3.1.12+020423442c
+	- fabric-screen-api-v1 2.1.1+277ecf7d2c
+	- fabric-screen-handler-api-v1 1.3.138+946bf4c32c
+	- fabric-serialization-api-v1 1.0.0+fc0e5aba2c
+	- fabric-sound-api-v1 1.0.42+946bf4c32c
+	- fabric-tag-api-v1 1.2.2+946bf4c32c
+	- fabric-transfer-api-v1 6.0.6+946bf4c32c
+	- fabric-transitive-access-wideners-v1 6.5.0+c847ce762c
+	- fabricloader 0.16.13
+	- java 21
+	- minecraft 1.21.8
+	- mixinextras 0.4.1
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-content-registries-v0/10.1.0+c75de69d2c/fabric-content-registries-v0-10.1.0+c75de69d2c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-dimensions-v1/4.0.20+948fc79a2c/fabric-dimensions-v1-4.0.20+948fc79a2c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-tag-api-v1/1.2.2+946bf4c32c/fabric-tag-api-v1-1.2.2+946bf4c32c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-resource-conditions-api-v1/5.0.25+98e6d6db2c/fabric-resource-conditions-api-v1-5.0.25+98e6d6db2c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-sound-api-v1/1.0.42+946bf4c32c/fabric-sound-api-v1-1.0.42+946bf4c32c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-convention-tags-v1/2.1.41+7f945d5b2c/fabric-convention-tags-v1-2.1.41+7f945d5b2c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-screen-api-v1/2.1.1+277ecf7d2c/fabric-screen-api-v1-2.1.1+277ecf7d2c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-game-rule-api-v1/1.0.73+c64c9c5b2c/fabric-game-rule-api-v1-1.0.73+c64c9c5b2c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-convention-tags-v2/2.15.6+eb5df52f2c/fabric-convention-tags-v2-2.15.6+eb5df52f2c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-rendering-fluids-v1/3.1.31+fa6cb72b2c/fabric-rendering-fluids-v1-3.1.31+fa6cb72b2c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-data-generation-api-v1/23.2.7+0b1ef9762c/fabric-data-generation-api-v1-23.2.7+0b1ef9762c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-resource-loader-v0/3.1.12+020423442c/fabric-resource-loader-v0-3.1.12+020423442c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-serialization-api-v1/1.0.0+fc0e5aba2c/fabric-serialization-api-v1-1.0.0+fc0e5aba2c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-command-api-v2/2.3.1+52fff9ec2c/fabric-command-api-v2-2.3.1+52fff9ec2c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-rendering-v1/12.5.1+fbe231d52c/fabric-rendering-v1-12.5.1+fbe231d52c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-message-api-v1/6.1.2+946bf4c32c/fabric-message-api-v1-6.1.2+946bf4c32c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-loot-api-v2/3.0.56+3f89f5a52c/fabric-loot-api-v2-3.0.56+3f89f5a52c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-fabric/0.4.1/8d1a9e96afb990367fa1f904d17580d164da72e3/mixinextras-fabric-0.4.1.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-item-api-v1/11.5.0+02ce13f42c/fabric-item-api-v1-11.5.0+02ce13f42c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-lifecycle-events-v1/2.6.4+db4dfd852c/fabric-lifecycle-events-v1-2.6.4+db4dfd852c.jar to classpath.
+[19:37:49] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-block-view-api-v2/1.0.31+946bf4c32c/fabric-block-view-api-v2-1.0.31+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-item-group-api-v1/4.2.14+c5f9bbc12c/fabric-item-group-api-v1-4.2.14+c5f9bbc12c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-loot-api-v3/2.0.3+946bf4c32c/fabric-loot-api-v3-2.0.3+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-registry-sync-v0/6.1.29+946bf4c32c/fabric-registry-sync-v0-6.1.29+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-crash-report-info-v1/0.3.15+946bf4c32c/fabric-crash-report-info-v1-0.3.15+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-object-builder-api-v1/21.1.9+946bf4c32c/fabric-object-builder-api-v1-21.1.9+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-transfer-api-v1/6.0.6+946bf4c32c/fabric-transfer-api-v1-6.0.6+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-api-lookup-api-v1/1.6.101+946bf4c32c/fabric-api-lookup-api-v1-1.6.101+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-renderer-api-v1/7.0.4+208eed172c/fabric-renderer-api-v1-7.0.4+208eed172c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-block-api-v1/1.1.3+946bf4c32c/fabric-block-api-v1-1.1.3+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-networking-api-v1/5.0.3+4ddbf91b2c/fabric-networking-api-v1-5.0.3+4ddbf91b2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-particles-v1/4.1.9+946bf4c32c/fabric-particles-v1-4.1.9+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-transitive-access-wideners-v1/6.5.0+c847ce762c/fabric-transitive-access-wideners-v1-6.5.0+c847ce762c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-client-gametest-api-v1/4.2.5+8a98c3fc2c/fabric-client-gametest-api-v1-4.2.5+8a98c3fc2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-data-attachment-api-v1/1.8.13+38b5f74e2c/fabric-data-attachment-api-v1-1.8.13+38b5f74e2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-biome-api-v1/16.0.11+946bf4c32c/fabric-biome-api-v1-16.0.11+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-key-binding-api-v1/1.0.65+946bf4c32c/fabric-key-binding-api-v1-1.0.65+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-api/0.133.4+1.21.8/fabric-api-0.133.4+1.21.8.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-gametest-api-v1/3.1.10+39ce47f52c/fabric-gametest-api-v1-3.1.10+39ce47f52c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-api-base/0.5.0+cd8c0daa2c/fabric-api-base-0.5.0+cd8c0daa2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-renderer-indigo/4.0.4+946bf4c32c/fabric-renderer-indigo-4.0.4+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-entity-events-v1/2.1.2+c9e472732c/fabric-entity-events-v1-2.1.2+c9e472732c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-events-interaction-v0/4.0.25+946bf4c32c/fabric-events-interaction-v0-4.0.25+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-screen-handler-api-v1/1.3.138+946bf4c32c/fabric-screen-handler-api-v1-1.3.138+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-recipe-api-v1/8.1.16+946bf4c32c/fabric-recipe-api-v1-8.1.16+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-model-loading-api-v1/5.2.7+946bf4c32c/fabric-model-loading-api-v1-5.2.7+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.tag.TagInit for mod fabric-tag-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.resource.conditions.ResourceConditionsImpl for mod fabric-resource-conditions-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.tag.convention.ConventionLogWarnings for mod fabric-convention-tags-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.tag.convention.v2.TranslationConventionLogWarnings for mod fabric-convention-tags-v2 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.client.rendering.hud.HudStatusBarHeightRegistryImpl for mod fabric-rendering-v1 (key client)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.loot.v2.LootInitializer for mod fabric-loot-api-v2 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.client.event.lifecycle.ClientLifecycleEventsImpl for mod fabric-lifecycle-events-v1 (key client)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.event.lifecycle.LifecycleEventsImpl for mod fabric-lifecycle-events-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.client.registry.sync.FabricRegistryClientInit for mod fabric-registry-sync-v0 (key client)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.registry.sync.FabricRegistryInit for mod fabric-registry-sync-v0 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.lookup.ApiLookupImpl for mod fabric-api-lookup-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.renderer.DebugHudClient for mod fabric-renderer-api-v1 (key client)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.networking.client.ClientNetworkingImpl::clientInit for mod fabric-networking-api-v1 (key client)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.networking.CommonPacketsImpl::init for mod fabric-networking-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.networking.NetworkingImpl::init for mod fabric-networking-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.client.particle.ExtendedBlockStateParticleEffectSyncClient for mod fabric-particles-v1 (key client)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.particle.ExtendedBlockStateParticleEffectSync for mod fabric-particles-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.attachment.client.AttachmentSyncClient for mod fabric-data-attachment-api-v1 (key client)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.attachment.AttachmentEntrypoint for mod fabric-data-attachment-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.attachment.sync.AttachmentSync for mod fabric-data-attachment-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.gametest.FabricGameTestModInitializer for mod fabric-gametest-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.client.indigo.Indigo for mod fabric-renderer-indigo (key client)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.event.interaction.InteractionEventsRouter for mod fabric-events-interaction-v0 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.screenhandler.client.ClientNetworking for mod fabric-screen-handler-api-v1 (key client)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.screenhandler.Networking for mod fabric-screen-handler-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.recipe.ingredient.client.CustomIngredientSyncClient for mod fabric-recipe-api-v1 (key client)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.recipe.ingredient.CustomIngredientInit for mod fabric-recipe-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.recipe.ingredient.CustomIngredientSync for mod fabric-recipe-api-v1 (key main)
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.client.model.loading.CustomUnbakedBlockStateModelInit for mod fabric-model-loading-api-v1 (key client)
+[19:37:50] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/root/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Initialising Mixin Platform Manager
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Adding mixin platform agents for container ContainerHandleURI(file:///root/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loader/0.16.13/98c9beaf1e9b7290882be44120b8a3967e7b1f28/fabric-loader-0.16.13.jar)
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Instancing new MixinPlatformAgentDefault for ContainerHandleURI(file:///root/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loader/0.16.13/98c9beaf1e9b7290882be44120b8a3967e7b1f28/fabric-loader-0.16.13.jar)
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) MixinPlatformAgentDefault accepted container ContainerHandleURI(file:///root/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loader/0.16.13/98c9beaf1e9b7290882be44120b8a3967e7b1f28/fabric-loader-0.16.13.jar)
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Instancing new MixinPlatformAgentDefault for ContainerHandleURI(file:///root/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loader/0.16.13/98c9beaf1e9b7290882be44120b8a3967e7b1f28/fabric-loader-0.16.13.jar)
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) MixinPlatformAgentDefault accepted container ContainerHandleURI(file:///root/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loader/0.16.13/98c9beaf1e9b7290882be44120b8a3967e7b1f28/fabric-loader-0.16.13.jar)
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:///root/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loader/0.16.13/98c9beaf1e9b7290882be44120b8a3967e7b1f28/fabric-loader-0.16.13.jar)]
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:///root/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loader/0.16.13/98c9beaf1e9b7290882be44120b8a3967e7b1f28/fabric-loader-0.16.13.jar)]
+[19:37:50] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Compatibility level JAVA_21 specified by fabric-content-registries-v0.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[19:37:50] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-content-registries-v0.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-dimensions-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-tag-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-resource-conditions-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-sound-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-screen-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-game-rule-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-game-rule-api-v1.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-convention-tags-api-v2.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-rendering-fluids-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-data-generation-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-data-generation-api-v1.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-resource-loader-v0.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-resource-loader-v0.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-serialization-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-command-api-v2.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-command-api-v2.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-rendering-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-message-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-message-api-v1.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-loot-api-v2.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-item-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-item-api-v1.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-lifecycle-events-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-lifecycle-events-v1.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-block-view-api-v2.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-block-view-api-v2.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-item-group-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-item-group-api-v1.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-loot-api-v3.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-registry-sync-v0.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-registry-sync-v0.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-crash-report-info-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-object-builder-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-object-builder-v1.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-transfer-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-api-lookup-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-renderer-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-block-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-networking-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-networking-api-v1.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-particles-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-particles-v1.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-client-gametest-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-data-attachment-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-data-attachment-api-v1.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-biome-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-key-binding-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-gametest-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-renderer-indigo.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-entity-events-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-events-interaction-v0.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-events-interaction-v0.client.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-screen-handler-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-recipe-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Mixin config fabric-model-loading-api-v1.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-38d0bcf411/1.21.8-loom.mappings.1_21_8.layered+hash.2198-v2/minecraft-merged-38d0bcf411-1.21.8-loom.mappings.1_21_8.layered+hash.2198-v2.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/build/classes/java/main to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/build/resources/main to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/fabric-loom/1.21.8/loom.mappings.1_21_8.layered+hash.2198-v2/mappings.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.kohsuke/github-api/1.318/4b7bf36f53d2fdfad0b885278493efd4f6eb73e9/github-api-1.318.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.17.1/fca7ef6192c9ad05d07bc50da991bf937a84af3a/jackson-annotations-2.17.1.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.17.1/5e52a11644cd59a28ef79f02bddc2cc3bab45edb/jackson-core-2.17.1.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.17.1/524dcbcccdde7d45a679dfc333e4763feb09079/jackson-databind-2.17.1.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-fabric/0.4.1/8d1a9e96afb990367fa1f904d17580d164da72e3/mixinextras-fabric-0.4.1.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/net.fabricmc/dev-launch-injector/0.2.1+build.8/da8bef7e6e2f952da707f282bdb46882a0fce5e3/dev-launch-injector-0.2.1+build.8.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.6.5/e1099981fd15dc4236c4499d82aba1276fb43a9a/oshi-core-6.6.5.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.github.stephenc.jcip/jcip-annotations/1.0-1/ef31541dd28ae2cefdd17c7ebf352d93e9058c63/jcip-annotations-1.0-1.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.2/c4a06a64e650562f30b7bf9aaec1bfed43aca12b/failureaccess-1.0.2.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/33.3.1-jre/852f8b363da0111e819460021ca693cacca3e8db/guava-33.3.1-jre.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j/76.1/215f3a8e936d4069344bd75f2b1368fd58112894/icu4j-76.1.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/msal4j/1.17.2/a6211e3d71d0388929babaa0ff0951b30d001852/msal4j-1.17.2.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.mojang/blocklist/1.0.10/5c685c5ffa94c4cd39496c7184c1d122e515ecef/blocklist-1.0.10.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.mojang/brigadier/1.3.10/d15b53a14cf20fdcaa98f731af5dda654452c010/brigadier-1.3.10.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.mojang/datafixerupper/8.0.16/67d4de6d7f95d89bcf5862995fb854ebaec02a34/datafixerupper-8.0.16.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.mojang/jtracy/1.0.29/6f07dcb6a2e595c7ee2ca43b67e5d1c018ca0770/jtracy-1.0.29.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.mojang/jtracy/1.0.29/f43b6fa5cd0ecf8e6a33bc30a24b117cd0ebbfa1/jtracy-1.0.29-natives-linux.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.mojang/patchy/2.2.10/da05971b07cbb379d002cf7eaec6a2048211fefc/patchy-2.2.10.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.mojang/text2speech/1.18.11/e853a12cdd6ba4f4836e8f4bf3b37844a13482b6/text2speech-1.18.11.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.nimbusds/content-type/2.3/e3aa0be212d7a42839a8f3f506f5b990bcce0222/content-type-2.3.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.nimbusds/lang-tag/1.7/97c73ecd70bc7e8eefb26c5eea84f251a63f1031/lang-tag-1.7.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.nimbusds/nimbus-jose-jwt/9.40/42b1dfa0360e4062951b070bac52dd8d96fd7b38/nimbus-jose-jwt-9.40.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/com.nimbusds/oauth2-oidc-sdk/11.18/7c7ec4f4066625ff07a711ad856fa04da1ff9de/oauth2-oidc-sdk-11.18.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.17.1/973638b7149d333563584137ebf13a691bb60579/commons-codec-1.17.1.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.17.0/ddcc8433eb019fb48fe25207c0278143f3e1d7e2/commons-io-2.17.0.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.3.4/b9fc14968d63a8b8a8a2c1885fe3e90564239708/commons-logging-1.3.4.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.118.Final/7022990af1e0d449f9d5322035899745e19735c5/netty-buffer-4.1.118.Final.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.118.Final/307f665c08ce57333121de4f460479fc0c3c94d4/netty-codec-4.1.118.Final.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.118.Final/4bb0f9899146484fa89f7b9bc27389d5b8e2ecde/netty-common-4.1.118.Final.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.118.Final/30ebb05b6b0fb071dbfcf713017c4a767a97bb9b/netty-handler-4.1.118.Final.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.118.Final/28c378c19c1779eca1104b400452627f3ebc4aea/netty-resolver-4.1.118.Final.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-classes-epoll/4.1.118.Final/376ce95507066f0e755d97c1c8bcd6c33f657617/netty-transport-classes-epoll-4.1.118.Final.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.118.Final/82f94d0a9d837f6b6a580379373310ff7288c0f8/netty-transport-native-epoll-4.1.118.Final-linux-aarch_64.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.118.Final/7e6b89e3746acb7cf6f0aad993bbd058fc6d912e/netty-transport-native-epoll-4.1.118.Final-linux-x86_64.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.118.Final/9da25a94e6a0edac90da0bc7894e5a54efcb866b/netty-transport-native-unix-common-4.1.118.Final.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.118.Final/5a27232e5d08218722d94ca14f0b1b4576e7711c/netty-transport-4.1.118.Final.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/8.5.15/1e885b40c9563ab0d3899b871fd0b30e958705dc/fastutil-8.5.15.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.15.0/86b502cad57d45da172b5e3231c537b042e296ef/jna-platform-5.15.0.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.15.0/1ee1d80ff44f08280188f7c0e740d57207841ac/jna-5.15.0.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/2.5.1/19b820261eb2e7de7d5bde11d1c06e4501dd7e5f/accessors-smart-2.5.1.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.5.1/4c11d2808d009132dfbbf947ebf37de6bf266c8e/json-smart-2.5.1.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c/jopt-simple-5.0.4.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.27.1/a19151084758e2fbb6b41eddaa88e7b8ff4e6599/commons-compress-1.27.1.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.17.0/b17d2136f0460dcc0d2016ceefca8723bdf4ee70/commons-lang3-3.17.0.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.14/1194890e6f56ec29177673f2f12d0b8e627dec98/httpclient-4.5.14.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.16/51cf043c87253c9f58b539c9f7e44c8894223850/httpcore-4.4.16.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.jcraft/jorbis/0.0.17/8872d22b293e8f5d7d56ff92be966e6dc28ebdc6/jorbis-0.0.17.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.8/fc0a71dad90a2cf41d82a76156a0e700af8e4f8d/joml-1.10.8.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.3.3/a0db6c84a8becc8ca05f9dbfa985edc348a824c7/lwjgl-freetype-3.3.3.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.3.3/149070a5480900347071b7074779531f25a6e3dc/lwjgl-freetype-3.3.3-natives-linux.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.3.3/efa1eb78c5ccd840e9f329717109b5e892d72f8e/lwjgl-glfw-3.3.3.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.3.3/a03684c5e4b1b1dbbe0d29dbbdc27b985b6840f2/lwjgl-glfw-3.3.3-natives-linux.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.3.3/b543467b7ff3c6920539a88ee602d34098628be5/lwjgl-jemalloc-3.3.3.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.3.3/4f86728bf449b1dd61251c4e0ac01df1389cb51e/lwjgl-jemalloc-3.3.3-natives-linux.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.3.3/daada81ceb5fc0c291fbfdd4433cb8d9423577f2/lwjgl-openal-3.3.3.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.3.3/3037360cc4595079bea240af250b6d1a527e0905/lwjgl-openal-3.3.3-natives-linux.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.3.3/2f6b0147078396a58979125a4c947664e98293a/lwjgl-opengl-3.3.3.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.3.3/62c70a4b00ca5391882b0f4b787c1588d24f1c86/lwjgl-opengl-3.3.3-natives-linux.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.3.3/25dd6161988d7e65f71d5065c99902402ee32746/lwjgl-stb-3.3.3.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.3.3/fd1271ccd9d85eff2fa31f3fd543e02ccfaf5041/lwjgl-stb-3.3.3-natives-linux.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.3.3/82d755ca94b102e9ca77283b9e2dc46d1b15fbe5/lwjgl-tinyfd-3.3.3.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.3.3/d8d58daa0c3e5fd906fee96f5fddbcbc07cc308b/lwjgl-tinyfd-3.3.3-natives-linux.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.3.3/29589b5f87ed335a6c7e7ee6a5775f81f97ecb84/lwjgl-3.3.3.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.3.3/1713758e3660ba66e1e954396fd18126038b33c0/lwjgl-3.3.3-natives-linux.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.lz4/lz4-java/1.8.0/4b986a99445e49ea5fbf5d149c4b63f6ed6c6780/lz4-java-1.8.0.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-api/0.133.4+1.21.8/fabric-api-0.133.4+1.21.8.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-transfer-api-v1/6.0.6+946bf4c32c/fabric-transfer-api-v1-6.0.6+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-api-lookup-api-v1/1.6.101+946bf4c32c/fabric-api-lookup-api-v1-1.6.101+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-command-api-v2/2.3.1+52fff9ec2c/fabric-command-api-v2-2.3.1+52fff9ec2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-content-registries-v0/10.1.0+c75de69d2c/fabric-content-registries-v0-10.1.0+c75de69d2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-data-generation-api-v1/23.2.7+0b1ef9762c/fabric-data-generation-api-v1-23.2.7+0b1ef9762c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-convention-tags-v1/2.1.41+7f945d5b2c/fabric-convention-tags-v1-2.1.41+7f945d5b2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-convention-tags-v2/2.15.6+eb5df52f2c/fabric-convention-tags-v2-2.15.6+eb5df52f2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-data-attachment-api-v1/1.8.13+38b5f74e2c/fabric-data-attachment-api-v1-1.8.13+38b5f74e2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-entity-events-v1/2.1.2+c9e472732c/fabric-entity-events-v1-2.1.2+c9e472732c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-events-interaction-v0/4.0.25+946bf4c32c/fabric-events-interaction-v0-4.0.25+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-gametest-api-v1/3.1.10+39ce47f52c/fabric-gametest-api-v1-3.1.10+39ce47f52c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-item-api-v1/11.5.0+02ce13f42c/fabric-item-api-v1-11.5.0+02ce13f42c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-item-group-api-v1/4.2.14+c5f9bbc12c/fabric-item-group-api-v1-4.2.14+c5f9bbc12c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-model-loading-api-v1/5.2.7+946bf4c32c/fabric-model-loading-api-v1-5.2.7+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-renderer-indigo/4.0.4+946bf4c32c/fabric-renderer-indigo-4.0.4+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-renderer-api-v1/7.0.4+208eed172c/fabric-renderer-api-v1-7.0.4+208eed172c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-rendering-v1/12.5.1+fbe231d52c/fabric-rendering-v1-12.5.1+fbe231d52c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-lifecycle-events-v1/2.6.4+db4dfd852c/fabric-lifecycle-events-v1-2.6.4+db4dfd852c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-loot-api-v2/3.0.56+3f89f5a52c/fabric-loot-api-v2-3.0.56+3f89f5a52c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-loot-api-v3/2.0.3+946bf4c32c/fabric-loot-api-v3-2.0.3+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-message-api-v1/6.1.2+946bf4c32c/fabric-message-api-v1-6.1.2+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-particles-v1/4.1.9+946bf4c32c/fabric-particles-v1-4.1.9+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-recipe-api-v1/8.1.16+946bf4c32c/fabric-recipe-api-v1-8.1.16+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-object-builder-api-v1/21.1.9+946bf4c32c/fabric-object-builder-api-v1-21.1.9+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-screen-handler-api-v1/1.3.138+946bf4c32c/fabric-screen-handler-api-v1-1.3.138+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-registry-sync-v0/6.1.29+946bf4c32c/fabric-registry-sync-v0-6.1.29+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-networking-api-v1/5.0.3+4ddbf91b2c/fabric-networking-api-v1-5.0.3+4ddbf91b2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-rendering-fluids-v1/3.1.31+fa6cb72b2c/fabric-rendering-fluids-v1-3.1.31+fa6cb72b2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-tag-api-v1/1.2.2+946bf4c32c/fabric-tag-api-v1-1.2.2+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-resource-loader-v0/3.1.12+020423442c/fabric-resource-loader-v0-3.1.12+020423442c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-screen-api-v1/2.1.1+277ecf7d2c/fabric-screen-api-v1-2.1.1+277ecf7d2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-api-base/0.5.0+cd8c0daa2c/fabric-api-base-0.5.0+cd8c0daa2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-biome-api-v1/16.0.11+946bf4c32c/fabric-biome-api-v1-16.0.11+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-block-api-v1/1.1.3+946bf4c32c/fabric-block-api-v1-1.1.3+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-block-view-api-v2/1.0.31+946bf4c32c/fabric-block-view-api-v2-1.0.31+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-client-gametest-api-v1/4.2.5+8a98c3fc2c/fabric-client-gametest-api-v1-4.2.5+8a98c3fc2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-crash-report-info-v1/0.3.15+946bf4c32c/fabric-crash-report-info-v1-0.3.15+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-dimensions-v1/4.0.20+948fc79a2c/fabric-dimensions-v1-4.0.20+948fc79a2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-game-rule-api-v1/1.0.73+c64c9c5b2c/fabric-game-rule-api-v1-1.0.73+c64c9c5b2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-key-binding-api-v1/1.0.65+946bf4c32c/fabric-key-binding-api-v1-1.0.65+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-resource-conditions-api-v1/5.0.25+98e6d6db2c/fabric-resource-conditions-api-v1-5.0.25+98e6d6db2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-serialization-api-v1/1.0.0+fc0e5aba2c/fabric-serialization-api-v1-1.0.0+fc0e5aba2c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-sound-api-v1/1.0.42+946bf4c32c/fabric-sound-api-v1-1.0.42+946bf4c32c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/projects/figura-fix/.gradle/loom-cache/remapped_mods/loom_mappings_1_21_8_layered_hash_2198_v2/net/fabricmc/fabric-api/fabric-transitive-access-wideners-v1/6.5.0+c847ce762c/fabric-transitive-access-wideners-v1-6.5.0+c847ce762c.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.jline/jline-reader/3.20.0/8f15415b022a25b473e8e16c28ae913186ffb9c4/jline-reader-3.20.0.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Knot) Adding /root/.gradle/caches/modules-2/files-2.1/org.jline/jline-terminal/3.20.0/d0ddcc708ddf527a3454c941b7b9225cc83a15ff/jline-terminal-3.20.0.jar to classpath.
+[19:37:50] [main/DEBUG] (FabricLoader/Entrypoint) No subscribers for entrypoint 'preLaunch'
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Preparing mixins for MixinEnvironment[DEFAULT]
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-content-registries-v0.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-dimensions-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-tag-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-resource-conditions-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-sound-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-screen-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-game-rule-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-game-rule-api-v1.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-convention-tags-api-v2.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-rendering-fluids-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-data-generation-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-data-generation-api-v1.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-resource-loader-v0.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-resource-loader-v0.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-serialization-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-command-api-v2.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-command-api-v2.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-rendering-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-message-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-message-api-v1.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-loot-api-v2.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config mixinextras.init.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/MixinExtras|Service) com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1) is taking over from null
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-item-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-item-api-v1.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-lifecycle-events-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-lifecycle-events-v1.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-block-view-api-v2.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-block-view-api-v2.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-item-group-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-item-group-api-v1.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-loot-api-v3.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-registry-sync-v0.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-registry-sync-v0.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-crash-report-info-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-object-builder-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-object-builder-v1.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-transfer-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-api-lookup-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-renderer-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-block-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-networking-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-networking-api-v1.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-particles-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-particles-v1.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-client-gametest-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-data-attachment-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-data-attachment-api-v1.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-biome-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-key-binding-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-gametest-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-renderer-indigo.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-entity-events-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-events-interaction-v0.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-events-interaction-v0.client.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-screen-handler-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-recipe-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Selecting config fabric-model-loading-api-v1.mixins.json
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-content-registries-v0.mixins.json (18)
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-dimensions-v1.mixins.json (4)
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-tag-api-v1.mixins.json (5)
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/core/MappedRegistry$2 is public in fabric-tag-api-v1.mixins.json:SimpleRegistry2Mixin from mod fabric-tag-api-v1 and should be specified in value
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/core/MappedRegistry$3 is public in fabric-tag-api-v1.mixins.json:SimpleRegistry3Mixin from mod fabric-tag-api-v1 and should be specified in value
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/core/MappedRegistry$TagSet$2 is public in fabric-tag-api-v1.mixins.json:SimpleRegistryTagLookup2Accessor from mod fabric-tag-api-v1 and should be specified in value
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-resource-conditions-api-v1.mixins.json (7)
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-sound-api-v1.mixins.json (2)
+[19:37:50] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-screen-api-v1.mixins.json (7)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-game-rule-api-v1.mixins.json (5)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/server/commands/GameRuleCommand$1 is public in fabric-game-rule-api-v1.mixins.json:GameRuleCommandVisitorMixin from mod fabric-game-rule-api-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-game-rule-api-v1.client.mixins.json (3)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/client/gui/screens/worldselection/EditGameRulesScreen$RuleList$1 is public in fabric-game-rule-api-v1.client.mixins.json:RuleListWidgetVisitorMixin from mod fabric-game-rule-api-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-convention-tags-api-v2.mixins.json (1)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-rendering-fluids-v1.mixins.json (1)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-data-generation-api-v1.mixins.json (17)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/data/HashCache$ProviderCache is public in fabric-data-generation-api-v1.mixins.json:DataCacheCachedDataMixin from mod fabric-data-generation-api-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/data/tags/TagAppender$1 is public in fabric-data-generation-api-v1.mixins.json:ProvidedTagBuilderMixin$ProvidedTagBuilder1Mixin from mod fabric-data-generation-api-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/data/tags/TagAppender$2 is public in fabric-data-generation-api-v1.mixins.json:ProvidedTagBuilderMixin$ProvidedTagBuilder2Mixin from mod fabric-data-generation-api-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-data-generation-api-v1.client.mixins.json (4)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-resource-loader-v0.mixins.json (15)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-resource-loader-v0.client.mixins.json (8)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/client/Options$3 is public in fabric-resource-loader-v0.client.mixins.json:GameOptionsWriteVisitorMixin from mod fabric-resource-loader-v0 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-serialization-api-v1.mixins.json (4)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-command-api-v2.mixins.json (6)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-command-api-v2.client.mixins.json (2)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-rendering-v1.mixins.json (23)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-message-api-v1.mixins.json (2)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-message-api-v1.client.mixins.json (2)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-loot-api-v2.mixins.json (2)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing mixinextras.init.mixins.json (0)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-item-api-v1.mixins.json (17)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-item-api-v1.client.mixins.json (3)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-lifecycle-events-v1.mixins.json (11)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/server/level/ServerLevel$EntityCallbacks is public in fabric-lifecycle-events-v1.mixins.json:ServerWorldServerEntityHandlerMixin from mod fabric-lifecycle-events-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-lifecycle-events-v1.client.mixins.json (7)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/client/multiplayer/ClientLevel$EntityCallbacks is public in fabric-lifecycle-events-v1.client.mixins.json:ClientWorldClientEntityHandlerMixin from mod fabric-lifecycle-events-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-block-view-api-v2.mixins.json (3)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-block-view-api-v2.client.mixins.json (2)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-item-group-api-v1.mixins.json (3)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-item-group-api-v1.client.mixins.json (1)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-loot-api-v3.mixins.json (8)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-registry-sync-v0.mixins.json (16)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-registry-sync-v0.client.mixins.json (5)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/client/multiplayer/RegistryDataCollector$ContentsCollector is public in fabric-registry-sync-v0.client.mixins.json:ClientRegistriesDynamicRegistriesAccessor from mod fabric-registry-sync-v0 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-crash-report-info-v1.mixins.json (2)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-object-builder-v1.mixins.json (10)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-object-builder-v1.client.mixins.json (4)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-transfer-api-v1.mixins.json (15)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-api-lookup-api-v1.mixins.json (2)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-renderer-api-v1.mixins.json (26)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/client/resources/model/ModelManager$1 is public in fabric-renderer-api-v1.mixins.json:client.sprite.BakedModelManager1Mixin from mod fabric-renderer-api-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-block-api-v1.mixins.json (5)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/world/level/chunk/LevelChunkSection$1BlockCounter is public in fabric-block-api-v1.mixins.json:ChunkSectionBlockStateCounterMixin from mod fabric-block-api-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-networking-api-v1.mixins.json (21)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/network/protocol/common/custom/CustomPacketPayload$1 is public in fabric-networking-api-v1.mixins.json:CustomPayloadPacketCodecMixin from mod fabric-networking-api-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/server/level/ChunkMap$TrackedEntity is public in fabric-networking-api-v1.mixins.json:accessor.EntityTrackerAccessor from mod fabric-networking-api-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-networking-api-v1.client.mixins.json (9)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-particles-v1.mixins.json (8)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-particles-v1.client.mixins.json (4)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-client-gametest-api-v1.mixins.json (25)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-data-attachment-api-v1.mixins.json (14)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-data-attachment-api-v1.client.mixins.json (1)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-biome-api-v1.mixins.json (9)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/world/level/biome/MultiNoiseBiomeSourceParameterList$Preset$1 is public in fabric-biome-api-v1.mixins.json:NetherBiomePresetMixin from mod fabric-biome-api-v1 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-key-binding-api-v1.mixins.json (2)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-gametest-api-v1.mixins.json (4)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-renderer-indigo.mixins.json (8)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-entity-events-v1.mixins.json (7)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-events-interaction-v0.mixins.json (5)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) @Mixin target net/minecraft/server/network/ServerGamePacketListenerImpl$1 is public in fabric-events-interaction-v0.mixins.json:ServerPlayNetworkHandlerInteractEntityHandlerMixin from mod fabric-events-interaction-v0 and should be specified in value
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-events-interaction-v0.client.mixins.json (3)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-screen-handler-api-v1.mixins.json (2)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-recipe-api-v1.mixins.json (5)
+[19:37:51] [main/DEBUG] (FabricLoader/Mixin) Preparing fabric-model-loading-api-v1.mixins.json (6)
+[19:37:52] [main/DEBUG] (FabricLoader/Mixin) Inner class net/fabricmc/fabric/mixin/itemgroup/ItemGroupsMixin$1ItemGroupPosition in net/fabricmc/fabric/mixin/itemgroup/ItemGroupsMixin on net/minecraft/world/item/CreativeModeTabs gets unique name net/minecraft/world/item/CreativeModeTabs$1ItemGroupPosition$dd0cf2e22beb4bb39e2b11bfe536424b
+[19:37:52] [main/DEBUG] (FabricLoader/Mixin) Inner class net/fabricmc/fabric/mixin/transfer/ChiseledBookshelfBlockEntityMixin$1 in net/fabricmc/fabric/mixin/transfer/ChiseledBookshelfBlockEntityMixin on net/minecraft/world/level/block/entity/ChiseledBookShelfBlockEntity gets unique name net/minecraft/world/level/block/entity/ChiseledBookShelfBlockEntity$Anonymous$906593925f7a4378bb69afa6bdaeffa4
+[19:37:52] [main/DEBUG] (FabricLoader/Mixin) Inner class net/fabricmc/fabric/mixin/renderer/client/block/model/MultipartBlockStateModelMixin$1Key in net/fabricmc/fabric/mixin/renderer/client/block/model/MultipartBlockStateModelMixin on net/minecraft/client/renderer/block/model/multipart/MultiPartModel gets unique name net/minecraft/client/renderer/block/model/multipart/MultiPartModel$1Key$21501cb3b5e14953b7441ee5466edb80
+[19:37:52] [main/DEBUG] (FabricLoader/Mixin) Prepared 382 mixins in 1.412 sec (3.7ms avg) (0ms load, 0ms transform, 0ms plugin)
+[19:37:52] [main/DEBUG] (io.netty.util.internal.logging.InternalLoggerFactory) Using SLF4J as the default logging framework
+[19:37:52] [main/DEBUG] (io.netty.util.ResourceLeakDetector) -Dio.netty.leakDetection.level: simple
+[19:37:52] [main/DEBUG] (io.netty.util.ResourceLeakDetector) -Dio.netty.leakDetection.targetRecords: 4
+[19:37:53] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[19:37:53] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @SugarWrapper with com.llamalad7.mixinextras.sugar.impl.SugarWrapperInjectionInfo
+[19:37:53] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @FactoryRedirectWrapper with com.llamalad7.mixinextras.wrapper.factory.FactoryRedirectWrapperInjectionInfo
+[19:37:53] [main/DEBUG] (FabricLoader/Mixin) Mixing TaggedChoiceMixin from fabric-dimensions-v1.mixins.json into com.mojang.datafixers.types.templates.TaggedChoice
+[19:37:53] [main/DEBUG] (FabricLoader/Mixin) fabric-dimensions-v1.mixins.json:TaggedChoiceMixin from mod fabric-dimensions-v1->@Inject::onApply(Lcom/mojang/datafixers/util/Pair;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:53] [main/DEBUG] (FabricLoader/Mixin) Mixing TaggedChoiceTaggedChoiceTypeMixin from fabric-dimensions-v1.mixins.json into com.mojang.datafixers.types.templates.TaggedChoice$TaggedChoiceType
+[19:37:53] [main/DEBUG] (FabricLoader/Mixin) fabric-dimensions-v1.mixins.json:TaggedChoiceTaggedChoiceTypeMixin from mod fabric-dimensions-v1->@Inject::onGetCodec(Ljava/lang/Object;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:54] [main/DEBUG] (FabricLoader/Mixin) Mixing Schema2832Mixin from fabric-dimensions-v1.mixins.json into net.minecraft.util.datafix.schemas.V2832
+[19:37:55] [main/DEBUG] (FabricLoader/Mixin) Mixing SystemDetailsMixin from fabric-crash-report-info-v1.mixins.json into net.minecraft.SystemReport
+[19:37:55] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$appendMods$1(Lnet/fabricmc/loader/api/ModContainer;)Ljava/lang/String; to mdffdfa9$fabric-crash-report-info-v1$lambda$appendMods$1$0 in fabric-crash-report-info-v1.mixins.json:SystemDetailsMixin from mod fabric-crash-report-info-v1
+[19:37:55] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$fillSystemDetails$0()Ljava/lang/String; to mdffdfa9$fabric-crash-report-info-v1$lambda$fillSystemDetails$0$1 in fabric-crash-report-info-v1.mixins.json:SystemDetailsMixin from mod fabric-crash-report-info-v1
+[19:37:55] [main/DEBUG] (FabricLoader/Mixin) fabric-crash-report-info-v1.mixins.json:SystemDetailsMixin from mod fabric-crash-report-info-v1->@Inject::fillSystemDetails(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:55] [main/DEBUG] (FabricLoader/Mixin) fabric-crash-report-info-v1.mixins.json:SystemDetailsMixin from mod fabric-crash-report-info-v1->@Inject::fillSystemDetails(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:55] [main/DEBUG] (FabricLoader/Mixin) fabric-crash-report-info-v1.mixins.json:SystemDetailsMixin from mod fabric-crash-report-info-v1->@Inject::fillSystemDetails(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /proc/self/auxv
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /proc/self/auxv
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /proc/stat
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cpu_capacity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu0/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cpu_capacity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu1/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cpu_capacity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu2/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cpu_capacity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu3/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cpu_capacity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu4/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cpu_capacity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu5/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cpu_capacity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu6/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/topology/core_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/topology/physical_package_id
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cpu_capacity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index2/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index2/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index2/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index2/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index2/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index0/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index0/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index0/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index0/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index0/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index3/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index3/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index3/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index3/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index3/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index1/level
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index1/type
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index1/ways_of_associativity
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index1/coherency_line_size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /sys/devices/system/cpu/cpu7/cache/index1/size
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /proc/cpuinfo
+[19:37:56] [main/DEBUG] (oshi.util.FileUtil) Reading file /proc/cpuinfo
+[19:37:57] [main/DEBUG] (oshi.util.FileUtil) Reading file /proc/self/auxv
+[19:37:57] [Datafixer Bootstrap/INFO] (com.mojang.datafixers.DataFixerBuilder) 269 Datafixer optimizations took 1751 milliseconds
+[19:37:57] [main/DEBUG] (oshi.util.FileUtil) Reading file /proc/meminfo
+[19:37:57] [main/DEBUG] (oshi.util.FileUtil) Reading file /proc/meminfo
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) Mixing BootstrapMixin from fabric-registry-sync-v0.mixins.json into net.minecraft.server.Bootstrap
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$initialize$1(Lnet/minecraft/world/level/material/Fluid;)Ljava/util/Collection; to mdffdfa9$fabric-registry-sync-v0$lambda$initialize$1$0 in fabric-registry-sync-v0.mixins.json:BootstrapMixin from mod fabric-registry-sync-v0
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$initialize$0(Lnet/minecraft/world/level/block/Block;)Ljava/util/Collection; to mdffdfa9$fabric-registry-sync-v0$lambda$initialize$0$1 in fabric-registry-sync-v0.mixins.json:BootstrapMixin from mod fabric-registry-sync-v0
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) fabric-registry-sync-v0.mixins.json:BootstrapMixin from mod fabric-registry-sync-v0->@Inject::initialize(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) Mixing RegistryMixin from fabric-registry-sync-v0.mixins.json into net.minecraft.core.Registry
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) Mixing RegistriesMixin from fabric-item-api-v1.mixins.json into net.minecraft.core.registries.BuiltInRegistries
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) Mixing RegistriesAccessor from fabric-registry-sync-v0.mixins.json into net.minecraft.core.registries.BuiltInRegistries
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) Renaming @Accessor method getROOT()Lnet/minecraft/core/WritableRegistry; to getROOT$fabric-registry-sync-v0_$md$ffdfa9$0 in fabric-registry-sync-v0.mixins.json:RegistriesAccessor from mod fabric-registry-sync-v0
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) Mixing RegistriesMixin from fabric-registry-sync-v0.mixins.json into net.minecraft.core.registries.BuiltInRegistries
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) fabric-item-api-v1.mixins.json:RegistriesMixin from mod fabric-item-api-v1->@Inject::modifyDefaultItemComponents(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) fabric-registry-sync-v0.mixins.json:RegistriesMixin from mod fabric-registry-sync-v0->@Inject::init(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V does use it's CallbackInfo
+[19:37:57] [main/DEBUG] (FabricLoader/Mixin) Mixing SimpleRegistryMixin from fabric-tag-api-v1.mixins.json into net.minecraft.core.MappedRegistry
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Mixing SimpleRegistryAccessor from fabric-registry-sync-v0.mixins.json into net.minecraft.core.MappedRegistry
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Mixing SimpleRegistryMixin from fabric-registry-sync-v0.mixins.json into net.minecraft.core.MappedRegistry
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$init$4([Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback;)Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback; to mdffdfa9$fabric-registry-sync-v0$lambda$init$4$0 in fabric-registry-sync-v0.mixins.json:SimpleRegistryMixin from mod fabric-registry-sync-v0
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$init$3([Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback;Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState;)V to mdffdfa9$fabric-registry-sync-v0$lambda$init$3$1 in fabric-registry-sync-v0.mixins.json:SimpleRegistryMixin from mod fabric-registry-sync-v0
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$init$2(ILnet/minecraft/resources/ResourceLocation;Ljava/lang/Object;)V to mdffdfa9$fabric-registry-sync-v0$lambda$init$2$2 in fabric-registry-sync-v0.mixins.json:SimpleRegistryMixin from mod fabric-registry-sync-v0
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$init$1([Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback;)Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback; to mdffdfa9$fabric-registry-sync-v0$lambda$init$1$3 in fabric-registry-sync-v0.mixins.json:SimpleRegistryMixin from mod fabric-registry-sync-v0
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$init$0([Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback;ILnet/minecraft/resources/ResourceLocation;Ljava/lang/Object;)V to mdffdfa9$fabric-registry-sync-v0$lambda$init$0$4 in fabric-registry-sync-v0.mixins.json:SimpleRegistryMixin from mod fabric-registry-sync-v0
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-registry-sync-v0.mixins.json:SimpleRegistryMixin from mod fabric-registry-sync-v0->@Inject::init(Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Lifecycle;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-registry-sync-v0.mixins.json:SimpleRegistryMixin from mod fabric-registry-sync-v0->@Inject::init(Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Lifecycle;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-registry-sync-v0.mixins.json:SimpleRegistryMixin from mod fabric-registry-sync-v0->@Inject::init(Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Lifecycle;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-registry-sync-v0.mixins.json:SimpleRegistryMixin from mod fabric-registry-sync-v0->@Inject::set(Lnet/minecraft/resources/ResourceKey;Ljava/lang/Object;Lnet/minecraft/core/RegistrationInfo;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Mixing RegistryKeysMixin from fabric-registry-sync-v0.mixins.json into net.minecraft.core.registries.Registries
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Mixing ArgumentTypesAccessor from fabric-command-api-v2.mixins.json into net.minecraft.commands.synchronization.ArgumentTypeInfos
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Renaming @Accessor method fabric_getClassMap()Ljava/util/Map; to fabric_getClassMap$fabric-command-api-v2_$md$ffdfa9$0 in fabric-command-api-v2.mixins.json:ArgumentTypesAccessor from mod fabric-command-api-v2
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Mixing ItemGroupsMixin from fabric-item-group-api-v1.mixins.json into net.minecraft.world.item.CreativeModeTabs
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$paginateGroups$0(Lnet/minecraft/core/Holder$Reference;Lnet/minecraft/core/Holder$Reference;)I to mdffdfa9$fabric-item-group-api-v1$lambda$paginateGroups$0$0 in fabric-item-group-api-v1.mixins.json:ItemGroupsMixin from mod fabric-item-group-api-v1
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-item-group-api-v1.mixins.json:ItemGroupsMixin from mod fabric-item-group-api-v1->@Inject::deferDuplicateCheck(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V does use it's CallbackInfo
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-item-group-api-v1.mixins.json:ItemGroupsMixin from mod fabric-item-group-api-v1->@Inject::paginateGroups(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Mixing ItemGroupAccessor from fabric-item-group-api-v1.mixins.json into net.minecraft.world.item.CreativeModeTab
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Mixing ItemGroupMixin from fabric-item-group-api-v1.mixins.json into net.minecraft.world.item.CreativeModeTab
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$getStacks$0(Lnet/minecraft/world/item/CreativeModeTab;)Ljava/lang/IllegalStateException; to mdffdfa9$fabric-item-group-api-v1$lambda$getStacks$0$0 in fabric-item-group-api-v1.mixins.json:ItemGroupMixin from mod fabric-item-group-api-v1
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-item-group-api-v1.mixins.json:ItemGroupMixin from mod fabric-item-group-api-v1->@Inject::getStacks(Lnet/minecraft/world/item/CreativeModeTab$ItemDisplayParameters;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-item-group-api-v1.mixins.json:ItemGroupMixin from mod fabric-item-group-api-v1->@Inject::getStacks(Lnet/minecraft/world/item/CreativeModeTab$ItemDisplayParameters;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-item-group-api-v1.mixins.json:ItemGroupMixin from mod fabric-item-group-api-v1->@Inject::getStacks(Lnet/minecraft/world/item/CreativeModeTab$ItemDisplayParameters;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Mixing FireBlockMixin from fabric-content-registries-v0.mixins.json into net.minecraft.world.level.block.FireBlock
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-content-registries-v0.mixins.json:FireBlockMixin from mod fabric-content-registries-v0->@Inject::afterConstruct(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-content-registries-v0.mixins.json:FireBlockMixin from mod fabric-content-registries-v0->@Inject::afterConstruct(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-content-registries-v0.mixins.json:FireBlockMixin from mod fabric-content-registries-v0->@Inject::afterConstruct(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-content-registries-v0.mixins.json:FireBlockMixin from mod fabric-content-registries-v0->@Inject::getFabricBurnChance(Lnet/minecraft/world/level/block/state/BlockState;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) fabric-content-registries-v0.mixins.json:FireBlockMixin from mod fabric-content-registries-v0->@Inject::getFabricSpreadChance(Lnet/minecraft/world/level/block/state/BlockState;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:58] [main/DEBUG] (FabricLoader/Mixin) Mixing BlockMixin from fabric-block-api-v1.mixins.json into net.minecraft.world.level.block.Block
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing AbstractBlockAccessor from fabric-content-registries-v0.mixins.json into net.minecraft.world.level.block.state.BlockBehaviour
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing BlockViewMixin from fabric-block-view-api-v2.mixins.json into net.minecraft.world.level.BlockGetter
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing EntityMixin from fabric-particles-v1.mixins.json into net.minecraft.world.entity.Entity
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing AttachmentTargetsMixin from fabric-data-attachment-api-v1.mixins.json into net.minecraft.world.entity.Entity
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$fabric_readAttachmentsFromNbt$3(Lnet/minecraft/world/level/storage/ValueInput;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/lang/Object;)V to mdffdfa9$fabric-data-attachment-api-v1$lambda$fabric_readAttachmentsFromNbt$3$0 in fabric-data-attachment-api-v1.mixins.json:AttachmentTargetsMixin from mod fabric-data-attachment-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$onAttachedSet$2(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)Lnet/fabricmc/fabric/api/event/Event; to mdffdfa9$fabric-data-attachment-api-v1$lambda$onAttachedSet$2$1 in fabric-data-attachment-api-v1.mixins.json:AttachmentTargetsMixin from mod fabric-data-attachment-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$onAttachedSet$1([Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget$OnAttachedSet;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget$OnAttachedSet; to mdffdfa9$fabric-data-attachment-api-v1$lambda$onAttachedSet$1$2 in fabric-data-attachment-api-v1.mixins.json:AttachmentTargetsMixin from mod fabric-data-attachment-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$onAttachedSet$0([Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget$OnAttachedSet;Ljava/lang/Object;Ljava/lang/Object;)V to mdffdfa9$fabric-data-attachment-api-v1$lambda$onAttachedSet$0$3 in fabric-data-attachment-api-v1.mixins.json:AttachmentTargetsMixin from mod fabric-data-attachment-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing EntityMixin from fabric-data-attachment-api-v1.mixins.json into net.minecraft.world.entity.Entity
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$fabric_syncChange$0(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;Lnet/minecraft/server/level/ServerPlayer;)V to mdffdfa9$fabric-data-attachment-api-v1$lambda$fabric_syncChange$0$4 in fabric-data-attachment-api-v1.mixins.json:EntityMixin from mod fabric-data-attachment-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing EntityMixin from fabric-entity-events-v1.mixins.json into net.minecraft.world.entity.Entity
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-data-attachment-api-v1.mixins.json:EntityMixin from mod fabric-data-attachment-api-v1->@Inject::readEntityAttachments(Lnet/minecraft/world/level/storage/ValueInput;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-data-attachment-api-v1.mixins.json:EntityMixin from mod fabric-data-attachment-api-v1->@Inject::readEntityAttachments(Lnet/minecraft/world/level/storage/ValueInput;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-data-attachment-api-v1.mixins.json:EntityMixin from mod fabric-data-attachment-api-v1->@Inject::readEntityAttachments(Lnet/minecraft/world/level/storage/ValueInput;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-data-attachment-api-v1.mixins.json:EntityMixin from mod fabric-data-attachment-api-v1->@Inject::writeEntityAttachments(Lnet/minecraft/world/level/storage/ValueOutput;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-data-attachment-api-v1.mixins.json:EntityMixin from mod fabric-data-attachment-api-v1->@Inject::writeEntityAttachments(Lnet/minecraft/world/level/storage/ValueOutput;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-data-attachment-api-v1.mixins.json:EntityMixin from mod fabric-data-attachment-api-v1->@Inject::writeEntityAttachments(Lnet/minecraft/world/level/storage/ValueOutput;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing PlayerEntityMixin from fabric-entity-events-v1.mixins.json into net.minecraft.world.entity.player.Player
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:PlayerEntityMixin from mod fabric-entity-events-v1->@Inject::onTrySleep(Lnet/minecraft/core/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:PlayerEntityMixin from mod fabric-entity-events-v1->@Inject::onIsSleepingLongEnough(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing LivingEntityMixin from fabric-item-api-v1.mixins.json into net.minecraft.world.entity.LivingEntity
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing LivingEntityMixin from fabric-lifecycle-events-v1.mixins.json into net.minecraft.world.entity.LivingEntity
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing LivingEntityMixin from fabric-block-api-v1.mixins.json into net.minecraft.world.entity.LivingEntity
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing LivingEntityMixin from fabric-particles-v1.mixins.json into net.minecraft.world.entity.LivingEntity
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing LivingEntityMixin from fabric-entity-events-v1.mixins.json into net.minecraft.world.entity.LivingEntity
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing elytra.LivingEntityMixin from fabric-entity-events-v1.mixins.json into net.minecraft.world.entity.LivingEntity
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-item-api-v1.mixins.json:LivingEntityMixin from mod fabric-item-api-v1->@Inject::onGetPreferredEquipmentSlot(Lnet/minecraft/world/item/ItemStack;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-lifecycle-events-v1.mixins.json:LivingEntityMixin from mod fabric-lifecycle-events-v1->@Inject::getEquipmentChanges(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V doesn't use it's CallbackInfoReturnable
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-lifecycle-events-v1.mixins.json:LivingEntityMixin from mod fabric-lifecycle-events-v1->@Inject::getEquipmentChanges(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V has 0 override(s) in child classes
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-lifecycle-events-v1.mixins.json:LivingEntityMixin from mod fabric-lifecycle-events-v1->@Inject::getEquipmentChanges(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V won't be passed a CallbackInfoReturnable as a result
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-block-api-v1.mixins.json:LivingEntityMixin from mod fabric-block-api-v1->@Inject::allowTaggedBlocksForTrapdoorClimbing(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::notifyDeath(Lnet/minecraft/world/damagesource/DamageSource;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::notifyDeath(Lnet/minecraft/world/damagesource/DamageSource;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::notifyDeath(Lnet/minecraft/world/damagesource/DamageSource;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::beforeDamage(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::afterDamage(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V doesn't use it's CallbackInfoReturnable
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::afterDamage(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V has 0 override(s) in child classes
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::afterDamage(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V won't be passed a CallbackInfoReturnable as a result
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::onSleep(Lnet/minecraft/core/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::onSleep(Lnet/minecraft/core/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::onSleep(Lnet/minecraft/core/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::onWakeUp(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::onWakeUp(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::onWakeUp(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:LivingEntityMixin from mod fabric-entity-events-v1->@Inject::onIsSleepingInBed(Lnet/minecraft/core/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:elytra.LivingEntityMixin from mod fabric-entity-events-v1->@Inject::injectElytraTick(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V does use it's CallbackInfo
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-entity-events-v1.mixins.json:elytra.LivingEntityMixin from mod fabric-entity-events-v1->@Inject::injectElytraCheck(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing WorldViewMixin from fabric-block-view-api-v2.mixins.json into net.minecraft.world.level.LevelReader
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing WorldMixin from fabric-lifecycle-events-v1.mixins.json into net.minecraft.world.level.Level
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing AttachmentTargetsMixin from fabric-data-attachment-api-v1.mixins.json into net.minecraft.world.level.Level
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing WorldMixin from fabric-data-attachment-api-v1.mixins.json into net.minecraft.world.level.Level
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing ServerWorldMixin from fabric-lifecycle-events-v1.mixins.json into net.minecraft.server.level.ServerLevel
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing ServerWorldMixin from fabric-api-lookup-api-v1.mixins.json into net.minecraft.server.level.ServerLevel
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$fabric_invalidateCache$5(Ljava/util/Map$Entry;)Z to mdffdfa9$fabric-api-lookup-api-v1$lambda$fabric_invalidateCache$5$0 in fabric-api-lookup-api-v1.mixins.json:ServerWorldMixin from mod fabric-api-lookup-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$fabric_invalidateCache$4(Ljava/lang/ref/WeakReference;)Z to mdffdfa9$fabric-api-lookup-api-v1$lambda$fabric_invalidateCache$4$1 in fabric-api-lookup-api-v1.mixins.json:ServerWorldMixin from mod fabric-api-lookup-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$fabric_invalidateCache$3(Ljava/lang/ref/WeakReference;)V to mdffdfa9$fabric-api-lookup-api-v1$lambda$fabric_invalidateCache$3$2 in fabric-api-lookup-api-v1.mixins.json:ServerWorldMixin from mod fabric-api-lookup-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$fabric_invalidateCache$2(Ljava/lang/ref/WeakReference;)Z to mdffdfa9$fabric-api-lookup-api-v1$lambda$fabric_invalidateCache$2$3 in fabric-api-lookup-api-v1.mixins.json:ServerWorldMixin from mod fabric-api-lookup-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$fabric_registerCache$1(Ljava/lang/ref/WeakReference;)Z to mdffdfa9$fabric-api-lookup-api-v1$lambda$fabric_registerCache$1$4 in fabric-api-lookup-api-v1.mixins.json:ServerWorldMixin from mod fabric-api-lookup-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$fabric_registerCache$0(Lnet/minecraft/core/BlockPos;)Ljava/util/List; to mdffdfa9$fabric-api-lookup-api-v1$lambda$fabric_registerCache$0$5 in fabric-api-lookup-api-v1.mixins.json:ServerWorldMixin from mod fabric-api-lookup-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing ServerWorldMixin from fabric-data-attachment-api-v1.mixins.json into net.minecraft.server.level.ServerLevel
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$fabric_syncChange$1(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;Lnet/minecraft/server/level/ServerPlayer;)V to mdffdfa9$fabric-data-attachment-api-v1$lambda$fabric_syncChange$1$6 in fabric-data-attachment-api-v1.mixins.json:ServerWorldMixin from mod fabric-data-attachment-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Renaming synthetic method lambda$createAttachmentsPersistentState$0(Lnet/minecraft/server/level/ServerLevel;)Lnet/fabricmc/fabric/impl/attachment/AttachmentPersistentState; to mdffdfa9$fabric-data-attachment-api-v1$lambda$createAttachmentsPersistentState$0$7 in fabric-data-attachment-api-v1.mixins.json:ServerWorldMixin from mod fabric-data-attachment-api-v1
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-lifecycle-events-v1.mixins.json:ServerWorldMixin from mod fabric-lifecycle-events-v1->@Inject::startWorldTick(Ljava/util/function/BooleanSupplier;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-lifecycle-events-v1.mixins.json:ServerWorldMixin from mod fabric-lifecycle-events-v1->@Inject::startWorldTick(Ljava/util/function/BooleanSupplier;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-lifecycle-events-v1.mixins.json:ServerWorldMixin from mod fabric-lifecycle-events-v1->@Inject::startWorldTick(Ljava/util/function/BooleanSupplier;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-lifecycle-events-v1.mixins.json:ServerWorldMixin from mod fabric-lifecycle-events-v1->@Inject::endWorldTick(Ljava/util/function/BooleanSupplier;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-lifecycle-events-v1.mixins.json:ServerWorldMixin from mod fabric-lifecycle-events-v1->@Inject::endWorldTick(Ljava/util/function/BooleanSupplier;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-lifecycle-events-v1.mixins.json:ServerWorldMixin from mod fabric-lifecycle-events-v1->@Inject::endWorldTick(Ljava/util/function/BooleanSupplier;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-data-attachment-api-v1.mixins.json:ServerWorldMixin from mod fabric-data-attachment-api-v1->@Inject::createAttachmentsPersistentState(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-data-attachment-api-v1.mixins.json:ServerWorldMixin from mod fabric-data-attachment-api-v1->@Inject::createAttachmentsPersistentState(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) fabric-data-attachment-api-v1.mixins.json:ServerWorldMixin from mod fabric-data-attachment-api-v1->@Inject::createAttachmentsPersistentState(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing BlockStateMixin from fabric-block-api-v1.mixins.json into net.minecraft.world.level.block.state.BlockState
+[19:37:59] [main/DEBUG] (FabricLoader/Mixin) Mixing AbstractBlockAbstractBlockStateMixin from fabric-content-registries-v0.mixins.json into net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase
