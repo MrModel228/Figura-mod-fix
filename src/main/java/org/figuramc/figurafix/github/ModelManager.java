@@ -15,7 +15,19 @@ public class ModelManager {
 
     public ModelManager(GitHubAPI gitHubAPI) {
         this.gitHubAPI = gitHubAPI;
+        ensureAvatarsDir();
         startFileWatcher();
+    }
+
+    private void ensureAvatarsDir() {
+        try {
+            Path dir = Paths.get(AVATARS_DIR);
+            if (!Files.exists(dir)) {
+                Files.createDirectories(dir);
+            }
+        } catch (IOException e) {
+            System.err.println("[Figura-Fix] Failed to create avatars directory: " + e.getMessage());
+        }
     }
 
     public void stopWatcher() {
@@ -175,6 +187,7 @@ public class ModelManager {
             updateLocalHash(Paths.get(modelPath), compressedContent);
 
         } catch (IOException e) {
+            System.err.println("[Figura-Fix] Failed to upload avatar " + playerName + "/" + avatarName + ": " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -194,6 +207,7 @@ public class ModelManager {
                 updateLocalHash(localDir.resolve("model.json"), compressedContent);
             }
         } catch (IOException e) {
+            System.err.println("[Figura-Fix] Failed to download avatar " + playerName + "/" + avatarName + ": " + e.getMessage());
             e.printStackTrace();
         }
     }

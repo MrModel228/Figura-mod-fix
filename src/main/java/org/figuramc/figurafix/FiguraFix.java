@@ -22,13 +22,14 @@ public class FiguraFix implements ClientModInitializer {
         SYNC_MANAGER = new SyncManager(gitHubAPI, MODEL_MANAGER);
         
         LOGGER.info("========================================");
-        LOGGER.info("   Figura-Fix v1.0.1 Loading...");
+        LOGGER.info("   Figura-Fix v1.0.3 Loading...");
         LOGGER.info("========================================");
         LOGGER.info("GitHub sync: enabled");
         LOGGER.info("Repo: MrModel228/figura-fix-models");
         LOGGER.info("Auto sync: start=enabled, exit=enabled");
         LOGGER.info("File watcher: enabled");
         LOGGER.info("========================================");
+        LOGGER.info("[Figura-Fix] Figura-Fix is working!");
         
         if (SYNC_MANAGER.isAutoStart()) {
             new Thread(() -> {

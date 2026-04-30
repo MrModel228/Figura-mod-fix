@@ -5,6 +5,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.*;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
@@ -65,92 +66,110 @@ public class GitHubAPI {
         }
     }
 
-    public String getFileContent(String path) throws IOException {
-        String encodedPath = path.replace("/", "%2F");
-        String response = sendRequest(
-                "/repos/" + owner + "/" + repo + "/contents/" + encodedPath,
-                "GET",
-                null
-        );
+    public String getFileContent(String path) {
+        try {
+            String encodedPath = path.replace("/", "%2F");
+            String response = sendRequest(
+                    "/repos/" + owner + "/" + repo + "/contents/" + encodedPath,
+                    "GET",
+                    null
+            );
 
-        if (response.contains("\"message\"")) {
+            if (response.contains("\"message\"")) {
+                return null;
+            }
+
+            Map<String, Object> data = parseJson(response);
+            String content = (String) data.get("content");
+            String encoding = (String) data.get("encoding");
+
+            if ("base64".equals(encoding) && content != null) {
+                return new String(Base64.getDecoder().decode(content));
+            }
+            return content;
+        } catch (Exception e) {
+            System.err.println("[Figura-Fix] Failed to get file content for " + path + ": " + e.getMessage());
             return null;
         }
-
-        Map<String, Object> data = parseJson(response);
-        String content = (String) data.get("content");
-        String encoding = (String) data.get("encoding");
-
-        if ("base64".equals(encoding)) {
-            return new String(Base64.getDecoder().decode(content));
-        }
-        return content;
     }
 
-    public void uploadFile(String path, String content, String commitMessage) throws IOException {
-        String encodedPath = path.replace("/", "%2F");
-        String response = sendRequest(
-                "/repos/" + owner + "/" + repo + "/contents/" + encodedPath,
-                "GET",
-                null
-        );
+    public void uploadFile(String path, String content, String commitMessage) {
+        try {
+            String encodedPath = path.replace("/", "%2F");
+            String response = sendRequest(
+                    "/repos/" + owner + "/" + repo + "/contents/" + encodedPath,
+                    "GET",
+                    null
+            );
 
-        String sha = null;
-        if (!response.contains("\"message\"")) {
-            Map<String, Object> data = parseJson(response);
-            sha = (String) data.get("sha");
-        }
-
-        Map<String, Object> payload = new HashMap<>();
-        payload.put("content", Base64.getEncoder().encodeToString(content.getBytes()));
-        payload.put("message", commitMessage);
-
-        if (sha != null) {
-            payload.put("sha", sha);
-        }
-
-        sendRequest(
-                "/repos/" + owner + "/" + repo + "/contents/" + encodedPath,
-                sha == null ? "PUT" : "PUT",
-                serializeJson(payload)
-        );
-    }
-
-    public boolean fileExists(String path) throws IOException {
-        String encodedPath = path.replace("/", "%2F");
-        String response = sendRequest(
-                "/repos/" + owner + "/" + repo + "/contents/" + encodedPath,
-                "GET",
-                null
-        );
-        return !response.contains("\"message\"");
-    }
-
-    public Map<String, String> listDirectory(String path) throws IOException {
-        String encodedPath = path.isEmpty() ? "" : path.replace("/", "%2F");
-        String response = sendRequest(
-                "/repos/" + owner + "/" + repo + "/contents/" + encodedPath,
-                "GET",
-                null
-        );
-
-        Map<String, String> files = new HashMap<>();
-        String[] items = response.substring(1, response.length() - 1).split("\\},\\{");
-
-        for (String item : items) {
-            item = item.trim();
-            if (item.startsWith("{")) item = item.substring(1);
-            if (item.endsWith("}")) item = item.substring(0, item.length() - 1);
-
-            String name = extractValue(item, "name");
-            String type = extractValue(item, "type");
-
-            if ("file".equals(type)) {
-                files.put(name, extractValue(item, "sha"));
+            String sha = null;
+            if (!response.contains("\"message\"")) {
+                Map<String, Object> data = parseJson(response);
+                sha = (String) data.get("sha");
             }
-        }
 
-        return files;
+            Map<String, Object> payload = new HashMap<>();
+            payload.put("content", Base64.getEncoder().encodeToString(content.getBytes()));
+            payload.put("message", commitMessage);
+
+            if (sha != null) {
+                payload.put("sha", sha);
+            }
+
+            sendRequest(
+                    "/repos/" + owner + "/" + repo + "/contents/" + encodedPath,
+                    sha == null ? "PUT" : "PUT",
+                    serializeJson(payload)
+            );
+        } catch (Exception e) {
+            System.err.println("[Figura-Fix] Failed to upload file " + path + ": " + e.getMessage());
+        }
+    }
+
+    public boolean fileExists(String path) {
+        try {
+            String encodedPath = path.replace("/", "%2F");
+            String response = sendRequest(
+                    "/repos/" + owner + "/" + repo + "/contents/" + encodedPath,
+                    "GET",
+                    null
+            );
+            return !response.contains("\"message\"");
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public Map<String, String> listDirectory(String path) {
+        try {
+            String encodedPath = path.isEmpty() ? "" : path.replace("/", "%2F");
+            String response = sendRequest(
+                    "/repos/" + owner + "/" + repo + "/contents/" + encodedPath,
+                    "GET",
+                    null
+            );
+
+            Map<String, String> files = new HashMap<>();
+            String[] items = response.substring(1, response.length() - 1).split("\\},\\{");
+
+            for (String item : items) {
+                item = item.trim();
+                if (item.startsWith("{")) item = item.substring(1);
+                if (item.endsWith("}")) item = item.substring(0, item.length() - 1);
+
+                String name = extractValue(item, "name");
+                String type = extractValue(item, "type");
+
+                if ("file".equals(type)) {
+                    files.put(name, extractValue(item, "sha"));
+                }
+            }
+
+            return files;
+        } catch (Exception e) {
+            System.err.println("[Figura-Fix] Failed to list directory " + path + ": " + e.getMessage());
+            return new HashMap<>();
+        }
     }
 
     private Map<String, Object> parseJson(String json) {

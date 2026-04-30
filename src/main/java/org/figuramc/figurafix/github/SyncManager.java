@@ -7,6 +7,7 @@ import java.nio.file.*;
 import java.util.*;
 
 public class SyncManager {
+    private static final String AVATARS_DIR = "config/figura/avatars";
     private static final String CONFIG_FILE = "config/figurafix/config.properties";
     private static final String TOKEN_FILE = "assets/figurafix/token.dat";
 
@@ -100,11 +101,14 @@ public class SyncManager {
         FiguraFix.LOGGER.info("[Figura-Fix] Starting sync...");
 
         List<ModelManager.PlayerModels> localPlayers = modelManager.scanLocalAvatars();
+        FiguraFix.LOGGER.info("[Figura-Fix] Found " + localPlayers.size() + " players with avatars");
 
         for (ModelManager.PlayerModels player : localPlayers) {
             String playerName = player.getPlayerName();
+            List<ModelManager.AvatarModel> models = player.getModels();
+            FiguraFix.LOGGER.info("[Figura-Fix] Processing player: " + playerName + " with " + models.size() + " avatars");
 
-            for (ModelManager.AvatarModel model : player.getModels()) {
+            for (ModelManager.AvatarModel model : models) {
                 String avatarName = model.getName();
                 String remotePath = "avatars/" + playerName + "/" + avatarName + "/model.json";
 
@@ -112,9 +116,11 @@ public class SyncManager {
                     if (!gitHubAPI.fileExists(remotePath)) {
                         modelManager.uploadAvatar(playerName, avatarName, model.getPath());
                         FiguraFix.LOGGER.info("[Figura-Fix] Uploaded: " + playerName + "/" + avatarName);
+                    } else {
+                        FiguraFix.LOGGER.debug("[Figura-Fix] Already exists: " + playerName + "/" + avatarName);
                     }
-                } catch (IOException e) {
-                    FiguraFix.LOGGER.error("[Figura-Fix] Failed to check/upload " + playerName + "/" + avatarName);
+                } catch (Exception e) {
+                    FiguraFix.LOGGER.error("[Figura-Fix] Failed to check/upload " + playerName + "/" + avatarName + ": " + e.getMessage());
                     e.printStackTrace();
                 }
             }
