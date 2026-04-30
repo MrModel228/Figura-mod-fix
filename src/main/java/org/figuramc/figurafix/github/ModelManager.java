@@ -7,16 +7,22 @@ import java.util.*;
 import java.util.concurrent.*;
 
 public class ModelManager {
-    private static final String AVATARS_DIR = "config/figura/avatars";
+    private static final String AVATARS_DIR = "figura/avatars";
     private final GitHubAPI gitHubAPI;
+    private final File avatarsFolder;
     private final ConcurrentHashMap<String, String> fileHashes = new ConcurrentHashMap<>();
     private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
     private volatile boolean watchRunning = true;
 
     public ModelManager(GitHubAPI gitHubAPI) {
         this.gitHubAPI = gitHubAPI;
+        this.avatarsFolder = new File(AVATARS_DIR);
         ensureAvatarsDir();
         startFileWatcher();
+    }
+
+    public File getAvatarsFolder() {
+        return avatarsFolder;
     }
 
     private void ensureAvatarsDir() {
@@ -35,6 +41,10 @@ public class ModelManager {
         scheduler.shutdown();
     }
 
+    private File getAvatarsDir() {
+        return new File(AVATARS_DIR);
+    }
+
     private void startFileWatcher() {
         scheduler.scheduleAtFixedRate(() -> {
             if (!watchRunning) return;
@@ -47,7 +57,7 @@ public class ModelManager {
     }
 
     private void checkAndSyncChanges() {
-        Path avatarsPath = Paths.get(AVATARS_DIR);
+        Path avatarsPath = getAvatarsDir().toPath();
         if (!Files.exists(avatarsPath)) return;
 
         try {
@@ -122,7 +132,7 @@ public class ModelManager {
 
     public List<PlayerModels> scanLocalAvatars() {
         List<PlayerModels> players = new ArrayList<>();
-        Path avatarsPath = Paths.get(AVATARS_DIR);
+        Path avatarsPath = getAvatarsDir().toPath();
 
         if (!Files.exists(avatarsPath)) {
             return players;
@@ -198,7 +208,7 @@ public class ModelManager {
             String content = gitHubAPI.getFileContent(remotePath);
 
             if (content != null) {
-                Path localDir = Paths.get(AVATARS_DIR, playerName, avatarName);
+                Path localDir = getAvatarsDir().toPath().resolve(playerName).resolve(avatarName);
                 Files.createDirectories(localDir);
 
                 String compressedContent = compressJson(content);

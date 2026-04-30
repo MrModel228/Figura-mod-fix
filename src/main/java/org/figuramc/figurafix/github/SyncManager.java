@@ -7,7 +7,7 @@ import java.nio.file.*;
 import java.util.*;
 
 public class SyncManager {
-    private static final String AVATARS_DIR = "config/figura/avatars";
+    private static final String AVATARS_DIR = "figura/avatars";
     private static final String CONFIG_FILE = "config/figurafix/config.properties";
     private static final String TOKEN_FILE = "assets/figurafix/token.dat";
 
@@ -100,6 +100,13 @@ public class SyncManager {
     public void syncAll() {
         FiguraFix.LOGGER.info("[Figura-Fix] Starting sync...");
 
+        File avatarsFolder = modelManager.getAvatarsFolder();
+        if (!avatarsFolder.exists()) {
+            FiguraFix.LOGGER.info("[Figura-Fix] Avatars folder not found: " + avatarsFolder.getAbsolutePath());
+            FiguraFix.LOGGER.info("[Figura-Fix] Sync complete!");
+            return;
+        }
+
         List<ModelManager.PlayerModels> localPlayers = modelManager.scanLocalAvatars();
         FiguraFix.LOGGER.info("[Figura-Fix] Found " + localPlayers.size() + " players with avatars");
 
@@ -139,7 +146,8 @@ public class SyncManager {
                 String playerName = playerEntry.getKey();
                 String playerSha = playerEntry.getValue();
 
-                Path playerDir = Paths.get("config/figura/avatars", playerName);
+                File avatarsFolder = modelManager.getAvatarsFolder();
+                Path playerDir = avatarsFolder.toPath().resolve(playerName);
                 Files.createDirectories(playerDir);
 
                 Map<String, String> avatars = gitHubAPI.listDirectory("avatars/" + playerName);
@@ -156,7 +164,7 @@ public class SyncManager {
 
                     if (content != null) {
                         String compressedContent = modelManager.compressJson(content);
-                        Files.writeString(avatarDir.resolve("model.json"), compressedContent);
+                        Files.writeString(playerDir.resolve(avatarName).resolve("model.json"), compressedContent);
                         FiguraFix.LOGGER.info("[Figura-Fix] Downloaded: " + playerName + "/" + avatarName);
                     }
                 }
