@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "figurafix",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "name": "Figura-Fix",
   "description": "Client-side optimization for Figura",
   "authors": ["MrModel228"],
