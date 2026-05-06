@@ -2,6 +2,8 @@ package org.figuramc.figurafix.github;
 
 import org.figuramc.figurafix.FiguraFix;
 
+import org.figuramc.figurafix.FiguraFix;
+
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
@@ -51,6 +53,7 @@ public class SyncManager {
                     }
                 }
             } catch (IOException e) {
+                FiguraFix.LOGGER.error("Failed to load config: " + e.getMessage());
                 e.printStackTrace();
             }
         }
@@ -76,6 +79,7 @@ public class SyncManager {
                 writer.write("autoExit=" + settings.autoExit);
             }
         } catch (IOException e) {
+            FiguraFix.LOGGER.error("Failed to save config: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -91,6 +95,7 @@ public class SyncManager {
             try {
                 return Files.readString(tokenPath).trim();
             } catch (IOException e) {
+                FiguraFix.LOGGER.error("Failed to read token: " + e.getMessage());
                 e.printStackTrace();
             }
         }
@@ -110,28 +115,30 @@ public class SyncManager {
         List<ModelManager.PlayerModels> localPlayers = modelManager.scanLocalAvatars();
         FiguraFix.LOGGER.info("[Figura-Fix] Found " + localPlayers.size() + " players with avatars");
 
-        for (ModelManager.PlayerModels player : localPlayers) {
-            String playerName = player.getPlayerName();
-            List<ModelManager.AvatarModel> models = player.getModels();
-            FiguraFix.LOGGER.info("[Figura-Fix] Processing player: " + playerName + " with " + models.size() + " avatars");
+                FiguraFix.LOGGER.info("Found " + localPlayers.size() + " players with avatars");
 
-            for (ModelManager.AvatarModel model : models) {
-                String avatarName = model.getName();
-                String remotePath = "avatars/" + playerName + "/" + avatarName + "/model.json";
+                for (ModelManager.PlayerModels player : localPlayers) {
+                    String playerName = player.getPlayerName();
+                    List<ModelManager.AvatarModel> models = player.getModels();
+                    FiguraFix.LOGGER.info("Processing player: " + playerName + " with " + models.size() + " avatars");
 
-                try {
-                    if (!gitHubAPI.fileExists(remotePath)) {
-                        modelManager.uploadAvatar(playerName, avatarName, model.getPath());
-                        FiguraFix.LOGGER.info("[Figura-Fix] Uploaded: " + playerName + "/" + avatarName);
-                    } else {
-                        FiguraFix.LOGGER.debug("[Figura-Fix] Already exists: " + playerName + "/" + avatarName);
+                    for (ModelManager.AvatarModel model : models) {
+                        String avatarName = model.getName();
+                        String remotePath = "avatars/" + playerName + "/" + avatarName + "/model.json";
+
+                        try {
+                            if (!gitHubAPI.fileExists(remotePath)) {
+                                modelManager.uploadAvatar(playerName, avatarName, model.getPath());
+                                FiguraFix.LOGGER.info("Uploaded: " + playerName + "/" + avatarName);
+                            } else {
+                                FiguraFix.LOGGER.debug("Already exists: " + playerName + "/" + avatarName);
+                            }
+                        } catch (Exception e) {
+                            FiguraFix.LOGGER.error("Failed to check/upload " + playerName + "/" + avatarName + ": " + e.getMessage());
+                            e.printStackTrace();
+                        }
                     }
-                } catch (Exception e) {
-                    FiguraFix.LOGGER.error("[Figura-Fix] Failed to check/upload " + playerName + "/" + avatarName + ": " + e.getMessage());
-                    e.printStackTrace();
                 }
-            }
-        }
 
         FiguraFix.LOGGER.info("[Figura-Fix] Sync complete!");
     }
