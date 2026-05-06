@@ -122,22 +122,32 @@ public class SyncManager {
                     List<ModelManager.AvatarModel> models = player.getModels();
                     FiguraFix.LOGGER.info("Processing player: " + playerName + " with " + models.size() + " avatars");
 
-                    for (ModelManager.AvatarModel model : models) {
-                        String avatarName = model.getName();
-                        String remotePath = "avatars/" + playerName + "/" + avatarName + "/model.json";
-
-                        try {
-                            if (!gitHubAPI.fileExists(remotePath)) {
-                                modelManager.uploadAvatar(playerName, avatarName, model.getPath());
-                                FiguraFix.LOGGER.info("Uploaded: " + playerName + "/" + avatarName);
-                            } else {
-                                FiguraFix.LOGGER.debug("Already exists: " + playerName + "/" + avatarName);
-                            }
-                        } catch (Exception e) {
-                            FiguraFix.LOGGER.error("Failed to check/upload " + playerName + "/" + avatarName + ": " + e.getMessage());
-                            e.printStackTrace();
-                        }
-                    }
+                     for (ModelManager.AvatarModel model : models) {
+                         String avatarName = model.getName();
+                         String avatarDir = avatarName + "/";
+                         
+                         try {
+                             String[] files = {"model.bbmodel", "texture.png"};
+                             boolean needsUpload = false;
+                             
+                             for (String file : files) {
+                                 if (!gitHubAPI.fileExists("avatars/" + avatarDir + file)) {
+                                     needsUpload = true;
+                                     break;
+                                 }
+                             }
+                             
+                             if (needsUpload) {
+                                 modelManager.uploadAvatar(playerName, avatarName, model.getPath());
+                                 FiguraFix.LOGGER.info("Uploaded: " + avatarName);
+                             } else {
+                                 FiguraFix.LOGGER.debug("Already exists: " + avatarName);
+                             }
+                         } catch (Exception e) {
+                             FiguraFix.LOGGER.error("Failed to check/upload " + avatarName + ": " + e.getMessage());
+                             e.printStackTrace();
+                         }
+                     }
                 }
 
         FiguraFix.LOGGER.info("[Figura-Fix] Sync complete!");
@@ -166,12 +176,12 @@ public class SyncManager {
                     Path avatarDir = playerDir.resolve(avatarName);
                     Files.createDirectories(avatarDir);
 
-                    String remotePath = "avatars/" + playerName + "/" + avatarName + "/model.json";
+                    String remotePath = "avatars/" + playerName + "/" + avatarName + "/model.bbmodel";
                     String content = gitHubAPI.getFileContent(remotePath);
 
                     if (content != null) {
                         String compressedContent = modelManager.compressJson(content);
-                        Files.writeString(playerDir.resolve(avatarName).resolve("model.json"), compressedContent);
+                        Files.writeString(playerDir.resolve(avatarName).resolve("model.bbmodel"), compressedContent);
                         FiguraFix.LOGGER.info("[Figura-Fix] Downloaded: " + playerName + "/" + avatarName);
                     }
                 }

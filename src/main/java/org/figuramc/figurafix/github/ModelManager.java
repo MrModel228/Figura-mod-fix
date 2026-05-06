@@ -108,7 +108,7 @@ public class ModelManager {
 
         try {
             Files.walk(avatarsPath)
-                    .filter(p -> p.toString().endsWith("model.json"))
+                    .filter(p -> p.toString().endsWith("model.bbmodel"))
                     .forEach(path -> {
                         try {
                             String content = Files.readString(path);
@@ -137,13 +137,12 @@ public class ModelManager {
             String content = Files.readString(path);
             String compressedContent = compressJson(content);
             
-            Path playerPath = path.getParent().getParent();
-            String playerName = playerPath.getFileName().toString();
-            String avatarName = path.getParent().getFileName().toString();
-            String remotePath = "avatars/" + playerName + "/" + avatarName + "/model.json";
+            Path avatarDir = path.getParent();
+            String avatarName = avatarDir.getFileName().toString();
+            String remotePath = "avatars/" + avatarName + "/model.bbmodel";
 
             gitHubAPI.uploadFile(remotePath, compressedContent, 
-                    "Upload new avatar " + avatarName + " for " + playerName);
+                    "Upload new avatar " + avatarName);
             
             updateLocalHash(path, compressedContent);
         } catch (IOException e) {
@@ -156,13 +155,12 @@ public class ModelManager {
             String content = Files.readString(path);
             String compressedContent = compressJson(content);
             
-            Path playerPath = path.getParent().getParent();
-            String playerName = playerPath.getFileName().toString();
-            String avatarName = path.getParent().getFileName().toString();
-            String remotePath = "avatars/" + playerName + "/" + avatarName + "/model.json";
+            Path avatarDir = path.getParent();
+            String avatarName = avatarDir.getFileName().toString();
+            String remotePath = "avatars/" + avatarName + "/model.bbmodel";
 
             gitHubAPI.uploadFile(remotePath, compressedContent, 
-                    "Update avatar " + avatarName + " for " + playerName);
+                    "Update avatar " + avatarName);
             
             updateLocalHash(path, compressedContent);
         } catch (IOException e) {
@@ -187,42 +185,32 @@ public class ModelManager {
         try {
             Files.list(avatarsPath)
                     .filter(Files::isDirectory)
-                    .forEach(playerDir -> {
-                        String playerName = playerDir.getFileName().toString();
+                    .forEach(avatarDir -> {
+                        String avatarName = avatarDir.getFileName().toString();
                         List<AvatarModel> models = new ArrayList<>();
+                        String modelPath = avatarDir + "/model.bbmodel";
+                        
+                        if (Files.exists(Paths.get(modelPath))) {
+                            try {
+                                String content = Files.readString(Paths.get(modelPath));
+                                String hash = calculateHash(content);
+                                long size = Files.size(Paths.get(modelPath));
+                                long lastModified = Files.getLastModifiedTime(Paths.get(modelPath)).toMillis();
 
-                        try {
-                            Files.list(playerDir)
-                                    .filter(Files::isDirectory)
-                                    .forEach(avatarDir -> {
-                                        String avatarName = avatarDir.getFileName().toString();
-                                        String modelPath = playerDir + "/" + avatarName + "/model.json";
-                                        
-                                        if (Files.exists(Paths.get(modelPath))) {
-                                            try {
-                                                String content = Files.readString(Paths.get(modelPath));
-                                                String hash = calculateHash(content);
-                                                long size = Files.size(Paths.get(modelPath));
-                                                long lastModified = Files.getLastModifiedTime(Paths.get(modelPath)).toMillis();
-
-                                                models.add(new AvatarModel(
-                                                        avatarName,
-                                                        modelPath,
-                                                        hash,
-                                                        size,
-                                                        lastModified
-                                                ));
-                                                fileHashes.put(modelPath, hash);
-                                            } catch (IOException e) {
-                                                e.printStackTrace();
-                                            }
-                                        }
-                                    });
-                        } catch (IOException e) {
-                            e.printStackTrace();
+                                models.add(new AvatarModel(
+                                        avatarName,
+                                        modelPath,
+                                        hash,
+                                        size,
+                                        lastModified
+                                ));
+                                fileHashes.put(modelPath, hash);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                         }
 
-                        players.add(new PlayerModels(playerName, models));
+                        players.add(new PlayerModels(avatarName, models));
                     });
         } catch (IOException e) {
             e.printStackTrace();
@@ -235,35 +223,35 @@ public class ModelManager {
         try {
             String content = Files.readString(Paths.get(modelPath));
             String compressedContent = compressJson(content);
-            String remotePath = "avatars/" + playerName + "/" + avatarName + "/model.json";
+            String remotePath = "avatars/" + avatarName + "/model.bbmodel";
 
             gitHubAPI.uploadFile(remotePath, compressedContent, 
-                    "Upload avatar " + avatarName + " for " + playerName);
+                    "Upload avatar " + avatarName);
             
             updateLocalHash(Paths.get(modelPath), compressedContent);
 
         } catch (IOException e) {
-            System.err.println("[Figura-Fix] Failed to upload avatar " + playerName + "/" + avatarName + ": " + e.getMessage());
+            System.err.println("[Figura-Fix] Failed to upload avatar " + avatarName + ": " + e.getMessage());
             e.printStackTrace();
         }
     }
 
     public void downloadAvatar(String playerName, String avatarName) {
         try {
-            String remotePath = "avatars/" + playerName + "/" + avatarName + "/model.json";
+            String remotePath = "avatars/" + avatarName + "/model.bbmodel";
             String content = gitHubAPI.getFileContent(remotePath);
 
             if (content != null) {
-                Path localDir = getAvatarsDir().toPath().resolve(playerName).resolve(avatarName);
+                Path localDir = getAvatarsDir().toPath().resolve(avatarName);
                 Files.createDirectories(localDir);
 
                 String compressedContent = compressJson(content);
-                Files.writeString(localDir.resolve("model.json"), compressedContent);
+                Files.writeString(localDir.resolve("model.bbmodel"), compressedContent);
                 
-                updateLocalHash(localDir.resolve("model.json"), compressedContent);
+                updateLocalHash(localDir.resolve("model.bbmodel"), compressedContent);
             }
         } catch (IOException e) {
-            System.err.println("[Figura-Fix] Failed to download avatar " + playerName + "/" + avatarName + ": " + e.getMessage());
+            System.err.println("[Figura-Fix] Failed to download avatar " + avatarName + ": " + e.getMessage());
             e.printStackTrace();
         }
     }
