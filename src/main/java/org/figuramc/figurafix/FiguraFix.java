@@ -33,7 +33,7 @@ public class FiguraFix implements ClientModInitializer {
         
         if (SYNC_MANAGER.isAutoStart()) {
             new Thread(() -> {
-                LOGGER.info("[Figura-Fix] Auto-start sync...");
+                FiguraFix.LOGGER.info("Auto-start sync...");
                 SYNC_MANAGER.syncAll();
             }).start();
         }

@@ -2,5 +2,5 @@ Manifest-Version: 1.0
 MixinConfigs: figurafix.mixins.json
 Implementation-Title: Figura-Fix
 Implementation-Version: 1.0.5
-Built-At: 2026-05-06 16:52:01
+Built-At: 2026-05-06 17:03:12
 
